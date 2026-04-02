@@ -1,0 +1,1644 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An Introduction to PHP5 Through Examples">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/en-php5-juillet-2011/objects.html">
+      
+      
+        <link rel="prev" href="application-exercise---tax-calculation.html">
+      
+      
+        <link rel="next" href="application-exercise---tax-calculation-with-objects-impots03.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>5. Objects - An Introduction to PHP5 Through Examples</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "An Introduction to PHP5 Through Examples";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#5-objects" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="An Introduction to PHP5 Through Examples" class="md-header__button md-logo" aria-label="An Introduction to PHP5 Through Examples" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            An Introduction to PHP5 Through Examples
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5. Objects
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/en-php5-juillet-2011" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="An Introduction to PHP5 Through Examples" class="md-nav__button md-logo" aria-label="An Introduction to PHP5 Through Examples" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    An Introduction to PHP5 Through Examples
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/en-php5-juillet-2011" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="foreword.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Foreword
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="setting-up-a-development-environment.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Setting up a development environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="the-basics-of-php.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. The Basics of PHP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="application-exercise---tax-calculation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Application Exercise – Tax Calculation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Objects
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="objects.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Objects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#51-any-variable-can-become-an-object-with-attributes-example_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Any variable can become an object with attributes (example_14)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-a-person-class-with-no-declared-attributes-example_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. A Person class with no declared attributes (example_15)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-the-person-class-with-declared-attributes-example_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3. The Person class with declared attributes (example_16)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-the-person-class-with-a-constructor-example_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4. The Person class with a constructor (example_17)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-the-person-class-with-validity-checks-in-the-constructor-example_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5. The Person class with validity checks in the constructor (example_18)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56-adding-a-method-that-acts-as-a-second-constructor-example_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6. Adding a method that acts as a second constructor (example_19)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#57-an-array-of-person-objects-example_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7. An array of Person objects (example_20)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#58-creating-a-class-derived-from-the-person-class-example_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8. Creating a class derived from the Person class (example_21)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#59-creating-a-second-class-derived-from-the-person-class-example_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9. Creating a second class derived from the Person class (example_22)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#510-interfaces-example_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.10. Interfaces (example_23)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="application-exercise---tax-calculation-with-objects-impots03.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Application Exercise – Tax Calculation with Objects (impots_03)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="using-the-mysql-dbms.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Using the MySQL DBMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tax-calculation-exercise-with-mysql.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Tax Calculation Exercise with MySQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="php-network-functions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. PHP Network Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="php-servers.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. PHP Servers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tax-calculation-exercise-with-a-web-service-and-a-three-tier-architecture.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Tax Calculation: Exercise with a Web Service and a Three-Tier Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="processing-xml-documents-simplexml01.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Processing XML Documents (simplexml_01)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tax-calculation-exercise-with-xml.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Tax Calculation: Exercise with XML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="refheading398901881943603"></a></p>
+<h1 id="5-objects">5. <span style="color: #365f91"><strong>Objects</strong></span></h1>
+<p><a id="refheading398921881943603"></a></p>
+<h2 id="51-any-variable-can-become-an-object-with-attributes-example_14">5.1. <span style="color: #4f81bd"><strong>Any variable can become an object with attributes (example_14)</strong></span></h2>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line">&lt;?php</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// any variable can have attributes by design</span>
+<span class="odt-code-line"><span style="color:#000000">$obj1-&gt;attr1 = </span><span style="color:#008000">&quot;one&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">$obj1-&gt;attr2 =</span><span style="color:#000080"> 100</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// displays the object</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;object1=[</span><span style="color:#0000ff">$obj1-&gt;attr1</span><span style="color:#008000">,</span><span style="color:#0000ff">$obj1-&gt;attr2</span><span style="color:#008000">]\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// Modifies the object</span>
+<span class="odt-code-line"><span style="color:#000000">$obj1-&gt;</span><span style="color:#000080">attr2+=100</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// display the object</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;object1=[</span><span style="color:#0000ff">$obj1-&gt;attr1</span><span style="color:#008000">,</span><span style="color:#0000ff">$obj1-&gt;attr2</span><span style="color:#008000">]\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// assigns the value of object1 to object2</span>
+<span class="odt-code-line"><span style="color:#0000ff">$obj2 </span><span style="color:#000000">= </span><span style="color:#0000ff">$obj1</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// modifies obj2</span>
+<span class="odt-code-line"><span style="color:#000000">$obj2-&gt;attr2 =</span><span style="color:#000080"> 0</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// displays both objects</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;object1=[</span><span style="color:#0000ff">$obj1-&gt;attr1</span><span style="color:#008000">,</span><span style="color:#0000ff">$obj1-&gt;attr2</span><span style="color:#008000">]\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;object2=[</span><span style="color:#0000ff">$obj2-&gt;attr1</span><span style="color:#008000">,</span><span style="color:#0000ff">$obj2-&gt;attr2</span><span style="color:#008000">]\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// assigns the reference of object1 to object3</span>
+<span class="odt-code-line"><span style="color:#0000ff">$obj3 </span><span style="color:#000000">= </span><span style="color:#0000ff">&amp;$obj1</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// modifies obj3</span>
+<span class="odt-code-line"><span style="color:#000000">$obj3-&gt;attr2 =</span><span style="color:#000080"> 10</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// displays both objects</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;object1=[</span><span style="color:#0000ff">$obj1-&gt;attr1</span><span style="color:#008000">,</span><span style="color:#0000ff">$obj1-&gt;attr2</span><span style="color:#008000">]\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;object3=[</span><span style="color:#0000ff">$obj3-&gt;attr1</span><span style="color:#008000">,</span><span style="color:#0000ff">$obj3-&gt;attr2</span><span style="color:#008000">]\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// Is an object a dictionary?</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#000000">count(</span><span style="color:#0000ff">$obj1</span><span style="color:#000000">).</span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">while </span><span style="color:#000000">(</span><span style="font-weight:bold;color:#000000">list</span><span style="color:#000000">(</span><span style="color:#0000ff">$attribute</span><span style="color:#000000">, </span><span style="color:#0000ff">$value</span><span style="color:#000000">) = </span><span style="font-weight:bold;color:#000000">each</span><span style="color:#000000">(</span><span style="color:#0000ff">$obj1</span><span style="color:#000000">))</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;obj1[</span><span style="color:#0000ff">$attribute</span><span style="color:#008000">]</span><span style="color:#0000ff">=$value</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// end</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">?&gt;</span>
+</code></pre></div>
+
+<p><strong>Results</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>object1=[one,100]
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>object1=[one,200]
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>object1=[one,0]
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>object2=[one,0]
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>object1=[one,10]
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>object3=[one,10]
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>1
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>obj1[attr1] = one
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>obj1[attr2] = 10
+</code></pre></div>
+<p><strong>Comments</strong></p>
+<ul>
+<li>line 4: the notation <em>$obj-&gt;attr</em> refers to the <em>attr</em> attribute of the variable <em>$obj</em>. If it does not exist, it is created, thus making the variable <em>$obj</em> an object with attributes.</li>
+<li>line 13: the expression <em>$obj2 = $obj1</em>, when <em>$obj1</em> is an object, is a copy of objects by <strong>reference</strong>. Thus, <em>$obj2</em> and <em>$obj1</em> are references to the same object. The object itself can be modified by either reference.</li>
+<li>Line 20: The expression <em>$obj3=&amp;$obj1</em> assigns the reference (address) of the variable <em>$obj1</em> to <em>$obj3</em>. If <em>$obj1</em> is an object, as is the case here, the preceding expression is equivalent to <em>$obj3=$obj1</em>.</li>
+<li>Lines 28–29: demonstrate that an object can be traversed like a dictionary. The keys of the dictionary are the names of the attributes, and the values of the dictionary are the values of those same attributes.</li>
+<li>Line 27: The <em>count</em> function can be applied to an object but does not, as one might expect, return the number of attributes. Therefore, an object shares similarities with a dictionary but is not one.
+<a id="refheading398941881943603"></a></li>
+</ul>
+<h2 id="52-a-person-class-with-no-declared-attributes-example_15">5.2. <span style="color: #4f81bd"><strong>A Person class with no declared attributes (example_15)</strong></span></h2>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line">&lt;?php</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold">class </span><span style="color:#000000">Person {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// class attributes</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// not declared - can be created dynamically</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// method</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">function </span><span style="color:#000000">identity() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// At first glance, this uses non-existent attributes</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#008000">&quot;[</span><span style="color:#0000ff">$this-&gt;firstName</span><span style="color:#008000">, </span><span style="color:#0000ff">$this-&gt;lastName</span><span style="color:#008000">, </span><span style="color:#0000ff">$this-&gt;age</span><span style="color:#008000">]&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// test</span>
+<span class="odt-code-line">// attributes are public and can be created dynamically</span>
+<span class="odt-code-line"><span style="color:#0000ff">$p </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">Person();</span></span>
+<span class="odt-code-line"><span style="color:#000000">$p-&gt;firstName = </span><span style="color:#008000">&quot;Paul&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">$p-&gt;lastName = </span><span style="color:#008000">&quot;Langevin&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">$p-&gt;age =</span><span style="color:#000080"> 48</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// calling a method</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;person=&quot; </span><span style="color:#000000">. $p-&gt;identity() . </span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// end</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">?&gt;</span>
+</code></pre></div>
+
+<p><strong>Results</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>person=[Paul,Langevin,48]
+</code></pre></div>
+<p><strong>Comments</strong></p>
+<ul>
+<li>lines 3–13: define a <em>Person</em> <strong>class</strong>. A class is a template used to create objects. A class is a collection of <strong>attributes</strong> and functions called <strong>methods</strong>. Attributes do not have to be declared.</li>
+<li>Lines 9–12: The <em>identity</em> method displays the values of three attributes not declared in the class. The keyword <strong>$this</strong> refers to the object to which the method is applied.</li>
+<li>Line 17: An object <em>$p</em> of type <em>Person</em> is created. The keyword <strong>new</strong> is used to create a new object. The operation returns a <strong>reference</strong> to the created object (i.e., an address). Various notations are possible: <em>new Person()</em>, <em>new Person</em>, <em>new person</em>. The class name is case-insensitive.</li>
+<li>Lines 18–20: The three attributes required by the <em>identity</em> method are created in the $p object.</li>
+<li>line 22: the <em>identity</em> method of the <em>Person</em> class is applied to the <em>$p</em> object. In the code (lines 9–11) of the <em>identity</em> method, <em>$this</em> refers to the same object as <em>$p</em>.
+<a id="refheading398961881943603"></a></li>
+</ul>
+<h2 id="53-the-person-class-with-declared-attributes-example_16">5.3. <span style="color: #4f81bd"><strong>The Person class with declared attributes (example_16)</strong></span></h2>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line">&lt;?php</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold">class </span><span style="color:#000000">Person {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// class attributes</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">var </span><span style="color:#0000ff">$last_name</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">var </span><span style="color:#0000ff">$lastName</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">var </span><span style="color:#0000ff">$age</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// method</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">function </span><span style="color:#000000">identity() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#008000">&quot;[</span><span style="color:#0000ff">$this-&gt;firstName</span><span style="color:#008000">,</span><span style="color:#0000ff">$this-&gt;lastName</span><span style="color:#008000">,</span><span style="color:#0000ff">$this-&gt;age</span><span style="color:#008000">]&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// test</span>
+<span class="odt-code-line">// attributes are public</span>
+<span class="odt-code-line"><span style="color:#0000ff">$p </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">Person();</span></span>
+<span class="odt-code-line"><span style="color:#000000">$p-&gt;firstName = </span><span style="color:#008000">&quot;Paul&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">$p-&gt;lastName = </span><span style="color:#008000">&quot;Langevin&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">$p-&gt;age =</span><span style="color:#000080"> 48</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// calling a method</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;person=&quot; </span><span style="color:#000000">. $p-&gt;identity() . </span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// end</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">?&gt;</span>
+</code></pre></div>
+
+<p><strong>Results</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>person=[Paul,Langevin,48]
+</code></pre></div>
+<p><strong>Comments</strong></p>
+<ul>
+<li>lines 6–8: the class attributes are explicitly declared using the <strong>var</strong> keyword.
+<a id="refheading398981881943603"></a></li>
+</ul>
+<h2 id="54-the-person-class-with-a-constructor-example_17">5.4. <span style="color: #4f81bd"><strong>The Person class with a constructor (example_17)</strong></span></h2>
+<p>The previous examples showed exotic <em>Person</em> classes as they might have been found in PHP 4. It is not recommended to follow these examples. We now present a <em>Person</em> class that follows PHP 5 best practices:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line">&lt;?php</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold">class </span><span style="color:#000000">Person {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// class attributes</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$last_name</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$last_name</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$age</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// getters and setters</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getFirstName() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;first_name;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getLastName() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;lastName;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getAge() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;age;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">setFirstName(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;firstName = </span><span style="color:#0000ff">$firstName</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">setLastName(</span><span style="color:#0000ff">$lastName</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;lastName = </span><span style="color:#0000ff">$lastName</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">setAge(</span><span style="color:#0000ff">$age</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;age = </span><span style="color:#0000ff">$age</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// constructor</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">function __construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">, </span><span style="color:#0000ff">$lastName</span><span style="color:#000000">, </span><span style="color:#0000ff">$age</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// we use the set methods</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setFirstName(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setLastName(</span><span style="color:#0000ff">$lastName</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setAge(</span><span style="color:#0000ff">$age</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// toString method</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">function __toString</span><span style="color:#000000">() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#008000">&quot;[</span><span style="color:#0000ff">$this-&gt;first_name</span><span style="color:#008000">, </span><span style="color:#0000ff">$this-&gt;last_name</span><span style="color:#008000">, </span><span style="color:#0000ff">$this-&gt;age</span><span style="color:#008000">]&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// test</span>
+<span class="odt-code-line">// create a Person object</span>
+<span class="odt-code-line"><span style="color:#0000ff">$p </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">Person(</span><span style="color:#008000">&quot;Paul&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;Langevin&quot;</span><span style="color:#000000">,</span><span style="color:#000080"> 48</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// identity of this person</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">person=$p</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// changing the age</span>
+<span class="odt-code-line"><span style="color:#000000">$p-&gt;setAge(</span><span style="color:#000080">14</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// person&#x27;s identity</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">person=$p</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// end</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">?&gt;</span>
+</code></pre></div>
+
+<p><strong>Results</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>person=[Paul,Langevin,48]
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>person=[Paul,Langevin,14]
+</code></pre></div>
+<p><strong>Comments</strong></p>
+<ul>
+<li>lines 3-48: the <em>Person</em> class</li>
+<li>lines 6-8: the class&#x27;s <strong>private</strong> attributes. These attributes are only visible within the class. Other keywords that can be used are:</li>
+<li><strong>public</strong>: makes the attribute a public attribute visible from outside the class</li>
+<li><strong>protected</strong>: makes the attribute a protected attribute visible from within the class and its derived classes.</li>
+<li>Because the attributes are private, they cannot be accessed from outside the class. Therefore, we cannot write the following code:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>$p = new Personne();
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>$p-&gt;name = &quot;Landru&quot;;
+</code></pre></div></td></tr></table></div>
+<p>Here, we are outside the <em>Person</em> class. Since the <em>name</em> attribute is private, line 2 is incorrect. To initialize the private fields of the $p object, there are two ways:</p>
+<ul>
+<li>(continued)<ul>
+<li>use the public <strong>set</strong> and <strong>get</strong> methods (the names of these methods can be anything) from lines 11–33. We can then write:</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>$p = new Person;
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>$p-&gt;setName(&quot;Landru&quot;);
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>(continued)<ul>
+<li>Use the constructor from lines 36–41. We would then write:</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>$p = new Person(&quot;Michel&quot;, &quot;Landru&quot;, 44);
+</code></pre></div></td></tr></table></div>
+<p>The code above automatically calls the <em>Person</em> class method called <em>__construct</em>.</p>
+<ul>
+<li>Line 54: This line displays the Person <em>$p</em> as a string. To do this, the <em>Person</em> class method called <em>__toString</em> is used.</li>
+</ul>
+<p><a id="refheading399001881943603"></a></p>
+<h2 id="55-the-person-class-with-validity-checks-in-the-constructor-example_18">5.5. <span style="color: #4f81bd"><strong>The Person class with validity checks in the constructor (example_18)</strong></span></h2>
+<p>A class’s constructor is the right place to verify that the object’s initialization values are correct. However, an object can also be initialized via its <em>set</em> methods or equivalents. To avoid duplicating the same checks in two different places, we’ll place them within the <em>set</em> methods. If an object’s initialization value is found to be incorrect, an <strong>exception</strong> will be thrown. Here is an example:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line">&lt;?php</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold">class </span><span style="color:#000000">Person {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// class attributes</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$first_name</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$last_name</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$age</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line">// getters and setters</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getFirstName() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;firstName;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getLastName() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;lastName;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getAge() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;age;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">setFirstName(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// the first name must not be empty</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(!preg_match(</span><span style="color:#008000">&quot;/^\s*(.+?)\s*$/&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">$firstName</span><span style="color:#000000">, </span><span style="color:#0000ff">$fields</span><span style="color:#000000">)) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="font-weight:bold;color:#000000">throw new Exception</span><span style="color:#000000">(</span><span style="color:#008000">&quot;The first name must not be empty&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">} </span><span style="font-weight:bold;color:#000000">else </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#000000">$this-&gt;firstName = </span><span style="color:#0000ff">$fields</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">];</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">setLastName(</span><span style="color:#0000ff">$lastName</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// the last name must not be empty</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(!preg_match(</span><span style="color:#008000">&quot;/^\s*(.+?)\s*$/&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">$name</span><span style="color:#000000">, </span><span style="color:#0000ff">$fields</span><span style="color:#000000">)) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="font-weight:bold;color:#000000">throw new Exception</span><span style="color:#000000">(</span><span style="color:#008000">&quot;The name must not be empty&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">} </span><span style="font-weight:bold;color:#000000">else </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#000000">$this-&gt;name = </span><span style="color:#0000ff">$fields</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">];</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">setAge(</span><span style="color:#0000ff">$age</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// the age must be valid</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(!preg_match(</span><span style="color:#008000">&quot;/^\s*(\d+)\s*$/&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">$age</span><span style="color:#000000">, </span><span style="color:#0000ff">$fields</span><span style="color:#000000">)) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="font-weight:bold;color:#000000">throw new Exception</span><span style="color:#000000">(</span><span style="color:#008000">&quot;The age must be a positive integer or zero&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">} </span><span style="font-weight:bold;color:#000000">else </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#000000">$this-&gt;age = </span><span style="color:#0000ff">$fields</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">];</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// constructor</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">function __construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$first_name</span><span style="color:#000000">, </span><span style="color:#0000ff">$last_name</span><span style="color:#000000">, </span><span style="color:#0000ff">$age</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// we use the set methods</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setFirstName(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setLastName(</span><span style="color:#0000ff">$lastName</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setAge(</span><span style="color:#0000ff">$age</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// toString method</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">function __toString</span><span style="color:#000000">() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#008000">&quot;[</span><span style="color:#0000ff">$this-&gt;first_name</span><span style="color:#008000">, </span><span style="color:#0000ff">$this-&gt;last_name</span><span style="color:#008000">, </span><span style="color:#0000ff">$this-&gt;age</span><span style="color:#008000">]&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// test</span>
+<span class="odt-code-line">// Create a Person object</span>
+<span class="odt-code-line"><span style="color:#0000ff">$p </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">Person(</span><span style="color:#008000">&quot;Paul&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;Langevin&quot;</span><span style="color:#000000">,</span><span style="color:#000080"> 48</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// identity of this person</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">person=$p</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// Creating an incorrect Person object</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">try </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#0000ff">$p </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">Person(</span><span style="color:#008000">&quot;xx&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;yy&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;zz&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">} </span><span style="font-weight:bold;color:#000000">catch </span><span style="color:#000000">(</span><span style="font-weight:bold;color:#000000">Exception </span><span style="color:#0000ff">$e</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#000000">$e-&gt;getMessage();</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// end</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">?&gt;</span>
+</code></pre></div>
+
+<p><strong>Results</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>people=[Paul, Langevin, 48]
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Age must be a positive integer or zero
+</code></pre></div>
+<p><strong>Comments</strong></p>
+<ul>
+<li>lines 23-30: initialization of the <em>first_name</em> attribute and verification of the initialization value</li>
+<li>line 25: use of a regular expression. The first name is a sequence of one or more characters, possibly followed or preceded by spaces.</li>
+<li>line 26: if the last name is empty, an exception is thrown; otherwise, the first name is stored (line 28)</li>
+<li>line 66: use of the <em>Person</em> class constructor</li>
+<li>line 68: use of the <em>__toString</em> method of the <em>Person</em> class</li>
+<li>Lines 70–74: Handling any exception thrown by the <em>Person</em> class constructor.</li>
+</ul>
+<p><a id="refheading399021881943603"></a></p>
+<h2 id="56-adding-a-method-that-acts-as-a-second-constructor-example_19">5.6. <span style="color: #4f81bd"><strong>Adding a method that acts as a second constructor (example_19)</strong></span></h2>
+<p>In PHP 5, it is not possible to have multiple constructors with different parameters that would allow an object to be constructed in various ways. We can therefore use methods that act as constructors:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line">&lt;?php</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold">class </span><span style="color:#000000">Person {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// class attributes</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$first_name</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$lastName</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$age</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line">// getters and setters</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getFirstName() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;firstName;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">….</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// constructor</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">function __construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">, </span><span style="color:#0000ff">$lastName</span><span style="color:#000000">, </span><span style="color:#0000ff">$age</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// we use the set methods</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setFirstName(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setLastName(</span><span style="color:#0000ff">$lastName</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setAge(</span><span style="color:#0000ff">$age</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// method</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">initWithPerson(</span><span style="color:#0000ff">$p</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// initializes the current object with a person $p</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;</span><span style="font-weight:bold;color:#000000">__construct</span><span style="color:#000000">($p-&gt;firstName, $p-&gt;lastName, $p-&gt;age);</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// toString method</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">function __toString</span><span style="color:#000000">() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#008000">&quot;[</span><span style="color:#0000ff">$this-&gt;firstName</span><span style="color:#008000">, </span><span style="color:#0000ff">$this-&gt;lastName</span><span style="color:#008000">, </span><span style="color:#0000ff">$this-&gt;age</span><span style="color:#008000">]&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// test</span>
+<span class="odt-code-line">// Create a Person object</span>
+<span class="odt-code-line"><span style="color:#0000ff">$p </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">Person(</span><span style="color:#008000">&quot;Paul&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;Langevin&quot;</span><span style="color:#000000">,</span><span style="color:#000080"> 48</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// identity of this person</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">person=$p</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// creating a second person</span>
+<span class="odt-code-line"><span style="color:#0000ff">$p2 </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">Person(</span><span style="color:#008000">&quot;Laure&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;Adeline&quot;</span><span style="color:#000000">,</span><span style="color:#000080"> 67</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// Initialize the first with the values from the second</span>
+<span class="odt-code-line"><span style="color:#000000">$p-&gt;initWithPerson(</span><span style="color:#0000ff">$p2</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// verification</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">person=$p</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// end</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">?&gt;</span>
+</code></pre></div>
+
+<p><strong>Results</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>people=[Paul,Langevin,48]
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>person=[Laure,Adeline,67]
+</code></pre></div>
+<p><strong>Comments</strong></p>
+<ul>
+<li>lines 26-29: The <em>initWithPerson</em> method allows you to assign the attribute values of another <em>Person</em> object to the current object. Here, it calls the <em>__construct</em> constructor, but this is not mandatory.
+<a id="refheading399041881943603"></a></li>
+</ul>
+<h2 id="57-an-array-of-person-objects-example_20">5.7. <span style="color: #4f81bd"><strong>An array of Person objects (example_20)</strong></span></h2>
+<p>The following example shows that you can have arrays of objects.</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line">&lt;?php</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold">class </span><span style="color:#000000">Person {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// class attributes</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$first_name</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$lastName</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$age</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line">// getters and setters</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getFirstName() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;firstName;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">...</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// constructor</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">function __construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">, </span><span style="color:#0000ff">$lastName</span><span style="color:#000000">, </span><span style="color:#0000ff">$age</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// we use the set methods</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setFirstName(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setLastName(</span><span style="color:#0000ff">$lastName</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setAge(</span><span style="color:#0000ff">$age</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// method</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">initWithPerson(</span><span style="color:#0000ff">$p</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line">….</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// toString method</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">function __toString</span><span style="color:#000000">() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">...</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// test</span>
+<span class="odt-code-line">// Create an array of Person objects</span>
+<span class="odt-code-line"><span style="color:#0000ff">$group </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">array</span><span style="color:#000000">(</span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">Person(</span><span style="color:#008000">&quot;Paul&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;Langevin&quot;</span><span style="color:#000000">,</span><span style="color:#000080"> 48</span><span style="color:#000000">), </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">Person(</span><span style="color:#008000">&quot;Sylvie&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;Lefur&quot;</span><span style="color:#000000">,</span><span style="color:#000080"> 70</span><span style="color:#000000">));</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// identities of these people</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">for </span><span style="color:#000000">(</span><span style="color:#0000ff">$i </span><span style="color:#000000">=</span><span style="color:#000080"> 0</span><span style="color:#000000">; </span><span style="color:#0000ff">$i </span><span style="color:#000000">&lt; count(</span><span style="color:#0000ff">$group</span><span style="color:#000000">); $i++)</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;group[</span><span style="color:#0000ff">$i</span><span style="color:#008000">]</span><span style="color:#0000ff">=$group[$i]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// end</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">?&gt;</span>
+</code></pre></div>
+
+<p><strong>Results</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>group[0]=[Paul,Langevin,48]
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>group[1]=[Sylvie,Lefur,70]
+</code></pre></div>
+<p><strong>Comments</strong></p>
+<ul>
+<li>line 39: creation of an array of 2 people</li>
+<li>line 42: iterating through the array</li>
+<li>line 43: <em>$group[$i]</em> is an object of type <em>Person</em>. The <em>__toString</em> method is used to display it.
+<a id="refheading399061881943603"></a></li>
+</ul>
+<h2 id="58-creating-a-class-derived-from-the-person-class-example_21">5.8. <span style="color: #4f81bd"><strong>Creating a class derived from the Person class (example_21)</strong></span></h2>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line">&lt;?php</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold">class </span><span style="color:#000000">Person {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// class attributes</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$first_name</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$last_name</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$age</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">  </span>
+<span class="odt-code-line">// getters and setters</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getFirstName() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;first_name;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line">...</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// constructor</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">function __construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">, </span><span style="color:#0000ff">$lastName</span><span style="color:#000000">, </span><span style="color:#0000ff">$age</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// we use the set methods</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setFirstName(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setLastName(</span><span style="color:#0000ff">$lastName</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setAge(</span><span style="color:#0000ff">$age</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// method</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">initWithPerson(</span><span style="color:#0000ff">$p</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// initializes the current object with a person $p</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;</span><span style="font-weight:bold;color:#000000">__construct</span><span style="color:#000000">($p-&gt;firstName, $p-&gt;lastName, $p-&gt;age);</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// toString method</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">function __toString</span><span style="color:#000000">() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#008000">&quot;[</span><span style="color:#0000ff">$this-&gt;firstName</span><span style="color:#008000">, </span><span style="color:#0000ff">$this-&gt;lastName</span><span style="color:#008000">, </span><span style="color:#0000ff">$this-&gt;age</span><span style="color:#008000">]&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// a class derived from Person</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">class </span><span style="color:#000000">Teacher </span><span style="font-weight:bold;color:#000000">extends </span><span style="color:#000000">Person {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// attributes</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$subject</span><span style="color:#000000">;</span><span style="color:#008080">  </span><span style="font-style:italic;color:#808080"> // subject taught</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// getter and setter</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getSubject() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;subject;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">setDiscipline(</span><span style="color:#0000ff">$discipline</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;discipline = </span><span style="color:#0000ff">$discipline</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// constructor</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function __construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">, </span><span style="color:#0000ff">$lastName</span><span style="color:#000000">, </span><span style="color:#0000ff">$age</span><span style="color:#000000">, </span><span style="color:#0000ff">$discipline</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// parent attributes</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">parent::</span><span style="font-weight:bold;color:#000000">__construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">, </span><span style="color:#0000ff">$lastName</span><span style="color:#000000">, </span><span style="color:#0000ff">$age</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// other attributes</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setSubject(</span><span style="color:#0000ff">$subject</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// Override the __toString function of the parent class</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function __toString</span><span style="color:#000000">() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#008000">&quot;[&quot; </span><span style="color:#000000">. parent::</span><span style="font-weight:bold;color:#000000">__toString</span><span style="color:#000000">() . </span><span style="color:#008000">&quot;,</span><span style="color:#0000ff">$this-&gt;discipline</span><span style="color:#008000">]&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// test</span>
+<span class="odt-code-line">// Create an array of Person objects and derived classes</span>
+<span class="odt-code-line"><span style="color:#0000ff">$group </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">array</span><span style="color:#000000">(</span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">Teacher(</span><span style="color:#008000">&quot;Paul&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;Langevin&quot;</span><span style="color:#000000">,</span><span style="color:#000080"> 48</span><span style="color:#000000">, </span><span style="color:#008000">&quot;English&quot;</span><span style="color:#000000">), </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">Person(</span><span style="color:#008000">&quot;Sylvie&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;Lefur&quot;</span><span style="color:#000000">,</span><span style="color:#000080"> 70</span><span style="color:#000000">));</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// identities of these people</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">for </span><span style="color:#000000">(</span><span style="color:#0000ff">$i </span><span style="color:#000000">=</span><span style="color:#000080"> 0</span><span style="color:#000000">; </span><span style="color:#0000ff">$i </span><span style="color:#000000">&lt; count(</span><span style="color:#0000ff">$group</span><span style="color:#000000">); $i++)</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;group[</span><span style="color:#0000ff">$i</span><span style="color:#008000">] = </span><span style="color:#0000ff">$group[$i]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// end</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">?&gt;</span>
+</code></pre></div>
+
+<p><strong>Results</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>group[0]=[[Paul,Langevin,48],English]
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>group[1]=[Sylvie,Lefur,70]
+</code></pre></div>
+<p><strong>Comments</strong></p>
+<ul>
+<li>lines 3-35: the <em>Person</em> class</li>
+<li>line 38: the <em>Teacher</em> class extends the <em>Person</em> class<em>.</em> The derived <em>Teacher</em> class inherits the attributes and methods of its parent class.</li>
+<li>line 41: the <em>Teacher</em> class adds a new attribute, <em>subject,</em> which is specific to it</li>
+<li>line 55: the <em>Teacher</em> class constructor takes 4 parameters<ul>
+<li>3 to initialize its parent class (first_name, last_name, age)</li>
+<li>1 for its own initialization (subject)</li>
+</ul>
+</li>
+<li>line 57: the derived class has access to the methods and constructors of its parent class via the keyword <strong>parent::</strong>. Here, we pass the parameters (first_name, last_name, age) to the parent class’s constructor.</li>
+<li>line 64: the <em>__toString</em> method of the derived class uses the <em>__toString</em> method of the parent class.</li>
+<li>line 71: an array containing a <em>Teacher</em> object and a <em>Person</em> object.</li>
+<li>line 74: we loop through the elements of the array</li>
+<li>line 75: the <em>__toString</em> method of each element <em>$group[$i]</em> will be called. The <em>Person</em> class has a <em>__toString</em> method. The <em>Teacher</em> class has two: that of its parent class and its own. One might wonder which one will be called. Execution shows that it was the <em>Teacher</em> class’s method that was called. This is always the case: when a method is called on an object, it is searched for in the following order: in the object itself, in its parent class if it has one, then in the parent class of the parent class, and so on… The search stops as soon as the method is found.
+<a id="refheading399081881943603"></a></li>
+</ul>
+<h2 id="59-creating-a-second-class-derived-from-the-person-class-example_22">5.9. <span style="color: #4f81bd"><strong>Creating a second class derived from the Person class (example_22)</strong></span></h2>
+<p>The following example creates a <em>Student</em> class derived from the <em>Person</em> class:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line">&lt;?php</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold">class </span><span style="color:#000000">Person {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// class attributes</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$lastName</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$lastName</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$age</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// getters and setters</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getFirstName() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;firstName;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line">...</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// constructor</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">function __construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">, </span><span style="color:#0000ff">$lastName</span><span style="color:#000000">, </span><span style="color:#0000ff">$age</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// we use the set methods</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setFirstName(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setLastName(</span><span style="color:#0000ff">$lastName</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setAge(</span><span style="color:#0000ff">$age</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// method</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">initWithPerson(</span><span style="color:#0000ff">$p</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// initializes the current object with a person $p</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">...</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// toString method</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">function __toString</span><span style="color:#000000">() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#008000">&quot;[</span><span style="color:#0000ff">$this-&gt;firstName</span><span style="color:#008000">,</span><span style="color:#0000ff">$this-&gt;lastName</span><span style="color:#008000">,</span><span style="color:#0000ff">$this-&gt;age</span><span style="color:#008000">]&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// a class derived from Person</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">class </span><span style="color:#000000">Teacher </span><span style="font-weight:bold;color:#000000">extends </span><span style="color:#000000">Person {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// attributes</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$subject</span><span style="color:#000000">;</span><span style="color:#008080">  </span><span style="font-style:italic;color:#808080"> // subject taught</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// getters and setters</span></span>
+<span class="odt-code-line">...</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// constructor</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function __construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">, </span><span style="color:#0000ff">$lastName</span><span style="color:#000000">, </span><span style="color:#0000ff">$age</span><span style="color:#000000">, </span><span style="color:#0000ff">$subject</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// parent attributes</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">parent::</span><span style="font-weight:bold;color:#000000">__construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">, </span><span style="color:#0000ff">$lastName</span><span style="color:#000000">, </span><span style="color:#0000ff">$age</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// other attributes</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setSubject(</span><span style="color:#0000ff">$subject</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// Override the parent class&#x27;s __toString() method</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function __toString</span><span style="color:#000000">() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#008000">&quot;[&quot; </span><span style="color:#000000">. parent::</span><span style="font-weight:bold;color:#000000">__toString</span><span style="color:#000000">() . </span><span style="color:#008000">&quot;,</span><span style="color:#0000ff">$this-&gt;discipline</span><span style="color:#008000">]&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// A class derived from Person</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">class </span><span style="color:#000000">Student </span><span style="font-weight:bold;color:#000000">extends </span><span style="color:#000000">Person {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// attributes</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$program</span><span style="color:#000000">;</span><span style="color:#008080">  </span><span style="font-style:italic;color:#808080"> // subject taught</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// getter and setter</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getEducation() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;education;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">setFormation(</span><span style="color:#0000ff">$formation</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;training = </span><span style="color:#0000ff">$training</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// constructor</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function __construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">, </span><span style="color:#0000ff">$lastName</span><span style="color:#000000">, </span><span style="color:#0000ff">$age</span><span style="color:#000000">, </span><span style="color:#0000ff">$education</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// parent attributes</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">parent::</span><span style="font-weight:bold;color:#000000">__construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$firstName</span><span style="color:#000000">, </span><span style="color:#0000ff">$lastName</span><span style="color:#000000">, </span><span style="color:#0000ff">$age</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// other attributes</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setEducation(</span><span style="color:#0000ff">$education</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// Override the __toString function of the parent class</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function __toString</span><span style="color:#000000">() {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#008000">&quot;[&quot; </span><span style="color:#000000">. parent::</span><span style="font-weight:bold;color:#000000">__toString</span><span style="color:#000000">() . </span><span style="color:#008000">&quot;,</span><span style="color:#0000ff">$this-&gt;formation</span><span style="color:#008000">]&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// test</span>
+<span class="odt-code-line">// Create an array of Person objects and derived classes</span>
+<span class="odt-code-line"><span style="color:#0000ff">$group </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">array</span><span style="color:#000000">(</span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">Teacher(</span><span style="color:#008000">&quot;Paul&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;Langevin&quot;</span><span style="color:#000000">,</span><span style="color:#000080"> 48</span><span style="color:#000000">, </span><span style="color:#008000">&quot;English&quot;</span><span style="color:#000000">), </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">Person(</span><span style="color:#008000">&quot;Sylvie&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;Lefur&quot;</span><span style="color:#000000">,</span><span style="color:#000080"> 70</span><span style="color:#000000">), </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">Student(</span><span style="color:#008000">&quot;Steve&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;Boer&quot;</span><span style="color:#000000">,</span><span style="color:#000080"> 23</span><span style="color:#000000">, </span><span style="color:#008000">&quot;iup2 quality&quot;</span><span style="color:#000000">));</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// identities of these people</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">for </span><span style="color:#000000">(</span><span style="color:#0000ff">$i </span><span style="color:#000000">=</span><span style="color:#000080"> 0</span><span style="color:#000000">; </span><span style="color:#0000ff">$i </span><span style="color:#000000">&lt; count(</span><span style="color:#0000ff">$group</span><span style="color:#000000">); $i++)</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;group[</span><span style="color:#0000ff">$i</span><span style="color:#008000">]</span><span style="color:#0000ff">=$group[$i]</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// end</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">?&gt;</span>
+</code></pre></div>
+
+<p><strong>Results</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>group[0]=[[Paul,Langevin,48],English]
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>group[1] = [Sylvie, Lefur, 70]
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>group[2]=[[Steve,Boer,23],iup2 quality]
+</code></pre></div>
+<p><a id="refheading49023760291743"></a></p>
+<h2 id="510-interfaces-example_23">5.10. <span style="color: #4f81bd"><strong>Interfaces (example_23)</strong></span></h2>
+<p>An interface is a structure that defines method prototypes. A class that implements an interface defines the code for all of the interface&#x27;s methods.</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line">&lt;?php</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// an interface</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">interface </span><span style="color:#000000">IExample {</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">function </span><span style="color:#000000">add(</span><span style="color:#0000ff">$i</span><span style="color:#000000">, </span><span style="color:#0000ff">$j</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">function </span><span style="color:#000000">subtract(</span><span style="color:#0000ff">$i</span><span style="color:#000000">, </span><span style="color:#0000ff">$j</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// Implementation 1 of the interface</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">class </span><span style="color:#000000">Class1 </span><span style="font-weight:bold;color:#000000">implements </span><span style="color:#000000">IExample {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">add(</span><span style="color:#0000ff">$a</span><span style="color:#000000">, </span><span style="color:#0000ff">$b</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#0000ff">$a </span><span style="color:#000000">+ </span><span style="color:#0000ff">$b </span><span style="color:#000000">+</span><span style="color:#000080"> 10</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">subtract(</span><span style="color:#0000ff">$a</span><span style="color:#000000">, </span><span style="color:#0000ff">$b</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#0000ff">$a </span><span style="color:#000000">- </span><span style="color:#0000ff">$b </span><span style="color:#000000">+</span><span style="color:#000080"> 20</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// Implementation 2 of the interface</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">class </span><span style="color:#000000">Class2 </span><span style="font-weight:bold;color:#000000">implements </span><span style="color:#000000">IExample {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">add(</span><span style="color:#0000ff">$a</span><span style="color:#000000">, </span><span style="color:#0000ff">$b</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#0000ff">$a </span><span style="color:#000000">+ </span><span style="color:#0000ff">$b </span><span style="color:#000000">+</span><span style="color:#000080"> 100</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">subtract(</span><span style="color:#0000ff">$a</span><span style="color:#000000">, </span><span style="color:#0000ff">$b</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#0000ff">$a </span><span style="color:#000000">- </span><span style="color:#0000ff">$b </span><span style="color:#000000">+</span><span style="color:#000080"> 200</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// function</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">function </span><span style="color:#000000">calculate(</span><span style="color:#0000ff">$a</span><span style="color:#000000">, </span><span style="color:#0000ff">$b</span><span style="color:#000000">, IExample </span><span style="color:#0000ff">$interface</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#000000">$interface-&gt;add(</span><span style="color:#0000ff">$a</span><span style="color:#000000">, </span><span style="color:#0000ff">$b</span><span style="color:#000000">).</span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#000000">$interface-&gt;subtract(</span><span style="color:#0000ff">$a</span><span style="color:#000000">, </span><span style="color:#0000ff">$b</span><span style="color:#000000">).</span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// ------------------- main</span>
+<span class="odt-code-line">// Create 2 objects of type Class1 and Class2</span>
+<span class="odt-code-line"><span style="color:#0000ff">$c1 </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">Class1();</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$c2 </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">Class2();</span></span>
+<span class="odt-code-line">// call the calculate function</span>
+<span class="odt-code-line"><span style="color:#000000">calculate(</span><span style="color:#000080">4</span><span style="color:#000000">,</span><span style="color:#000080"> 3</span><span style="color:#000000">, </span><span style="color:#0000ff">$c1</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">calculate(</span><span style="color:#000080">14</span><span style="color:#000000">,</span><span style="color:#000080"> 13</span><span style="color:#000000">, </span><span style="color:#0000ff">$c2</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">?&gt;</span>
+</code></pre></div>
+
+<p><strong>Results</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>17
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>21
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>127
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>201
+</code></pre></div>
+<p><strong>Comments</strong></p>
+<ul>
+<li>Lines 4–8: The <em>IExample</em> interface defines two methods: the <em>add</em> function (line 5) and the <em>subtract</em> function (line 7). The interface does not define the code for these methods. The classes that implement the interface will do so.</li>
+<li>Line 11: The <em>Class1</em> class <strong>implements</strong> the <em>IExample</em> interface. It therefore defines code for the <em>add</em> method (line 13) and the <em>subtract</em> method (line 17).</li>
+<li>Lines 24–34: The same applies to the <em>Class2</em> class.</li>
+<li>Line 37: The <code>*calculer</code><em> method takes three parameters: two integers, <code>*$a*</code> and </em><code>$b*</code>, and an object <code>*$interface</code><em> that implements the <code>*IExemple</code></em> interface. We could have written <em><code>function calculate($a, $b, $interface)</code></em> without specifying the <em><code>IExample</code></em> type of the <code>*$interface*</code> parameter. By specifying it, we allow the PHP interpreter to verify that the actual parameter is indeed an object implementing the <code>*IExample</code>* interface.</li>
+<li>lines 38–39: use of the <em>add</em> and <em>subtract</em> methods of the $interface object. Because it implements the <em>IExample</em> interface, we know it has these two methods.</li>
+<li>Lines 44–45: Creation of two objects of different types, both of which implement the <em>IExample</em> interface.</li>
+<li>Line 47: We pass the object <em>$c1</em> of type <em>Class1</em>, which implements the <em>IExample</em> interface, to the <em>calculate</em> function.</li>
+<li>Line 48: The object <em>$c2</em> of type <em>Class2</em>, which implements the <em>IExample</em> interface, is passed to the <em>calculate</em> function.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://tahe.developpez.com" target="_blank">
+          https://tahe.developpez.com
+        </a>
+        <br>
+        This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the
+<em>Creative Commons Attribution – Non-Commercial –
+ShareAlike 3.0 Unported</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
