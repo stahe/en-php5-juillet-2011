@@ -606,6 +606,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#101-clientserver-datetime-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1. Client/server date/time application
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.1. Client/server date/time application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1011-the-server-web_01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1.1. The server (web_01)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#1012-a-client-client1_web_01" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -615,8 +638,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#1013-a-second-client-client2_web_01" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -624,6 +647,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -651,6 +679,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#1022-the-server-web_02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2.2. The server (web_02)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#1023-the-post-client-client2_web_03" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -671,6 +710,23 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103-retrieving-web-server-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3. Retrieving Web Server Environment Variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.3. Retrieving Web Server Environment Variables">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#1031-the-server-web_04" class="md-nav__link">
@@ -723,10 +779,43 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#1042-server-1-web_05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4.2. Server 1 (web_05)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1043-client-1-client1_web_05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4.3. Client 1 (client1_web_05)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#1044-server-2-web_06" class="md-nav__link">
     <span class="md-ellipsis">
       
         10.4.4. Server 2 (web_06)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1045-client-2-client1_web_06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4.5. Client 2 (client1_web_06)
       
     </span>
   </a>
@@ -868,8 +957,6 @@
 
 <p><a id="refheading399381881943603"></a></p>
 <h1 id="10-php-servers">10. <span style="color: #365f91"><strong>PHP Servers</strong></span></h1>
-<p></li>
-</ul></p>
 <p>Since PHP programs can be executed by a web server, such a program becomes a server-side program capable of serving multiple clients. From the client’s perspective, calling a web service is equivalent to requesting the URL of that service. The client can be written in any language, including PHP. In the latter case, we use the network functions we just discussed. We also need to know how to &quot;communicate&quot; with a web service, that is, understand the <em>HTTP</em> protocol used for communication between a web server and its clients. This is the purpose of the following programs.</p>
 <p>The web client described in Section<a href="#inet02"><u><span style="color: #0563c1"> 9.2</span></u></a> allowed us to explore part of the HTTP protocol.</p>
 <p><img src="images/10000000000004B0000000E0FF946545.png" style="width:15.875cm;height:2.963cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004B0000000E0FF946545.png" /></p>
@@ -977,17 +1064,12 @@
   <li>server-side scripts will be written like [example1.php] above
   </li>
   <li>client-side scripts will be written like the console scripts we have written so far.
-<a id="refheading399401881943603"></a>
-
-## 10.1. <span style="color: #4f81bd">**Client/server date/time application**</span>
-
-<a id="refheading399421881943603"></a>
-
-### 10.1.1. <span style="color: #4f81bd">**The server (web\_01)**</span>
-
   </li>
 </ul>
-
+<p><a id="refheading399401881943603"></a></p>
+<h2 id="101-clientserver-datetime-application">10.1. <span style="color: #4f81bd"><strong>Client/server date/time application</strong></span></h2>
+<p><a id="refheading399421881943603"></a></p>
+<h3 id="1011-the-server-web_01">10.1.1. <span style="color: #4f81bd"><strong>The server (web_01)</strong></span></h3>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
 <span class="odt-code-line">// time: number of milliseconds since 01/01/1970</span>
@@ -1351,13 +1433,10 @@
   <li><span style="color: #000000">line 18: encoding of the 3 parameters. We are working in a script written in NetBeans with UTF-8 character encoding. Therefore, the 3 parameter values from line 8 are encoded in UTF-8. The utf8_decode function converts their encoding to ISO-8859-1. Once this is done, they can be encoded for the URL. All non-alphabetic characters are replaced by %xx, where xx is the hexadecimal value of the character. Spaces are replaced by the + sign.</span>
   </li>
   <li><span style="color: #000000">Line 24: The requested URL is </span><b><span style="color: #000000">$URL?$infos, </span></b><span style="color: #000000">where </span><i><span style="color: #000000">$infos </span></i><span style="color: #000000">is in the form </span><i><span style="color: #000000">last_name=val1&amp;first_name=val2&amp;age=val3</span></i><span style="color: #000000">.</span>
-<a id="refheading399561881943603"></a>
-
-### 10.2.2. <span style="color: #4f81bd">**The server (web\_02)**</span>
-
   </li>
 </ul>
-
+<p><a id="refheading399561881943603"></a></p>
+<h3 id="1022-the-server-web_02">10.2.2. <span style="color: #4f81bd"><strong>The server (web_02)</strong></span></h3>
 <p>The server simply displays what it receives.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
@@ -1620,13 +1699,10 @@
   <li>line 6: the HTTP <i>Content-Length</i> header. Since this header was not generated by the server script, it was generated by the web server.
   </li>
   <li>Line 8: the only header generated by the server script
-<a id="refheading399641881943603"></a>
-
-## 10.3. <span style="color: #4f81bd">**Retrieving Web Server Environment Variables**</span>
-
   </li>
 </ul>
-
+<p><a id="refheading399641881943603"></a></p>
+<h2 id="103-retrieving-web-server-environment-variables">10.3. <span style="color: #4f81bd"><strong>Retrieving Web Server Environment Variables</strong></span></h2>
 <p>A server script runs in a web environment that it can access. This environment is stored in the $_SERVER dictionary. First, we write a server application that sends the contents of this dictionary to its clients.</p>
 <p><a id="refheading399661881943603"></a></p>
 <h3 id="1031-the-server-web_04">10.3.1. <span style="color: #4f81bd"><strong>The server (web_04)</strong></span></h3>
@@ -1915,13 +1991,10 @@
   <li>line 6: the <i>Set-Cookie</i> header will be in the form <i>Set-Cookie: PHPSESSID=session_id</i>
   </li>
   <li>Line 7: A client session is not started automatically. The server script must explicitly request it using the <i>session_start()</i> function.
-<a id="refheading399761881943603"></a>
-
-### 10.4.2. <span style="color: #4f81bd">**Server 1 (web\_05)**</span>
-
   </li>
 </ul>
-
+<p><a id="refheading399761881943603"></a></p>
+<h3 id="1042-server-1-web_05">10.4.2. <span style="color: #4f81bd"><strong>Server 1 (web_05)</strong></span></h3>
 <p>Session ID management is transparent to a web service. This identifier is managed by the web server. A web service accesses the client’s session via the <em>session_start()</em> function. From that point on, the web service can read from and write to the client’s session via the $_SESSION array. The following code demonstrates session management for three counters.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
@@ -1999,13 +2072,10 @@
   <li>The web browser sends the session ID back with the HTTP <i>Cookie</i> header.
   </li>
   <li>In its response, the web service no longer includes this identifier. It is now the client’s responsibility to send it with each of its requests.
-<a id="refheading399781881943603"></a>
-
-### 10.4.3. <span style="color: #4f81bd">**Client 1 (client1\_web\_05)**</span>
-
   </li>
 </ul>
-
+<p><a id="refheading399781881943603"></a></p>
+<h3 id="1043-client-1-client1_web_05">10.4.3. <span style="color: #4f81bd"><strong>Client 1 (client1_web_05)</strong></span></h3>
 <p>We will now write a client-side script based on the previous server-side script. In its session management, it must behave like the web browser:</p>
 <ul>
   <li>In the server’s response to its first request, it must find the session ID that the server sends it. It knows it will find it in the HTTP <i>Set-Cookie</i> header.
@@ -2346,13 +2416,10 @@
   <li>lines 22-25: if it is already in the session, its numerical values are incremented by 1
   </li>
   <li>lines 30-35: the array and dictionary are sent to the client
-<a id="refheading399841881943603"></a>
-
-### 10.4.5. <span style="color: #4f81bd">**Client 2 (client1\_web\_06)**</span>
-
   </li>
 </ul>
-
+<p><a id="refheading399841881943603"></a></p>
+<h3 id="1045-client-2-client1_web_06">10.4.5. <span style="color: #4f81bd"><strong>Client 2 (client1_web_06)</strong></span></h3>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
 <span class="odt-code-line"></span>

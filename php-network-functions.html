@@ -589,6 +589,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#92-a-web-client-inet_02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2. A web client ( inet_02)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#93-an-smtp-client-inet_03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3. An SMTP client (inet_03)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#94-a-second-program-for-sending-email-inet_04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.4. A second program for sending email (inet_04)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -724,8 +757,6 @@
 
 <p><a id="refheading399301881943603"></a></p>
 <h1 id="9-php-network-functions">9. <span style="color: #365f91"><strong>PHP Network Functions</strong></span></h1>
-<p></li>
-</ul></p>
 <p>We will now discuss PHP’s network functions, which allow us to perform TCP/IP (Transmission Control Protocol/Internet Protocol) programming.</p>
 <p><a id="refheading399321881943603"></a></p>
 <h2 id="91-retrieving-the-name-or-ip-address-of-a-machine-on-the-internet-inet_01">9.1. <span style="color: #4f81bd"><strong>Retrieving the name or IP address of a machine on the Internet (inet_01)</strong></span></h2>
@@ -787,14 +818,11 @@
   <li>Line 18: The <i>gethostbyname($name) </i>function retrieves the IP address &quot;ip3.ip2.ip1.ip0&quot; of the machine named <i>$name</i>. If the machine <i>$name </i>does not exist, the function returns <i>$name </i>as the result.
   </li>
   <li>Line 22: The <i>gethostbyaddr($ip) </i>function retrieves the hostname of the machine with the IP address $ip in the format &quot;ip3.ip2.ip1.ip0&quot;. If the machine <i>$ip </i>does not exist, the function returns <i>$ip </i>as the result.
-<a id="refheading399341881943603"></a>
-<a id="inet02"></a>
-
-## 9.2. <span style="color: #4f81bd">**A web client (** **inet\_02)**</span>
-
   </li>
 </ul>
-
+<p><a id="refheading399341881943603"></a>
+<a id="inet02"></a></p>
+<h2 id="92-a-web-client-inet_02">9.2. <span style="color: #4f81bd"><strong>A web client (</strong> <strong>inet_02)</strong></span></h2>
 <p>A script to retrieve the content of a website&#x27;s index page.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
@@ -918,13 +946,10 @@
   <li>Line 38: The <i>fputs</i> function allows the client to send data to the server. Here, the text line sent has the following meaning: &quot;I want (GET) the root page (/) of the website I am connected to. I am using HTTP version 1.0.&quot; The current version of this protocol is 1.1.
   </li>
   <li>Line 42: The text lines of the server’s response can be read line by line using a <i>while</i> loop and saved to the text file [$site.html]. Once the web server has sent the requested page, it closes its connection with the client. On the client side, this will be detected as an end-of-file.
-<a id="refheading399361881943603"></a>
-
-## 9.3. <span style="color: #4f81bd">**An SMTP client (inet\_03)**</span>
-
   </li>
 </ul>
-
+<p><a id="refheading399361881943603"></a></p>
+<h2 id="93-an-smtp-client-inet_03">9.3. <span style="color: #4f81bd"><strong>An SMTP client (inet_03)</strong></span></h2>
 <p>Among TCP/IP protocols, SMTP (Simple Mail Transfer Protocol) is the communication protocol for the mail delivery service.</p>
 <p>Notes:</p>
 <ul>
@@ -1371,11 +1396,9 @@
   <li>lines 191–199: reading the other lines of the response
   </li>
   <li>lines 203–204: if the error code is &gt;=500, then the SMTP server is reporting an error.
-## 9.4. <span style="color: #4f81bd">**A second program for sending email (inet\_04)**</span>
-
   </li>
 </ul>
-
+<h2 id="94-a-second-program-for-sending-email-inet_04">9.4. <span style="color: #4f81bd"><strong>A second program for sending email (inet_04)</strong></span></h2>
 <p>This script has the same functionality as the previous one: sending an email. We use modules from the PEAR library for this. This library contains dozens of modules covering various fields. We will use the following:</p>
 <ul>
   <li><i>Net/SMTP</i>: a module for communicating with an SMTP server
@@ -1683,6 +1706,8 @@
   <li>line 61: creates the class responsible for sending the <i>Mail_Mime</i> message<i>. </i>The first parameter of the method is the name of the protocol to use, in this case the SMTP protocol. The second parameter is an array specifying the name and port of the SMTP service to use
   </li>
   <li>line 62: sending the message. The send method takes three parameters: the sender’s address, the <i>Mail_Mime</i> message headers, and the <i>Mail_Mime</i> message body. The send function returns the boolean TRUE if the message was sent successfully, or an error message otherwise.
+  </li>
+</ul>
 
 
 
