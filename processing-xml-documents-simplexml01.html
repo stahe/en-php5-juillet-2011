@@ -675,7 +675,7 @@
 
 
 <p><a id="refheading400021881943603"></a></p>
-<h1 id="12-processing-xml-documents-simplexml_01">12. <span style="color: #365f91"><strong>Processing XML Documents (simplexml_01)</strong></span></h1>
+<h1 id="12-processing-xml-documents-simplexml_01">12. <span style="color: #365f91">Processing XML Documents (simplexml_01)</span></h1>
 <p>Consider the following [data.xml] file:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
@@ -711,7 +711,7 @@
 <span class="odt-code-line"><span style="color:#0000ff">$xml </span><span style="color:#000000">= simplexml_load_file(</span><span style="color:#0000ff">$FILE_NAME</span><span style="color:#000000">);</span></span>
 <span class="odt-code-line"><span style="color:#000000">print_r(</span><span style="color:#0000ff">$xml</span><span style="color:#000000">);</span></span>
 <span class="odt-code-line"><span style="color:#000000">print_r($xml-&gt;teacher-&gt;person[</span><span style="color:#008000">&#x27;gender&#x27;</span><span style="color:#000000">]);</span></span>
-<span class="odt-code-line"><span style="color:#000000">$name = $xml-&gt;teacher-&gt;person-&gt;name;</span></span>
+<span class="odt-code-line">$name = $xml-&gt;teacher-&gt;person-&gt;name;</span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">name=$name</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#000000">$gender </span><span style="color:#0000ff">= </span><span style="color:#000000">$xml-&gt;teacher-&gt;person[</span><span style="color:#008000">&#x27;gender&#x27;</span><span style="color:#000000">];</span></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">gender=$gender</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>

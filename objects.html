@@ -822,9 +822,9 @@
 
 
 <p><a id="refheading398901881943603"></a></p>
-<h1 id="5-objects">5. <span style="color: #365f91"><strong>Objects</strong></span></h1>
+<h1 id="5-objects">5. <span style="color: #365f91">Objects</span></h1>
 <p><a id="refheading398921881943603"></a></p>
-<h2 id="51-any-variable-can-become-an-object-with-attributes-example_14">5.1. <span style="color: #4f81bd"><strong>Any variable can become an object with attributes (example_14)</strong></span></h2>
+<h2 id="51-any-variable-can-become-an-object-with-attributes-example_14">5.1. <span style="color: #4f81bd">Any variable can become an object with attributes (example_14)</span></h2>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
 <span class="odt-code-line"></span>
@@ -880,7 +880,7 @@
 <li>Line 27: The <em>count</em> function can be applied to an object but does not, as one might expect, return the number of attributes. Therefore, an object shares similarities with a dictionary but is not one.
 <a id="refheading398941881943603"></a></li>
 </ul>
-<h2 id="52-a-person-class-with-no-declared-attributes-example_15">5.2. <span style="color: #4f81bd"><strong>A Person class with no declared attributes (example_15)</strong></span></h2>
+<h2 id="52-a-person-class-with-no-declared-attributes-example_15">5.2. <span style="color: #4f81bd">A Person class with no declared attributes (example_15)</span></h2>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
 <span class="odt-code-line"></span>
@@ -921,7 +921,7 @@
 <li>line 22: the <em>identity</em> method of the <em>Person</em> class is applied to the <em>$p</em> object. In the code (lines 9–11) of the <em>identity</em> method, <em>$this</em> refers to the same object as <em>$p</em>.
 <a id="refheading398961881943603"></a></li>
 </ul>
-<h2 id="53-the-person-class-with-declared-attributes-example_16">5.3. <span style="color: #4f81bd"><strong>The Person class with declared attributes (example_16)</strong></span></h2>
+<h2 id="53-the-person-class-with-declared-attributes-example_16">5.3. <span style="color: #4f81bd">The Person class with declared attributes (example_16)</span></h2>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
 <span class="odt-code-line"></span>
@@ -958,7 +958,7 @@
 <li>lines 6–8: the class attributes are explicitly declared using the <strong>var</strong> keyword.
 <a id="refheading398981881943603"></a></li>
 </ul>
-<h2 id="54-the-person-class-with-a-constructor-example_17">5.4. <span style="color: #4f81bd"><strong>The Person class with a constructor (example_17)</strong></span></h2>
+<h2 id="54-the-person-class-with-a-constructor-example_17">5.4. <span style="color: #4f81bd">The Person class with a constructor (example_17)</span></h2>
 <p>The previous examples showed exotic <em>Person</em> classes as they might have been found in PHP 4. It is not recommended to follow these examples. We now present a <em>Person</em> class that follows PHP 5 best practices:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
@@ -1064,7 +1064,7 @@
 <li>Line 54: This line displays the Person <em>$p</em> as a string. To do this, the <em>Person</em> class method called <em>__toString</em> is used.</li>
 </ul>
 <p><a id="refheading399001881943603"></a></p>
-<h2 id="55-the-person-class-with-validity-checks-in-the-constructor-example_18">5.5. <span style="color: #4f81bd"><strong>The Person class with validity checks in the constructor (example_18)</strong></span></h2>
+<h2 id="55-the-person-class-with-validity-checks-in-the-constructor-example_18">5.5. <span style="color: #4f81bd">The Person class with validity checks in the constructor (example_18)</span></h2>
 <p>A class’s constructor is the right place to verify that the object’s initialization values are correct. However, an object can also be initialized via its <em>set</em> methods or equivalents. To avoid duplicating the same checks in two different places, we’ll place them within the <em>set</em> methods. If an object’s initialization value is found to be incorrect, an <strong>exception</strong> will be thrown. Here is an example:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
@@ -1160,7 +1160,7 @@
 <li>Lines 70–74: Handling any exception thrown by the <em>Person</em> class constructor.</li>
 </ul>
 <p><a id="refheading399021881943603"></a></p>
-<h2 id="56-adding-a-method-that-acts-as-a-second-constructor-example_19">5.6. <span style="color: #4f81bd"><strong>Adding a method that acts as a second constructor (example_19)</strong></span></h2>
+<h2 id="56-adding-a-method-that-acts-as-a-second-constructor-example_19">5.6. <span style="color: #4f81bd">Adding a method that acts as a second constructor (example_19)</span></h2>
 <p>In PHP 5, it is not possible to have multiple constructors with different parameters that would allow an object to be constructed in various ways. We can therefore use methods that act as constructors:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
@@ -1225,7 +1225,7 @@
 <li>lines 26-29: The <em>initWithPerson</em> method allows you to assign the attribute values of another <em>Person</em> object to the current object. Here, it calls the <em>__construct</em> constructor, but this is not mandatory.
 <a id="refheading399041881943603"></a></li>
 </ul>
-<h2 id="57-an-array-of-person-objects-example_20">5.7. <span style="color: #4f81bd"><strong>An array of Person objects (example_20)</strong></span></h2>
+<h2 id="57-an-array-of-person-objects-example_20">5.7. <span style="color: #4f81bd">An array of Person objects (example_20)</span></h2>
 <p>The following example shows that you can have arrays of objects.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
@@ -1287,7 +1287,7 @@
 <li>line 43: <em>$group[$i]</em> is an object of type <em>Person</em>. The <em>__toString</em> method is used to display it.
 <a id="refheading399061881943603"></a></li>
 </ul>
-<h2 id="58-creating-a-class-derived-from-the-person-class-example_21">5.8. <span style="color: #4f81bd"><strong>Creating a class derived from the Person class (example_21)</strong></span></h2>
+<h2 id="58-creating-a-class-derived-from-the-person-class-example_21">5.8. <span style="color: #4f81bd">Creating a class derived from the Person class (example_21)</span></h2>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
 <span class="odt-code-line"></span>
@@ -1390,7 +1390,7 @@
 <li>line 75: the <em>__toString</em> method of each element <em>$group[$i]</em> will be called. The <em>Person</em> class has a <em>__toString</em> method. The <em>Teacher</em> class has two: that of its parent class and its own. One might wonder which one will be called. Execution shows that it was the <em>Teacher</em> class’s method that was called. This is always the case: when a method is called on an object, it is searched for in the following order: in the object itself, in its parent class if it has one, then in the parent class of the parent class, and so on… The search stops as soon as the method is found.
 <a id="refheading399081881943603"></a></li>
 </ul>
-<h2 id="59-creating-a-second-class-derived-from-the-person-class-example_22">5.9. <span style="color: #4f81bd"><strong>Creating a second class derived from the Person class (example_22)</strong></span></h2>
+<h2 id="59-creating-a-second-class-derived-from-the-person-class-example_22">5.9. <span style="color: #4f81bd">Creating a second class derived from the Person class (example_22)</span></h2>
 <p>The following example creates a <em>Student</em> class derived from the <em>Person</em> class:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
@@ -1504,7 +1504,7 @@
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>group[2]=[[Steve,Boer,23],iup2 quality]
 </code></pre></div>
 <p><a id="refheading49023760291743"></a></p>
-<h2 id="510-interfaces-example_23">5.10. <span style="color: #4f81bd"><strong>Interfaces (example_23)</strong></span></h2>
+<h2 id="510-interfaces-example_23">5.10. <span style="color: #4f81bd">Interfaces (example_23)</span></h2>
 <p>An interface is a structure that defines method prototypes. A class that implements an interface defines the code for all of the interface&#x27;s methods.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>

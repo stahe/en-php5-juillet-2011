@@ -747,7 +747,7 @@
 <p><a id="refheading398821881943603"></a></p>
 <h1 id="4-application-exercise-tax-calculation">4. <span style="color: #365f91"><strong>Application Exercise – T</strong><strong>ax</strong> <strong>C</strong><strong>alculation</strong></span></h1>
 <p><a id="refheading398841881943603"></a></p>
-<h2 id="41-the-problem">4.1. <span style="color: #4f81bd"><strong>The Problem</strong></span></h2>
+<h2 id="41-the-problem">4.1. <span style="color: #4f81bd">The Problem</span></h2>
 <p>We aim to write a program to calculate a taxpayer’s tax. We’ll consider the simplified case of a taxpayer who has only their salary to report:</p>
 <ul>
 <li>The number of shares for the employee is calculated <strong>as nbParts = nbEnfants / 2 + 1</strong> if they are unmarried, or <strong>nbEnfants / 2 + 2</strong> if they are married, where <em>nbEnfants</em> is the number of children they have.</li>
@@ -764,9 +764,9 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    0                0.65        49062
 </code></pre></div>
 <p>which gives tax I = 0.65*R – 49062*nbParts.</p>
-<p><a id="impots01"></a>
-<a id="refheading398861881943603"></a></p>
-<h2 id="42-version-with-arrays-impots_01">4.2. <span style="color: #4f81bd"><strong>Version with arrays (impots_01)</strong></span></h2>
+<p><a id="refheading398861881943603"></a>
+<a id="impots01"></a></p>
+<h2 id="42-version-with-arrays-impots_01">4.2. <span style="color: #4f81bd">Version with arrays (impots_01)</span></h2>
 <p>We present an initial program where:</p>
 <ul>
 <li>the data needed to calculate the tax are in three arrays (limits, coeffR, coeffN)</li>
@@ -897,9 +897,9 @@
 <li>line 76: <em>array_push($array, $element)</em> adds <em>$element</em> to the end of <em>the $array</em>. Note that the <em>$limits</em> array is passed by value to the <em>calculateTax</em> function <em>(</em>line 56<em>)</em>. This addition of an element is therefore performed on a copy of the actual parameter, which remains unchanged.</li>
 <li>line 84: the function <em>floor($x)</em> returns the integer value immediately less than $x.</li>
 </ul>
-<p><a id="impots02"></a>
-<a id="refheading398881881943603"></a></p>
-<h2 id="43-version-with-text-files-impots_02">4.3. <span style="color: #4f81bd"><strong>Version with text files (impots_02)</strong></span></h2>
+<p><a id="refheading398881881943603"></a>
+<a id="impots02"></a></p>
+<h2 id="43-version-with-text-files-impots_02">4.3. <span style="color: #4f81bd">Version with text files (impots_02)</span></h2>
 <p>This new version differs from the previous one only in that the data ($limites, $coeffR, $coeffN) needed to calculate the tax are now in a text file in the following format:</p>
 <p>File <em>impots.txt</em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>12620:13190:15640:24740:31810:39970:48360:55790:92970:127860:151250:172040:195000:0

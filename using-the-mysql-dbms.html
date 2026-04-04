@@ -756,7 +756,7 @@
 
 
 <p><a id="refheading399121881943603"></a></p>
-<h1 id="7-using-the-mysql-dbms">7. <span style="color: #365f91"><strong>Using the MySQL DBMS</strong></span></h1>
+<h1 id="7-using-the-mysql-dbms">7. <span style="color: #365f91">Using the MySQL DBMS</span></h1>
 <p>We will write PHP scripts using a MySQL database:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005E8000001090A0CE1CE.png" style="display:inline-block; margin:4px;width:17.997cm;height:3.154cm;" class="odt-zoomable" data-zoom-src="images/10000000000005E8000001090A0CE1CE.png" /></td></tr></table>
 
@@ -817,7 +817,7 @@
 <li>2: You will see the various available PDO extensions and those that are active: [PHP_pdo_mysql] for the MySQL DBMS, [PHP_pdo_sqlite] for the SQLite DBMS. To enable an extension, simply click on it. The PHP interpreter is then restarted with the new extension enabled.
 <a id="refheading399141881943603"></a></li>
 </ul>
-<h2 id="71-connecting-to-a-mysql-database-1-mysql_01">7.1. <span style="color: #4f81bd"><strong>Connecting to a MySQL database – 1 (mysql_01)</strong></span></h2>
+<h2 id="71-connecting-to-a-mysql-database-1-mysql_01">7.1. <span style="color: #4f81bd">Connecting to a MySQL database – 1 (mysql_01)</span></h2>
 <p>Connecting to a DBMS is done by creating a PDO object. The constructor accepts various parameters:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">$</span><span class="n">dbh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PDO</span><span class="p">(</span><span class="o">$</span><span class="n">dsn</span><span class="p">,</span><span class="w"> </span><span class="o">$</span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="o">$</span><span class="n">passwd</span><span class="p">,</span><span class="w"> </span><span class="o">$</span><span class="n">driver_options</span><span class="p">)</span>
 </code></pre></div>
@@ -862,7 +862,7 @@
 <li>Line 15: The connection to a DBMS may fail. In this case, a PDOException is thrown.</li>
 </ul>
 <p><a id="refheading399161881943603"></a></p>
-<h2 id="72-creating-a-mysql-table-mysql_02">7.2. <span style="color: #4f81bd"><strong>Creating a MySQL table (mysql_02)</strong></span></h2>
+<h2 id="72-creating-a-mysql-table-mysql_02">7.2. <span style="color: #4f81bd">Creating a MySQL table (mysql_02)</span></h2>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
 <span class="odt-code-line"></span>
@@ -1068,7 +1068,7 @@
 <p><strong>Comments</strong></p>
 <p>The new feature is the <em>executeCommands</em> function in lines 48–90. This function executes the SQL commands found in the text file named <em>$SQL</em> on the <em>$connection</em>. It returns an error array (<em>$nbErrors, $msg1, $msg2, …</em>) where <em>$nbErrors</em> is the number of errors, and <em>$msg1</em> is error message number <em>i.</em> If there are no errors, the returned array is <em>array(0)</em>.</p>
 <p><a id="refheading399221881943603"></a></p>
-<h2 id="74-executing-arbitrary-sql-queries-mysql_04">7.4. <span style="color: #4f81bd"><strong>Executing arbitrary SQL queries (mysql_04)</strong></span></h2>
+<h2 id="74-executing-arbitrary-sql-queries-mysql_04">7.4. <span style="color: #4f81bd">Executing arbitrary SQL queries (mysql_04)</span></h2>
 <p>The following script demonstrates the execution of SQL commands from the following text file [sql.txt]:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">people</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">select</span><span class="w"> </span><span class="n">last_name</span><span class="p">,</span><span class="w"> </span><span class="n">first_name</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">people</span><span class="w"> </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">last_name</span><span class="w"> </span><span class="k">asc</span><span class="p">,</span><span class="w"> </span><span class="n">first_name</span><span class="w"> </span><span class="k">desc</span>
