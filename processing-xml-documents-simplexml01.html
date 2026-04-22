@@ -679,46 +679,46 @@
 <p>Consider the following [data.xml] file:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="odt-code-line"></span>
+<span class="odt-code-line"> </span>
 <span class="odt-code-line">&lt;tribu&gt;</span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;teacher&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;person gender=&quot;</span><span style="color:#0000ff">M</span><span style="color:#800080">&quot;&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;last_name&gt;</span><span style="color:#000000">dupont</span><span style="color:#800080">&lt;/last_name&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;first_name&gt;</span><span style="color:#000000">Jean</span><span style="color:#800080">&lt;/first_name&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;enseignant&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;personne</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">sexe</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">M</span><span style="color:#800080">&quot;&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;nom&gt;</span><span style="color:#000000">dupont</span><span style="color:#800080">&lt;/nom&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;prenom&gt;</span><span style="color:#000000">jean</span><span style="color:#800080">&lt;/prenom&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;age&gt;</span><span style="color:#000000">28</span><span style="color:#800080">&lt;/age&gt;</span></span>
-<span class="odt-code-line">This is a comment</span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;/person&gt;</span></span>
+<span class="odt-code-line">ceci est un commentaire</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;/personne&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;section&gt;</span><span style="color:#000000">27</span><span style="color:#800080">&lt;/section&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;/teacher&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;student&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;person gender=&quot;</span><span style="color:#0000ff">F</span><span style="color:#800080">&quot;&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;last name&gt;</span><span style="color:#000000">martin</span><span style="color:#800080">&lt;/last name&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;first_name&gt;</span><span style="color:#000000">Charline</span><span style="color:#800080">&lt;/first_name&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;/enseignant&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;etudiant&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;personne</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">sexe</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">F</span><span style="color:#800080">&quot;&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;nom&gt;</span><span style="color:#000000">martin</span><span style="color:#800080">&lt;/nom&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;prenom&gt;</span><span style="color:#000000">charline</span><span style="color:#800080">&lt;/prenom&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;age&gt;</span><span style="color:#000000">22</span><span style="color:#800080">&lt;/age&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;/person&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;education&gt;</span><span style="color:#000000">IAIE degree</span><span style="color:#800080">&lt;/education&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;/student&gt;</span></span>
-<span class="odt-code-line">&lt;/group&gt;</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;/personne&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;formation&gt;</span><span style="color:#000000">dess IAIE</span><span style="color:#800080">&lt;/formation&gt;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;/etudiant&gt;</span></span>
+<span class="odt-code-line">&lt;/tribu&gt;</span>
 </code></pre></div>
 
 <p>We analyze this document with the following script:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// XML file to process</span>
-<span class="odt-code-line"><span style="color:#0000ff">$FILE_NAME </span><span style="color:#000000">= </span><span style="color:#008000">&quot;data.xml&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">// processing</span>
-<span class="odt-code-line"><span style="color:#0000ff">$xml </span><span style="color:#000000">= simplexml_load_file(</span><span style="color:#0000ff">$FILE_NAME</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">// file XML to be processed</span>
+<span class="odt-code-line"><span style="color:#0000ff">$FILE_NAME</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;data.xml&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// operation</span>
+<span class="odt-code-line"><span style="color:#0000ff">$xml</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">simplexml_load_file(</span><span style="color:#0000ff">$FILE_NAME</span><span style="color:#000000">);</span></span>
 <span class="odt-code-line"><span style="color:#000000">print_r(</span><span style="color:#0000ff">$xml</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">print_r($xml-&gt;teacher-&gt;person[</span><span style="color:#008000">&#x27;gender&#x27;</span><span style="color:#000000">]);</span></span>
-<span class="odt-code-line">$name = $xml-&gt;teacher-&gt;person-&gt;name;</span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">name=$name</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#000000">$gender </span><span style="color:#0000ff">= </span><span style="color:#000000">$xml-&gt;teacher-&gt;person[</span><span style="color:#008000">&#x27;gender&#x27;</span><span style="color:#000000">];</span></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">gender=$gender</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">$education </span><span style="color:#000000">= $xml-&gt;student-&gt;education;</span></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">education=$education</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;isset=&quot;</span><span style="color:#000000">.</span><span style="font-weight:bold;color:#000000">isset</span><span style="color:#000000">($xml-&gt;teacher-&gt;person-&gt;name).</span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;isset=&quot;</span><span style="color:#000000">.</span><span style="font-weight:bold;color:#000000">isset</span><span style="color:#000000">($xml-&gt;teacher-&gt;person-&gt;xx).</span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">print_r(</span><span style="color:#0000ff">$xml</span><span style="color:#000000">-&gt;enseignant-&gt;personne[</span><span style="color:#008000">&#x27;sexe&#x27;</span><span style="color:#000000">]);</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$nom</span><span style="color:#000000">=</span><span style="color:#0000ff">$xml</span><span style="color:#000000">-&gt;enseignant-&gt;personne-&gt;nom;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;nom=</span><span style="color:#0000ff">$nom</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$sexe</span><span style="color:#000000">=</span><span style="color:#0000ff">$xml</span><span style="color:#000000">-&gt;enseignant-&gt;personne[</span><span style="color:#008000">&#x27;sexe&#x27;</span><span style="color:#000000">];</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;sexe=</span><span style="color:#0000ff">$sexe</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$formation</span><span style="color:#000000">=</span><span style="color:#0000ff">$xml</span><span style="color:#000000">-&gt;etudiant-&gt;formation;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;formation=</span><span style="color:#0000ff">$formation</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;isset=&quot;</span><span style="color:#000000">.</span><span style="font-weight:bold;color:#000000">isset</span><span style="color:#000000">(</span><span style="color:#0000ff">$xml</span><span style="color:#000000">-&gt;enseignant-&gt;personne-&gt;nom).</span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;isset=&quot;</span><span style="color:#000000">.</span><span style="font-weight:bold;color:#000000">isset</span><span style="color:#000000">(</span><span style="color:#0000ff">$xml</span><span style="color:#000000">-&gt;enseignant-&gt;personne-&gt;xx).</span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">;</span></span>
 </code></pre></div>
 
 <p><span style="color: #000000">Here we are using a PHP module called [simpleXML] that allows us to process XML documents.</span></p>
@@ -781,38 +781,38 @@
 <span class="normal"><a href="#__codelineno-0-45">45</a></span>
 <span class="normal"><a href="#__codelineno-0-46">46</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>SimpleXMLElement Object
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>(
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>    [teacher] =&gt; SimpleXMLElement Object
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>    [enseignant] =&gt; SimpleXMLElement Object
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>        (
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>            [person] =&gt; SimpleXMLElement Object
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>            [personne] =&gt; SimpleXMLElement Object
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a>                (
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a>                    [@attributes] =&gt; Array
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a>                        (
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>                            [gender] =&gt; M
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>                            [sexe] =&gt; M
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a>                        )
 <a id="__codelineno-0-11" name="__codelineno-0-11"></a>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a>                    [last_name] =&gt; Dupont
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a>                    [first_name] =&gt; Jean
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>                    [nom] =&gt; dupont
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>                    [prenom] =&gt; jean
 <a id="__codelineno-0-14" name="__codelineno-0-14"></a>                    [age] =&gt; 28
 <a id="__codelineno-0-15" name="__codelineno-0-15"></a>                )
 <a id="__codelineno-0-16" name="__codelineno-0-16"></a>
 <a id="__codelineno-0-17" name="__codelineno-0-17"></a>            [section] =&gt; 27
 <a id="__codelineno-0-18" name="__codelineno-0-18"></a>        )
 <a id="__codelineno-0-19" name="__codelineno-0-19"></a>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a>    [student] =&gt; SimpleXMLElement Object
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>    [etudiant] =&gt; SimpleXMLElement Object
 <a id="__codelineno-0-21" name="__codelineno-0-21"></a>        (
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a>            [person] =&gt; SimpleXMLElement Object
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>            [personne] =&gt; SimpleXMLElement Object
 <a id="__codelineno-0-23" name="__codelineno-0-23"></a>                (
 <a id="__codelineno-0-24" name="__codelineno-0-24"></a>                    [@attributes] =&gt; Array
 <a id="__codelineno-0-25" name="__codelineno-0-25"></a>                        (
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a>                            [gender] =&gt; F
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a>                            [sexe] =&gt; F
 <a id="__codelineno-0-27" name="__codelineno-0-27"></a>                        )
 <a id="__codelineno-0-28" name="__codelineno-0-28"></a>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a>                    [last_name] =&gt; martin
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a>                    [first_name] =&gt; charline
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a>                    [nom] =&gt; martin
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a>                    [prenom] =&gt; charline
 <a id="__codelineno-0-31" name="__codelineno-0-31"></a>                    [age] =&gt; 22
 <a id="__codelineno-0-32" name="__codelineno-0-32"></a>                )
 <a id="__codelineno-0-33" name="__codelineno-0-33"></a>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a>            [Education] =&gt; IAIE degree
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a>            [formation] =&gt; dess IAIE
 <a id="__codelineno-0-35" name="__codelineno-0-35"></a>        )
 <a id="__codelineno-0-36" name="__codelineno-0-36"></a>
 <a id="__codelineno-0-37" name="__codelineno-0-37"></a>)
@@ -820,9 +820,9 @@
 <a id="__codelineno-0-39" name="__codelineno-0-39"></a>(
 <a id="__codelineno-0-40" name="__codelineno-0-40"></a>    [0] =&gt; M
 <a id="__codelineno-0-41" name="__codelineno-0-41"></a>)
-<a id="__codelineno-0-42" name="__codelineno-0-42"></a>name=dupont
-<a id="__codelineno-0-43" name="__codelineno-0-43"></a>gender=M
-<a id="__codelineno-0-44" name="__codelineno-0-44"></a>education=IAIE design
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a>nom=dupont
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a>sexe=M
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a>formation=dess IAIE
 <a id="__codelineno-0-45" name="__codelineno-0-45"></a>isset=1
 <a id="__codelineno-0-46" name="__codelineno-0-46"></a>isset=
 </code></pre></div></td></tr></table></div>

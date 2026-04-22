@@ -826,12 +826,12 @@
 </ul>
 
 <p>It retrieves the three parameters above from a text file [data.txt] in the format (married, children, salary):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>yes,2,200000
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>no,2,200000
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>yes,3,200000
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>no,3,200000
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>yes,5,50000
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>no,0,3000000
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>oui,2,200000
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>non,2,200000
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>oui,3,200000
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>non,3,200000
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>oui,5,50000
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>non,0,3000000
 </code></pre></div>
 <p>The client script </p>
 <ul>
@@ -843,152 +843,152 @@
   </li>
 </ul>
 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;error&gt;error message&lt;/error&gt;
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&lt;tax&gt;tax amount&lt;/tax&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;erreur&gt;message d&#39;erreur&lt;/erreur&gt;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&lt;impot&gt;montant de l&#39;impôt&lt;/impot&gt;
 </code></pre></div>
 <ul>
   <li>will save the server&#x27;s response to a text file [results.txt] in one of the following two formats:
   </li>
 </ul>
 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>married:children:salary:error
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>married:children:salary:tax
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>marié:enfants:salaire:erreur
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>marié:enfants:salaire:impôt
 </code></pre></div>
 <p>The client-side script code is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
-<span class="odt-code-line"></span>
+<span class="odt-code-line"> </span>
 <span class="odt-code-line">// tax client</span>
-<span class="odt-code-line">// error handling</span>
-<span class="odt-code-line"><span style="color:#000000">ini_set(</span><span style="color:#008000">&quot;display_errors&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;off&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"></span>
+<span class="odt-code-line">// error management</span>
+<span class="odt-code-line"><span style="color:#000000">ini_set(</span><span style="color:#008000">&quot;display_errors&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;off&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"> </span>
 <span class="odt-code-line">// ---------------------------------------------------------------------------------</span>
 <span class="odt-code-line">// a class of utility functions</span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">class </span><span style="color:#000000">Utilities {</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">function </span><span style="color:#000000">cutNewLinechar(</span><span style="color:#0000ff">$line</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">class</span><span style="color:#008080"> </span><span style="color:#000000">Utilitaires</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">cutNewLinechar(</span><span style="color:#0000ff">$ligne</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
 <span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">...</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
+<span class="odt-code-line"> </span>
 <span class="odt-code-line">}</span>
-<span class="odt-code-line"></span>
+<span class="odt-code-line"> </span>
 <span class="odt-code-line">// main -----------------------------------------------------</span>
 <span class="odt-code-line">// definition of constants</span>
-<span class="odt-code-line"><span style="color:#0000ff">$DATA </span><span style="color:#000000">= </span><span style="color:#008000">&quot;data.txt&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">$RESULTS </span><span style="color:#000000">= </span><span style="color:#008000">&quot;results.txt&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$DATA</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;data.txt&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$RESULTATS</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;resultats.txt&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">// server data</span>
-<span class="odt-code-line"><span style="color:#0000ff">$HOST </span><span style="color:#000000">= </span><span style="color:#008000">&quot;localhost&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">$PORT </span><span style="color:#000000">=</span><span style="color:#000080"> 80</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">$serverUrl </span><span style="color:#000000">= </span><span style="color:#008000">&quot;/web-examples/taxes_05_web.php&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// Taxable individuals&#x27; parameters (marital status, number of children, annual income)</span>
-<span class="odt-code-line">// have been placed in the text file $DATA, with one line per taxpayer</span>
-<span class="odt-code-line">// the results (marital status, number of children, annual income, tax due) </span>
-<span class="odt-code-line">// or (marital status, number of children, annual income, error message) are placed in</span>
-<span class="odt-code-line">// the text file $RESULTS, with one result per line</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// Utilities class</span>
-<span class="odt-code-line"><span style="color:#0000ff">$u </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">Utilities();</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// open the taxpayer data file</span>
-<span class="odt-code-line"><span style="color:#0000ff">$data </span><span style="color:#000000">= fopen(</span><span style="color:#0000ff">$DATA</span><span style="color:#000000">, </span><span style="color:#008000">&quot;r&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(!</span><span style="color:#0000ff">$data</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;Unable to open the data file [</span><span style="color:#0000ff">$DATA</span><span style="color:#008000">] for reading\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$HOTE</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;localhost&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$PORT</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000080">80</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$urlServeur</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;/exemples-web/impots_05_web.php&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">// taxable person parameters (marital status, number of children, annual salary)</span>
+<span class="odt-code-line">// were placed in the $DATA text file, one line for each taxpayer</span>
+<span class="odt-code-line">// results (marital status, number of children, annual salary, tax payable) </span>
+<span class="odt-code-line">// or (marital status, number of children, annual salary, error msg) are placed in</span>
+<span class="odt-code-line">// the $RESULTATS text file, with one result per line</span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">// utility class</span>
+<span class="odt-code-line"><span style="color:#0000ff">$u</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">new</span><span style="color:#008080"> </span><span style="color:#000000">Utilitaires();</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">// opening taxpayer data files</span>
+<span class="odt-code-line"><span style="color:#0000ff">$data</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">fopen(</span><span style="color:#0000ff">$DATA</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;r&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(!</span><span style="color:#0000ff">$data</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;Impossible d&#x27;ouvrir en lecture le fichier des données [</span><span style="color:#0000ff">$DATA</span><span style="color:#008000">]\n&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">}</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// Open the results file</span>
-<span class="odt-code-line"><span style="color:#0000ff">$results </span><span style="color:#000000">= fopen(</span><span style="color:#0000ff">$RESULTS</span><span style="color:#000000">, </span><span style="color:#008000">&quot;w&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(!</span><span style="color:#0000ff">$results</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;Unable to create the results file [</span><span style="color:#0000ff">$RESULTS</span><span style="color:#008000">]\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">// open results file</span>
+<span class="odt-code-line"><span style="color:#0000ff">$résultats</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">fopen(</span><span style="color:#0000ff">$RESULTATS</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;w&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(!</span><span style="color:#0000ff">$résultats</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;Impossible de créer le fichier des résultats [</span><span style="color:#0000ff">$RESULTATS</span><span style="color:#008000">]\n&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">}</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// process the current line of the taxpayer data file</span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">while </span><span style="color:#000000">(</span><span style="color:#0000ff">$line </span><span style="color:#000000">= fgets(</span><span style="color:#0000ff">$data</span><span style="color:#000000">,</span><span style="color:#000080"> 100</span><span style="color:#000000">)) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// remove any end-of-line characters</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#0000ff">$line </span><span style="color:#000000">= $u-&gt;cutNewLineChar(</span><span style="color:#0000ff">$line</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// retrieve the 3 fields married:children:salary that make up $line</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">list</span><span style="color:#000000">(</span><span style="color:#0000ff">$married</span><span style="color:#000000">, </span><span style="color:#0000ff">$children</span><span style="color:#000000">, </span><span style="color:#0000ff">$salary</span><span style="color:#000000">) = explode(</span><span style="color:#008000">&quot;,&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">$line</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// calculate the tax</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">list</span><span style="color:#000000">(</span><span style="color:#0000ff">$error</span><span style="color:#000000">, </span><span style="color:#0000ff">$tax</span><span style="color:#000000">) = calculateTax(</span><span style="color:#0000ff">$HOST</span><span style="color:#000000">, </span><span style="color:#0000ff">$PORT</span><span style="color:#000000">, </span><span style="color:#0000ff">$serverUrl</span><span style="color:#000000">, </span><span style="color:#0000ff">$cookie</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#000000">array</span><span style="color:#000000">(</span><span style="color:#0000ff">$married</span><span style="color:#000000">, </span><span style="color:#0000ff">$children</span><span style="color:#000000">, </span><span style="color:#0000ff">$salary</span><span style="color:#000000">));</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// display the result</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#0000ff">$result </span><span style="color:#000000">= </span><span style="color:#0000ff">$error </span><span style="color:#000000">? </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">$married</span><span style="color:#008000">:</span><span style="color:#0000ff">$children</span><span style="color:#008000">:</span><span style="color:#0000ff">$salary</span><span style="color:#008000">:</span><span style="color:#0000ff">$error</span><span style="color:#008000">&quot; </span><span style="color:#000000">: </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">$married</span><span style="color:#008000">:</span><span style="color:#0000ff">$children</span><span style="color:#008000">:</span><span style="color:#0000ff">$salary</span><span style="color:#008000">:</span><span style="color:#0000ff">$tax</span><span style="color:#008000">&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$results</span><span style="color:#000000">, </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">$result</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// next data</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">// the current line of the taxpayer data file is used</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">while</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$ligne</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">fgets(</span><span style="color:#0000ff">$data</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">100</span><span style="color:#000000">))</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// remove any end-of-line marker</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#0000ff">$ligne</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$u</span><span style="color:#000000">-&gt;cutNewLineChar(</span><span style="color:#0000ff">$ligne</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// we retrieve the 3 fields married:children:salary which form $ligne</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">list</span><span style="color:#000000">(</span><span style="color:#0000ff">$marié</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$enfants</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$salaire</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">explode(</span><span style="color:#008000">&quot;,&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$ligne</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// tax calculation</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">list</span><span style="color:#000000">(</span><span style="color:#0000ff">$erreur</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$impôt</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">calculerImpot(</span><span style="color:#0000ff">$HOTE</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$PORT</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$urlServeur</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$cookie</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">array</span><span style="color:#000000">(</span><span style="color:#0000ff">$marié</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$enfants</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$salaire</span><span style="color:#000000">));</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// enter the result</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#0000ff">$résultat</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$erreur</span><span style="color:#008080"> </span><span style="color:#000000">?</span><span style="color:#008080"> </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">$marié</span><span style="color:#008000">:</span><span style="color:#0000ff">$enfants</span><span style="color:#008000">:</span><span style="color:#0000ff">$salaire</span><span style="color:#008000">:</span><span style="color:#0000ff">$erreur</span><span style="color:#008000">&quot;</span><span style="color:#008080"> </span><span style="color:#000000">:</span><span style="color:#008080"> </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">$marié</span><span style="color:#008000">:</span><span style="color:#0000ff">$enfants</span><span style="color:#008000">:</span><span style="color:#0000ff">$salaire</span><span style="color:#008000">:</span><span style="color:#0000ff">$impôt</span><span style="color:#008000">&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$résultats</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">$résultat</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// following data</span></span>
 <span class="odt-code-line">}</span>
-<span class="odt-code-line">// close the files</span>
+<span class="odt-code-line">// close files</span>
 <span class="odt-code-line"><span style="color:#000000">fclose(</span><span style="color:#0000ff">$data</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">fclose(</span><span style="color:#0000ff">$results</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">fclose(</span><span style="color:#0000ff">$résultats</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"> </span>
 <span class="odt-code-line">// end</span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;Done...\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;Terminé...\n&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">function </span><span style="color:#000000">calculateTax(</span><span style="color:#0000ff">$HOST</span><span style="color:#000000">, </span><span style="color:#0000ff">$PORT</span><span style="color:#000000">, </span><span style="color:#0000ff">$serverUrl</span><span style="color:#000000">, </span><span style="color:#0000ff">&amp;$cookie</span><span style="color:#000000">, </span><span style="color:#0000ff">$params</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// connects the client to ($HOST, $PORT, $serverURL)</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// sends the $cookie if it is not empty. $cookie is passed by reference</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// sends $params to the server</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// processes the single line returned by the server</span></span>
-<span class="odt-code-line">  </span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// Open a connection on port 80 of $HOST</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#0000ff">$connection </span><span style="color:#000000">= fsockopen(</span><span style="color:#0000ff">$HOST</span><span style="color:#000000">, </span><span style="color:#0000ff">$PORT</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// error?</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(!</span><span style="color:#0000ff">$connection</span><span style="color:#000000">)</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return array</span><span style="color:#000000">(</span><span style="color:#008000">&quot;Error connecting to the server (</span><span style="color:#0000ff">$HOST</span><span style="color:#008000">, </span><span style="color:#0000ff">$PORT</span><span style="color:#008000">)&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// HTTP headers must end with an empty line</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// POST</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connection</span><span style="color:#000000">, </span><span style="color:#008000">&quot;POST </span><span style="color:#0000ff">$serverURL </span><span style="color:#008000">HTTP/1.1\n&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// Host</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connection</span><span style="color:#000000">, </span><span style="color:#008000">&quot;Host: localhost\n&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// Connection</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connection</span><span style="color:#000000">, </span><span style="color:#008000">&quot;Connection: close\n&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">// send the cookie if it is not empty</span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(</span><span style="color:#0000ff">$cookie</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connection</span><span style="color:#000000">, </span><span style="color:#008000">&quot;Cookie: </span><span style="color:#0000ff">$cookie</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">//if</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// now send the client instruction after encoding it</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#0000ff">$infos </span><span style="color:#000000">= </span><span style="color:#008000">&quot;params=&quot; </span><span style="color:#000000">. urlencode(implode(</span><span style="color:#008000">&quot;,&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">$params</span><span style="color:#000000">));</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// Specify the type of data to be sent</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connection</span><span style="color:#000000">, </span><span style="color:#008000">&quot;Content-type: application/x-www-form-urlencoded\n&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// send the size (number of characters) of the data to be sent</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connection</span><span style="color:#000000">, </span><span style="color:#008000">&quot;Content-length: &quot; </span><span style="color:#000000">. strlen(</span><span style="color:#0000ff">$info</span><span style="color:#000000">) . </span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// send an empty line</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connection</span><span style="color:#000000">, </span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// send the data</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connection</span><span style="color:#000000">, </span><span style="color:#0000ff">$data</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// display the web server&#x27;s response</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// and make sure to retrieve any cookies</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">while </span><span style="color:#000000">(</span><span style="color:#0000ff">$line </span><span style="color:#000000">= fgets(</span><span style="color:#0000ff">$connection</span><span style="color:#000000">,</span><span style="color:#000080"> 1000</span><span style="color:#000000">)) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// cookie - only on the first response</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(!</span><span style="color:#0000ff">$cookie</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(preg_match(</span><span style="color:#008000">&quot;/^Set-Cookie: (.*?)\s*$/&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">$line</span><span style="color:#000000">, </span><span style="color:#0000ff">$fields</span><span style="color:#000000">)) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">        </span><span style="color:#0000ff">$cookie </span><span style="color:#000000">= </span><span style="color:#0000ff">$fields</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">];</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">//if</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">calculerImpot(</span><span style="color:#0000ff">$HOTE</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$PORT</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$urlServeur</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000000">&amp;</span><span style="color:#0000ff">$cookie</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$params</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// connects client to ($HOTE,$PORT,$urlServeur)</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// sends the $cookie cookie if it is non-empty. $cookie is passed by reference</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// sends $params to the server</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// exploits the single line returned by the server</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">  <span style="color:#008080">// open a connection on port 80 of $HOTE</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#0000ff">$connexion</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">fsockopen(</span><span style="color:#0000ff">$HOTE</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$PORT</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// mistake?</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(!</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">array</span><span style="color:#000000">(</span><span style="color:#008000">&quot;erreur lors de la connexion au serveur (</span><span style="color:#0000ff">$HOTE</span><span style="color:#008000">, </span><span style="color:#0000ff">$PORT</span><span style="color:#008000">)&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// protocol HTTP headers must end with an empty line</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// POST</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;POST </span><span style="color:#0000ff">$urlServeur</span><span style="color:#008000"> HTTP/1.1\n&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// Host</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;Host: localhost\n&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// Connection</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;Connection: close\n&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// send cookie if non-empty</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$cookie</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;Cookie: </span><span style="color:#0000ff">$cookie</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">////if</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// now we send the client instruction after encoding it</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#0000ff">$infos</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;params=&quot;</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#000000">urlencode(implode(</span><span style="color:#008000">&quot;,&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$params</span><span style="color:#000000">));</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// on indique quel type d&#x27;informations on va envoyer</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;Content-type: application/x-www-form-urlencoded\n&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// send the size (number of characters) of the information to be sent</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;Content-length: &quot;</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#000000">strlen(</span><span style="color:#0000ff">$infos</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// send an empty line</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// we send the news</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$infos</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// the web server response is displayed</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// and we take care to recover any cookie</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">while</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$ligne</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">fgets(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">1000</span><span style="color:#000000">))</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line">    <span style="color:#008080">// cookie - only on 1st response</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(!</span><span style="color:#0000ff">$cookie</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(preg_match(</span><span style="color:#008000">&quot;/^Set-Cookie: (.*?)\s*$/&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$ligne</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$champs</span><span style="color:#000000">))</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">        </span><span style="color:#0000ff">$cookie</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$champs</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">];</span></span>
+<span class="odt-code-line">      }//if</span>
 <span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// as soon as there is an empty line, the HTTP response is complete</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(trim(</span><span style="color:#0000ff">$line</span><span style="color:#000000">) == </span><span style="color:#008000">&quot;&quot;</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line">    <span style="color:#008080">// as soon as there is an empty line, the HTTP response is terminated</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(trim(</span><span style="color:#0000ff">$ligne</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">==</span><span style="color:#008080"> </span><span style="color:#008000">&quot;&quot;</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
 <span class="odt-code-line"><span style="color:#008080">      </span><span style="font-weight:bold;color:#000000">break</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">//while</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// read a line of the result</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#0000ff">$line </span><span style="color:#000000">= fgets(</span><span style="color:#0000ff">$connection</span><span style="color:#000000">,</span><span style="color:#000080"> 1000</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// Close the connection</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">fclose(</span><span style="color:#0000ff">$connection</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// calculate result</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">$error=</span><span style="color:#008000">&quot;&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">$tax = </span><span style="color:#008000">&quot;&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(preg_match(</span><span style="color:#008000">&quot;/^&lt;error&gt;(.*?)&lt;\/error&gt;\s*$/&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">$line</span><span style="color:#000000">, </span><span style="color:#0000ff">$fields</span><span style="color:#000000">)) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$error </span><span style="color:#000000">= </span><span style="color:#0000ff">$fields</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">];</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">} </span><span style="font-weight:bold;color:#000000">else </span><span style="color:#000000">{</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(preg_match(</span><span style="color:#008000">&quot;/^&lt;tax&gt;(.*?)&lt;\/tax&gt;\s*$/&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">$line</span><span style="color:#000000">, </span><span style="color:#0000ff">$fields</span><span style="color:#000000">)) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#0000ff">$tax </span><span style="color:#000000">= </span><span style="color:#0000ff">$fields</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">];</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">} </span><span style="font-weight:bold;color:#000000">else </span><span style="color:#000000">{</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#000000">$error </span><span style="color:#008000">= &quot;unusable server result&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">////while</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// read line result</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#0000ff">$ligne</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">fgets(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">1000</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// close the connection</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">fclose(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// result calculation</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#0000ff">$erreur</span><span style="color:#000000">=</span><span style="color:#008000">&quot;&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#0000ff">$impôt</span><span style="color:#000000">=</span><span style="color:#008000">&quot;&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(preg_match(</span><span style="color:#008000">&quot;/^&lt;erreur&gt;(.*?)&lt;\/erreur&gt;\s*$/&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$ligne</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$champs</span><span style="color:#000000">))</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$erreur</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$champs</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">];</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">else</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(preg_match(</span><span style="color:#008000">&quot;/^&lt;impot&gt;(.*?)&lt;\/impot&gt;\s*$/&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$ligne</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$champs</span><span style="color:#000000">))</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#0000ff">$impôt</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$champs</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">];</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">}</span><span style="font-weight:bold;color:#000000">else</span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#0000ff">$erreur</span><span style="color:#000000">=</span><span style="color:#008000">&quot;résultat du serveur non exploitable&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">}</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// return</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">return array</span><span style="color:#000000">(</span><span style="color:#0000ff">$error</span><span style="color:#000000">, </span><span style="color:#0000ff">$tax</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">  <span style="color:#008080">// return</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">array</span><span style="color:#000000">(</span><span style="color:#0000ff">$erreur</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$impôt</span><span style="color:#000000">);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
@@ -1060,50 +1060,50 @@
 <p>We will store the data from the MySQL table [impots] in an array of <em>Tranche</em> objects, where <em>Tranche</em> is the following class:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
-<span class="odt-code-line"></span>
+<span class="odt-code-line"> </span>
 <span class="odt-code-line">// a tax bracket</span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">class </span><span style="color:#000000">Tranche {</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// private fields</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$limit</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$coeffR</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$coeffN</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// getters and setters</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getLimit() {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;limit;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">class</span><span style="color:#008080"> </span><span style="color:#000000">Tranche</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">  <span style="color:#008080">// private fields</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#0000ff">$limite</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#0000ff">$coeffR</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#0000ff">$coeffN</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">  <span style="color:#008080">// getters and setters</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">getLimite()</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;limite;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">setLimit(</span><span style="color:#0000ff">$limit</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;limit = </span><span style="color:#0000ff">$limit</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">setLimite(</span><span style="color:#0000ff">$limite</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;limite</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$limite</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getRate() {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;coeffR;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">getCoeffR()</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;coeffR;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">setCoeffR(</span><span style="color:#0000ff">$coeffR</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;coeffR = </span><span style="color:#0000ff">$coeffR</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">setCoeffR(</span><span style="color:#0000ff">$coeffR</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;coeffR</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$coeffR</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getCoeffN() {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;coeffN;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">getCoeffN()</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;coeffN;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">setCoeffN(</span><span style="color:#0000ff">$coeffN</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;coeffN = </span><span style="color:#0000ff">$coeffN</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">setCoeffN(</span><span style="color:#0000ff">$coeffN</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;coeffN</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$coeffN</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// constructor</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function __construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$limit</span><span style="color:#000000">, </span><span style="color:#0000ff">$coeffR</span><span style="color:#000000">, </span><span style="color:#0000ff">$coeffN</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setLimit(</span><span style="color:#0000ff">$limit</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setCoeffR(</span><span style="color:#0000ff">$coeffR</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setCoeffN(</span><span style="color:#0000ff">$coeffN</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">  <span style="color:#008080">// manufacturer</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">__construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$limite</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$coeffR</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$coeffN</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;setLimite(</span><span style="color:#0000ff">$limite</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;setCoeffR(</span><span style="color:#0000ff">$coeffR</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;setCoeffN(</span><span style="color:#0000ff">$coeffN</span><span style="color:#000000">);</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// toString</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function __toString</span><span style="color:#000000">(){</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#008000">&quot;[</span><span style="color:#0000ff">$this-&gt;limit</span><span style="color:#008000">,</span><span style="color:#0000ff">$this-&gt;coeffR</span><span style="color:#008000">,</span><span style="color:#0000ff">$this-&gt;coeffN</span><span style="color:#008000">]&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">  <span style="color:#008080">// toString</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">__toString</span><span style="color:#000000">(){</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#008000">&quot;[</span><span style="color:#0000ff">$this-&gt;limite</span><span style="color:#008000">,</span><span style="color:#0000ff">$this-&gt;coeffR</span><span style="color:#008000">,</span><span style="color:#0000ff">$this-&gt;coeffN</span><span style="color:#008000">]&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
@@ -1146,10 +1146,10 @@
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
 <span class="normal"><a href="#__codelineno-4-4">4</a></span>
 <span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="x">// Dao interface</span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="x">// dao interface</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="x">interface IImpotsDao {</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="x">// returns an array of Tranche entities</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="x">// renders an array of Slice entities</span>
 <a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="x">  function getData();</span>
 <a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="x">}</span>
 </code></pre></div></td></tr></table></div>
@@ -1157,78 +1157,78 @@
 <p>The implementation class is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// DAO layer</span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">// dao layer</span>
 <span class="odt-code-line">// dependencies</span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">require_once </span><span style="color:#008000">&quot;impots_05_entities.php&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">require_once</span><span style="color:#008080"> </span><span style="color:#008000">&quot;impots_05_entites.php&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">// constants</span>
-<span class="odt-code-line"><span style="color:#000000">define(</span><span style="color:#008000">&quot;TABLE&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;impots&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">define(</span><span style="color:#008000">&quot;TABLE&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;impots&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"> </span>
 <span class="odt-code-line">// -----------------------------------------------------------------</span>
 <span class="odt-code-line">// abstract implementation</span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">abstract class </span><span style="color:#000000">ImpotsDaoWithPdo </span><span style="font-weight:bold;color:#000000">implements </span><span style="color:#000000">IImpotsDao {</span></span>
-<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">abstract</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">class</span><span style="color:#008080"> </span><span style="color:#000000">ImpotsDaoWithPdo</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">implements</span><span style="color:#008080"> </span><span style="color:#000000">IImpotsDao</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"> </span>
 <span class="odt-code-line">// private fields</span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$dsn</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$user</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$passwd</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$brackets</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#0000ff">$dsn</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#0000ff">$user</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#0000ff">$passwd</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#0000ff">$tranches</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"> </span>
 <span class="odt-code-line">// getters and setters</span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getDsn() {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;dsn;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">getDsn()</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;dsn;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">setDsn(</span><span style="color:#0000ff">$dsn</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;dsn = </span><span style="color:#0000ff">$dsn</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">setDsn(</span><span style="color:#0000ff">$dsn</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;dsn</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$dsn</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getUser() {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;user;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">getUser()</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;user;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">setUser(</span><span style="color:#0000ff">$user</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;user = </span><span style="color:#0000ff">$user</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">setUser(</span><span style="color:#0000ff">$user</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;user</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$user</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getPasswd() {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;passwd;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">getPasswd()</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;passwd;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">setPasswd(</span><span style="color:#0000ff">$passwd</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;passwd = </span><span style="color:#0000ff">$passwd</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">setPasswd(</span><span style="color:#0000ff">$passwd</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;passwd</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$passwd</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// constructor</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function __construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$dsn</span><span style="color:#000000">, </span><span style="color:#0000ff">$user</span><span style="color:#000000">, </span><span style="color:#0000ff">$passwd</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// save the parameters</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setDsn(</span><span style="color:#0000ff">$dsn</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setUser(</span><span style="color:#0000ff">$user</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setPasswd(</span><span style="color:#0000ff">$passwd</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// retrieve data from the DBMS</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// Connect ($user, $pwd) to the database $dsn</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">try </span><span style="color:#000000">{</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="font-style:italic;color:#808080">// connection</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#0000ff">$connection </span><span style="color:#000000">= </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">PDO(</span><span style="color:#0000ff">$dsn</span><span style="color:#000000">, </span><span style="color:#0000ff">$user</span><span style="color:#000000">, </span><span style="color:#0000ff">$passwd</span><span style="color:#000000">, </span><span style="font-weight:bold;color:#000000">array</span><span style="color:#000000">(PDO::ATTR_PERSISTENT =&gt; </span><span style="font-weight:bold;color:#000000">true</span><span style="color:#000000">));</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="font-style:italic;color:#808080">// read from the $TABLE table</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#0000ff">$query </span><span style="color:#000000">= </span><span style="color:#008000">&quot;select limits,coeffR,coeffN from &quot; </span><span style="color:#000000">. TABLE;</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="font-style:italic;color:#808080">// execute the $query on the $connection</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#0000ff">$statement </span><span style="color:#000000">= $connection-&gt;prepare(</span><span style="color:#0000ff">$query</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#000000">$statement-&gt;execute();</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="font-style:italic;color:#808080">// process the query result</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="font-weight:bold;color:#000000">while </span><span style="color:#000000">(</span><span style="color:#0000ff">$columns </span><span style="color:#000000">= $statement-&gt;fetch()) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">        </span><span style="color:#000000">$this-&gt;slices[] = </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">Slice(</span><span style="color:#0000ff">$columns</span><span style="color:#000000">[</span><span style="color:#000080">0</span><span style="color:#000000">], </span><span style="color:#0000ff">$columns</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">], </span><span style="color:#0000ff">$columns</span><span style="color:#000000">[</span><span style="color:#000080">2</span><span style="color:#000000">]);</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">  <span style="color:#008080">// manufacturer</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">__construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$dsn</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$user</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$passwd</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line">    <span style="color:#008080">// save parameters</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;setDsn(</span><span style="color:#0000ff">$dsn</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;setUser(</span><span style="color:#0000ff">$user</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;setPasswd(</span><span style="color:#0000ff">$passwd</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">    <span style="color:#008080">// retrieve data from SGBD</span></span>
+<span class="odt-code-line">    <span style="color:#008080">// connects ($user,$pwd) to base $dsn</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">try</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line">      <span style="color:#008080">// connection</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#0000ff">$connexion</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">new</span><span style="color:#008080"> </span><span style="color:#000000">PDO(</span><span style="color:#0000ff">$dsn</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$user</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$passwd</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">array</span><span style="color:#000000">(PDO::ATTR_PERSISTENT</span><span style="color:#008080"> </span><span style="color:#000000">=&gt;</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">true</span><span style="color:#000000">));</span></span>
+<span class="odt-code-line">      <span style="color:#008080">// read table $TABLE</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#0000ff">$requête</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;select limites,coeffR,coeffN from &quot;</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#000000">TABLE;</span></span>
+<span class="odt-code-line">      <span style="color:#008080">// executes the $requête request on the $connexion connection</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#0000ff">$statement</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$connexion</span><span style="color:#000000">-&gt;prepare(</span><span style="color:#0000ff">$requête</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#0000ff">$statement</span><span style="color:#000000">-&gt;execute();</span></span>
+<span class="odt-code-line">      <span style="color:#008080">// query result evaluation</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="font-weight:bold;color:#000000">while</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$colonnes</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$statement</span><span style="color:#000000">-&gt;fetch())</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">        </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;tranches[]</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">new</span><span style="color:#008080"> </span><span style="color:#000000">Tranche(</span><span style="color:#0000ff">$colonnes</span><span style="color:#000000">[</span><span style="color:#000080">0</span><span style="color:#000000">],</span><span style="color:#008080"> </span><span style="color:#0000ff">$colonnes</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">],</span><span style="color:#008080"> </span><span style="color:#0000ff">$colonnes</span><span style="color:#000000">[</span><span style="color:#000080">2</span><span style="color:#000000">]);</span></span>
 <span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="font-style:italic;color:#808080">// disconnect</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#0000ff">$connection </span><span style="color:#000000">= NULL;</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">} </span><span style="font-weight:bold;color:#000000">catch </span><span style="color:#000000">(PDOException </span><span style="color:#0000ff">$e</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="font-style:italic;color:#808080">// return with error</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="font-weight:bold;color:#000000">throw new </span><span style="color:#000000">ImpotsException($e-&gt;getMessage(),</span><span style="color:#000080"> 1</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">      <span style="color:#008080">// disconnect</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#0000ff">$connexion</span><span style="color:#000000">=NULL;</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">}</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">catch</span><span style="color:#008080"> </span><span style="color:#000000">(PDOException</span><span style="color:#008080"> </span><span style="color:#0000ff">$e</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line">      <span style="color:#008080">// return with error</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="font-weight:bold;color:#000000">throw</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">new</span><span style="color:#008080"> </span><span style="color:#000000">ImpotsException(</span><span style="color:#0000ff">$e</span><span style="color:#000000">-&gt;getMessage(),</span><span style="color:#008080"> </span><span style="color:#000080">1</span><span style="color:#000000">);</span></span>
 <span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">}</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getData(){</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;brackets;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">getData(){</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;tranches;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
@@ -1256,12 +1256,12 @@
 
 <p>The <span style="color: #000000">[ImpotsDaoWithPdo] </span>class <span style="color: #000000">is suitable for any DBMS. The class constructor, line 45, requires knowledge of the database’s </span><em><span style="color: #000000">Data Source Name</span></em><span style="color: #000000">. This string depends on the DBMS used. We have chosen not to require the user of the class to know this </span><em><span style="color: #000000">Data Source Name</span></em><span style="color: #000000">. For each DBMS, there will be a specific class derived from [ImpotsDaoWithPdo]. For the MySQL DBMS, this will be the following class:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">class </span><span style="color:#000000">TaxDaoWithMySQL </span><span style="font-weight:bold;color:#000000">extends </span><span style="color:#000000">TaxDaoWithPDO {</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function __construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$host</span><span style="color:#000000">, </span><span style="color:#0000ff">$port</span><span style="color:#000000">, </span><span style="color:#0000ff">$db</span><span style="color:#000000">, </span><span style="color:#0000ff">$user</span><span style="color:#000000">, </span><span style="color:#0000ff">$passwd</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">parent::</span><span style="font-weight:bold;color:#000000">__construct</span><span style="color:#000000">(</span><span style="color:#008000">&quot;mysql:</span><span style="color:#0000ff">host=$host</span><span style="color:#008000">;</span><span style="color:#0000ff">dbname=$base</span><span style="color:#008000">;</span><span style="color:#0000ff">port=$port</span><span style="color:#008000">&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">$user</span><span style="color:#000000">, </span><span style="color:#0000ff">$passwd</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">class</span><span style="color:#008080"> </span><span style="color:#000000">ImpotsDaoWithMySQL</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">extends</span><span style="color:#008080"> </span><span style="color:#000000">ImpotsDaoWithPdo</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">__construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$host</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$port</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$base</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$user</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$passwd</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">parent::</span><span style="font-weight:bold;color:#000000">__construct</span><span style="color:#000000">(</span><span style="color:#008000">&quot;mysql:host=</span><span style="color:#0000ff">$host</span><span style="color:#008000">;dbname=</span><span style="color:#0000ff">$base</span><span style="color:#008000">;port=</span><span style="color:#0000ff">$port</span><span style="color:#008000">&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$user</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$passwd</span><span style="color:#000000">);</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
+<span class="odt-code-line"> </span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
@@ -1280,10 +1280,10 @@
 <p>The [business] layer has the following interface:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
-<span class="odt-code-line"></span>
+<span class="odt-code-line"> </span>
 <span class="odt-code-line">// business interface</span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">interface </span><span style="color:#000000">IImpotsMetier {</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">calculateTax(</span><span style="color:#0000ff">$married</span><span style="color:#000000">, </span><span style="color:#0000ff">$children</span><span style="color:#000000">, </span><span style="color:#0000ff">$salary</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">interface</span><span style="color:#008080"> </span><span style="color:#000000">IImpotsMetier</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">calculerImpot(</span><span style="color:#0000ff">$marié</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$enfants</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$salaire</span><span style="color:#000000">);</span></span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
@@ -1301,67 +1301,67 @@
 <p>The implementation of the [IImpotsMetier] interface is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">// dependencies</span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">require_once </span><span style="color:#008000">&quot;impots_05_dao.php&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">require_once</span><span style="color:#008080"> </span><span style="color:#008000">&quot;impots_05_dao.php&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"> </span>
 <span class="odt-code-line">// ------------------------------------------------------------------</span>
 <span class="odt-code-line">// implementation class</span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">class </span><span style="color:#000000">BusinessTaxes </span><span style="font-weight:bold;color:#000000">implements </span><span style="color:#000000">IImpotsMetier {</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// DAO layer</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$dao</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">  // array of [Tranche] objects</span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private </span><span style="color:#0000ff">$data</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// getter and setter</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">getDao() {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">$this-&gt;dao;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">class</span><span style="color:#008080"> </span><span style="color:#000000">ImpotsMetier</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">implements</span><span style="color:#008080"> </span><span style="color:#000000">IImpotsMetier</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">  <span style="color:#008080">// dao layer</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#0000ff">$dao</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">    // object array [Slice]</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#0000ff">$data</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">  <span style="color:#008080">// getter and setter</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">getDao()</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;dao;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">setDao(</span><span style="color:#0000ff">$dao</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;dao</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$dao</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
 <span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">setDao(</span><span style="color:#0000ff">$dao</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;dao = </span><span style="color:#0000ff">$dao</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">setData(</span><span style="color:#0000ff">$data</span><span style="color:#000000">){</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;data=</span><span style="color:#0000ff">$data</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">setData(</span><span style="color:#0000ff">$data</span><span style="color:#000000">){</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;data = </span><span style="color:#0000ff">$data</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">__construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$dao</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line">    <span style="color:#008080">// retrieve the data needed to calculate taxes</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;setDao(</span><span style="color:#0000ff">$dao</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;setData(</span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;dao-&gt;getData());</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line">  </span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function __construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$dao</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// retrieve the data needed to calculate the tax</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setDao(</span><span style="color:#0000ff">$dao</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;setData($this-&gt;dao-&gt;getData());</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public function </span><span style="color:#000000">calculateTax(</span><span style="color:#0000ff">$married</span><span style="color:#000000">, </span><span style="color:#0000ff">$children</span><span style="color:#000000">, </span><span style="color:#0000ff">$salary</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// $marié: yes, no</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// $children: number of children</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// $salary: annual salary</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// number of shares</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$married </span><span style="color:#000000">= strtolower(</span><span style="color:#0000ff">$married</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(</span><span style="color:#0000ff">$married </span><span style="color:#000000">== </span><span style="color:#008000">&quot;yes&quot;</span><span style="color:#000000">)</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#0000ff">$nbShares </span><span style="color:#000000">= </span><span style="color:#0000ff">$children </span><span style="color:#000000">/</span><span style="color:#000080"> 2 </span><span style="color:#000000">+</span><span style="color:#000080"> 2</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">calculerImpot(</span><span style="color:#0000ff">$marié</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$enfants</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$salaire</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line">    <span style="color:#008080">// $marié : yes, no</span></span>
+<span class="odt-code-line">    <span style="color:#008080">// $enfants : number of children</span></span>
+<span class="odt-code-line">    <span style="color:#008080">// $salaire: annual salary</span></span>
+<span class="odt-code-line">    <span style="color:#008080">// number of shares</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$marié</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">strtolower(</span><span style="color:#0000ff">$marié</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$marié</span><span style="color:#008080"> </span><span style="color:#000000">==</span><span style="color:#008080"> </span><span style="color:#008000">&quot;oui&quot;</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#0000ff">$nbParts</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$enfants</span><span style="color:#008080"> </span><span style="color:#000000">/</span><span style="color:#008080"> </span><span style="color:#000080">2</span><span style="color:#008080"> </span><span style="color:#000000">+</span><span style="color:#008080"> </span><span style="color:#000080">2</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">else</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#000000">$nbParts = </span><span style="color:#0000ff">$children </span><span style="color:#000000">/</span><span style="color:#000080"> 2 </span><span style="color:#000000">+</span><span style="color:#000080"> 1</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// add 1/2 portion if there are at least 3 children</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(</span><span style="color:#0000ff">$children </span><span style="color:#000000">&gt;=</span><span style="color:#000080"> 3</span><span style="color:#000000">)</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#000080">$nbParts+=0.5</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// taxable income</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$taxableIncome </span><span style="color:#000000">=</span><span style="color:#000080"> 0.72 </span><span style="color:#000000">* </span><span style="color:#0000ff">$salary</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// family quotient</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$quotient </span><span style="color:#000000">= </span><span style="color:#0000ff">$taxableIncome </span><span style="color:#000000">/ </span><span style="color:#0000ff">$numberOfChildren</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// is placed at the end of the limits array to stop the following loop</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$N </span><span style="color:#000000">= count($this-&gt;data);</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;data[</span><span style="color:#0000ff">$N </span><span style="color:#000000">-</span><span style="color:#000080"> 1</span><span style="color:#000000">]-&gt;setLimit(</span><span style="color:#0000ff">$quotient</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// tax calculation</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$i </span><span style="color:#000000">=</span><span style="color:#000080"> 0</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">while </span><span style="color:#000000">(</span><span style="color:#0000ff">$i </span><span style="color:#000000">&lt; </span><span style="color:#0000ff">$N </span><span style="font-weight:bold;color:#000000">and </span><span style="color:#0000ff">$quotient </span><span style="color:#000000">&gt; $this-&gt;data[</span><span style="color:#0000ff">$i</span><span style="color:#000000">]-&gt;getLimit()) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#000000">$i++;</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#0000ff">$nbParts</span><span style="color:#000000">=</span><span style="color:#0000ff">$enfants</span><span style="color:#008080"> </span><span style="color:#000000">/</span><span style="color:#008080"> </span><span style="color:#000080">2</span><span style="color:#008080"> </span><span style="color:#000000">+</span><span style="color:#008080"> </span><span style="color:#000080">1</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">    <span style="color:#008080">// an additional 1/2 share if at least 3 children</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$enfants</span><span style="color:#008080"> </span><span style="color:#000000">&gt;=</span><span style="color:#008080"> </span><span style="color:#000080">3</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#0000ff">$nbParts</span><span style="color:#000000">+=</span><span style="color:#000080">0.5</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">    <span style="color:#008080">// taxable income</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$revenuImposable</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000080">0.72</span><span style="color:#008080"> </span><span style="color:#000000">*</span><span style="color:#008080"> </span><span style="color:#0000ff">$salaire</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">    <span style="color:#008080">// family quotient</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$quotient</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$revenuImposable</span><span style="color:#008080"> </span><span style="color:#000000">/</span><span style="color:#008080"> </span><span style="color:#0000ff">$nbParts</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">    <span style="color:#008080">// is set at the end of the limit table to stop the following loop</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$N</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">count(</span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;data);</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;data[</span><span style="color:#0000ff">$N</span><span style="color:#008080"> </span><span style="color:#000000">-</span><span style="color:#008080"> </span><span style="color:#000080">1</span><span style="color:#000000">]-&gt;setLimite(</span><span style="color:#0000ff">$quotient</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">    <span style="color:#008080">// tAX CALCULATION</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000080">0</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">while</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">&lt;</span><span style="color:#008080"> </span><span style="color:#0000ff">$N</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">and</span><span style="color:#008080"> </span><span style="color:#0000ff">$quotient</span><span style="color:#008080"> </span><span style="color:#000000">&gt;</span><span style="color:#008080"> </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;data[</span><span style="color:#0000ff">$i</span><span style="color:#000000">]-&gt;getLimite())</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">      </span><span style="color:#0000ff">$i</span><span style="color:#000000">++;</span></span>
 <span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// Since we placed $quotient at the end of the $limites array, the previous loop</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// cannot overflow the $limites array</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-style:italic;color:#808080">// now we can calculate the tax</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return </span><span style="color:#000000">floor(</span><span style="color:#0000ff">$taxableIncome </span><span style="color:#000000">* $this-&gt;data[</span><span style="color:#0000ff">$i</span><span style="color:#000000">]-&gt;getCoeffR() - </span><span style="color:#0000ff">$numberOfShares </span><span style="color:#000000">* $this-&gt;data[</span><span style="color:#0000ff">$i</span><span style="color:#000000">]-&gt;getCoeffN());</span></span>
+<span class="odt-code-line">    <span style="color:#008080">// because $quotient has been placed at the end of the $limites array, the previous loop</span></span>
+<span class="odt-code-line">    <span style="color:#008080">// cannot exceed the table $limites</span></span>
+<span class="odt-code-line">    <span style="color:#008080">// now we can calculate the tax</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#000000">floor(</span><span style="color:#0000ff">$revenuImposable</span><span style="color:#008080"> </span><span style="color:#000000">*</span><span style="color:#008080"> </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;data[</span><span style="color:#0000ff">$i</span><span style="color:#000000">]-&gt;getCoeffR()</span><span style="color:#008080"> </span><span style="color:#000000">-</span><span style="color:#008080"> </span><span style="color:#0000ff">$nbParts</span><span style="color:#008080"> </span><span style="color:#000000">*</span><span style="color:#008080"> </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;data[</span><span style="color:#0000ff">$i</span><span style="color:#000000">]-&gt;getCoeffN());</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
-<span class="odt-code-line"></span>
+<span class="odt-code-line"> </span>
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
@@ -1391,76 +1391,76 @@
 <p>The [web] layer consists of the web service that responds to web clients. Recall that these clients make a request to the web service by posting the following parameter: <em>params=married,children,salary</em>. This is a web service similar to those we built in the previous sections. Its code is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line">&lt;?php</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// business logic layer</span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">require_once </span><span style="color:#008000">&quot;impots_05_business.php&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// error handling</span>
-<span class="odt-code-line"><span style="color:#000000">ini_set(</span><span style="color:#008000">&quot;display_errors&quot;</span><span style="color:#000000">, </span><span style="color:#008000">&quot;off&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// UTF-8 header</span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">// business layer</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">require_once</span><span style="color:#008080"> </span><span style="color:#008000">&quot;impots_05_metier.php&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">// error management</span>
+<span class="odt-code-line"><span style="color:#000000">ini_set(</span><span style="color:#008000">&quot;display_errors&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;off&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">// uTF-8 header</span>
 <span class="odt-code-line"><span style="color:#000000">header(</span><span style="color:#008000">&quot;Content-Type: text/plain; charset=utf-8&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"></span>
+<span class="odt-code-line"> </span>
 <span class="odt-code-line">// ------------------------------------------------------------------------------</span>
-<span class="odt-code-line">// the tax web service</span>
+<span class="odt-code-line">// tax web service</span>
 <span class="odt-code-line">// definition of constants</span>
-<span class="odt-code-line"><span style="color:#0000ff">$HOST </span><span style="color:#000000">= </span><span style="color:#008000">&quot;localhost&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">$PORT </span><span style="color:#000000">=</span><span style="color:#000080"> 3306</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">$DATABASE </span><span style="color:#000000">= </span><span style="color:#008000">&quot;dbimpots&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">$USER </span><span style="color:#000000">= </span><span style="color:#008000">&quot;root&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">$PWD </span><span style="color:#000000">= </span><span style="color:#008000">&quot;&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">// The data needed to calculate the tax has been placed in the MySQL table IMPOTS</span>
+<span class="odt-code-line"><span style="color:#0000ff">$HOTE</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;localhost&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$PORT</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000080">3306</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$BASE</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;dbimpots&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$USER</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;root&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$PWD</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// the data required to calculate the tax has been placed in the mysql table IMPOTS</span>
 <span class="odt-code-line">// belonging to the $BASE database. The table has the following structure</span>
 <span class="odt-code-line">// limits decimal(10,2), coeffR decimal(6,2), coeffN decimal(10,2)</span>
-<span class="odt-code-line">// the parameters for taxable individuals (marital status, number of children, annual salary)</span>
-<span class="odt-code-line">// are sent by the client in the form params=marital status, number of children, annual salary</span>
-<span class="odt-code-line">// the results (marital status, number of children, annual salary, tax due) are returned to the client</span>
-<span class="odt-code-line">// in the form &lt;tax&gt;tax&lt;/tax&gt;</span>
-<span class="odt-code-line">// or in the form &lt;error&gt;error&lt;/error&gt;, if the parameters are invalid</span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// retrieve the [business] layer from the session</span>
+<span class="odt-code-line">// taxable person parameters (marital status, number of children, annual salary)</span>
+<span class="odt-code-line">// are sent by the customer in the form params=marital status, number of children, annual salary</span>
+<span class="odt-code-line">// results (marital status, number of children, annual salary, tax payable) are returned to the customer</span>
+<span class="odt-code-line">// in the form &lt;impot&gt;impot&lt;/impot&gt;</span>
+<span class="odt-code-line">// or as &lt;error&gt;error&lt;/error&gt;, if parameters are invalid</span>
+<span class="odt-code-line"> </span>
+<span class="odt-code-line">// retrieve the [business] layer in the session</span>
 <span class="odt-code-line">session_start();</span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(!</span><span style="font-weight:bold;color:#000000">isset</span><span style="color:#000000">(</span><span style="color:#0000ff">$_SESSION</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;metier&#x27;</span><span style="color:#000000">])) {</span></span>
-<span class="odt-code-line">// Instantiate the [DAO] layer and the [business] layer</span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">try </span><span style="color:#000000">{</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$_SESSION</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;metier&#x27;</span><span style="color:#000000">] = </span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">ImpotsMetier(</span><span style="font-weight:bold;color:#000000">new </span><span style="color:#000000">ImpotsDaoWithMySQL(</span><span style="color:#0000ff">$HOST</span><span style="color:#000000">, </span><span style="color:#0000ff">$PORT</span><span style="color:#000000">, </span><span style="color:#0000ff">$BASE</span><span style="color:#000000">, </span><span style="color:#0000ff">$USER</span><span style="color:#000000">, </span><span style="color:#0000ff">$PWD</span><span style="color:#000000">));</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">} </span><span style="font-weight:bold;color:#000000">catch </span><span style="color:#000000">(ImpotsException </span><span style="color:#0000ff">$ie</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;&lt;error&gt;Error: &quot; </span><span style="color:#000000">. utf8_encode($ie-&gt;getMessage() . </span><span style="color:#008000">&quot;&lt;/error&gt;&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(!</span><span style="font-weight:bold;color:#000000">isset</span><span style="color:#000000">(</span><span style="color:#0000ff">$_SESSION</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;metier&#x27;</span><span style="color:#000000">]))</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line">// instantiation of the [dao] layer and the [business] layer</span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">try</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="color:#0000ff">$_SESSION</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;metier&#x27;</span><span style="color:#000000">]</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">new</span><span style="color:#008080"> </span><span style="color:#000000">ImpotsMetier(</span><span style="font-weight:bold;color:#000000">new</span><span style="color:#008080"> </span><span style="color:#000000">ImpotsDaoWithMySQL(</span><span style="color:#0000ff">$HOTE</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$PORT</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$BASE</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$USER</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$PWD</span><span style="color:#000000">));</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">catch</span><span style="color:#008080"> </span><span style="color:#000000">(ImpotsException</span><span style="color:#008080"> </span><span style="color:#0000ff">$ie</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;&lt;erreur&gt;Erreur : &quot;</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#000000">utf8_encode(</span><span style="color:#0000ff">$ie</span><span style="color:#000000">-&gt;getMessage()</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#008000">&quot;&lt;/erreur&gt;&quot;</span><span style="color:#000000">);</span></span>
 <span class="odt-code-line"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="color:#000000">}</span></span>
 <span class="odt-code-line">}</span>
-<span class="odt-code-line"><span style="color:#0000ff">$job </span><span style="color:#000000">= </span><span style="color:#0000ff">$_SESSION</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;job&#x27;</span><span style="color:#000000">];</span></span>
-<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#0000ff">$metier</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$_SESSION</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;metier&#x27;</span><span style="color:#000000">];</span></span>
+<span class="odt-code-line"> </span>
 <span class="odt-code-line">// retrieve the line sent by the client</span>
-<span class="odt-code-line"><span style="color:#0000ff">$params </span><span style="color:#000000">= utf8_encode(htmlspecialchars(strtolower(trim(</span><span style="color:#0000ff">$_POST</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;params&#x27;</span><span style="color:#000000">]))));</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">$items </span><span style="color:#000000">= explode(</span><span style="color:#008000">&quot;,&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">$params</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">// there must be exactly 3 parameters</span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(count(</span><span style="color:#0000ff">$items</span><span style="color:#000000">) !=</span><span style="color:#000080"> 3</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;&lt;error&gt;[</span><span style="color:#0000ff">$params</span><span style="color:#008000">]: invalid number of parameters&lt;/error&gt;\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$params</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">utf8_encode(htmlspecialchars(strtolower(trim(</span><span style="color:#0000ff">$_POST</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;params&#x27;</span><span style="color:#000000">]))));</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$items</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">explode(</span><span style="color:#008000">&quot;,&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$params</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// there must be only 3 parameters</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(count(</span><span style="color:#0000ff">$items</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">!=</span><span style="color:#008080"> </span><span style="color:#000080">3</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;&lt;erreur&gt;[</span><span style="color:#0000ff">$params</span><span style="color:#008000">] : nombre de paramètres invalides&lt;/erreur&gt;\n&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">//if</span></span>
-<span class="odt-code-line">// the first parameter (marital status) must be yes/no</span>
-<span class="odt-code-line"><span style="color:#0000ff">$married </span><span style="color:#000000">= trim(</span><span style="color:#0000ff">$items</span><span style="color:#000000">[</span><span style="color:#000080">0</span><span style="color:#000000">]);</span></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(</span><span style="color:#0000ff">$married </span><span style="color:#000000">!= </span><span style="color:#008000">&quot;yes&quot; </span><span style="font-weight:bold;color:#000000">and </span><span style="color:#0000ff">$married </span><span style="color:#000000">!= </span><span style="color:#008000">&quot;no&quot;</span><span style="color:#000000">) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;&lt;error&gt;[</span><span style="color:#0000ff">$params</span><span style="color:#008000">]: Invalid first parameter&lt;/error&gt;\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// first parameter (marital status) must be yes/no</span>
+<span class="odt-code-line"><span style="color:#0000ff">$marié</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">trim(</span><span style="color:#0000ff">$items</span><span style="color:#000000">[</span><span style="color:#000080">0</span><span style="color:#000000">]);</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$marié</span><span style="color:#008080"> </span><span style="color:#000000">!=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;oui&quot;</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">and</span><span style="color:#008080"> </span><span style="color:#0000ff">$marié</span><span style="color:#008080"> </span><span style="color:#000000">!=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;non&quot;</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;&lt;erreur&gt;[</span><span style="color:#0000ff">$params</span><span style="color:#008000">] : 1er paramètre invalide&lt;/erreur&gt;\n&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">//if</span></span>
 <span class="odt-code-line">// the second parameter (number of children) must be an integer</span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(!preg_match(</span><span style="color:#008000">&quot;/^\s*(\d+)\s*$/&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">$items</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">], </span><span style="color:#0000ff">$fields</span><span style="color:#000000">)) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;&lt;error&gt;[</span><span style="color:#0000ff">$params</span><span style="color:#008000">]: Invalid second parameter&lt;/error&gt;\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(!preg_match(</span><span style="color:#008000">&quot;/^\s*(\d+)\s*$/&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$items</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">],</span><span style="color:#008080"> </span><span style="color:#0000ff">$champs</span><span style="color:#000000">))</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;&lt;erreur&gt;[</span><span style="color:#0000ff">$params</span><span style="color:#008000">] : 2ième paramètre invalide&lt;/erreur&gt;\n&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">//if</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">$children </span><span style="color:#000000">= </span><span style="color:#0000ff">$fields</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">];</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$enfants</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$champs</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">];</span></span>
 <span class="odt-code-line">// the third parameter (salary) must be an integer</span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">if </span><span style="color:#000000">(!preg_match(</span><span style="color:#008000">&quot;/^\s*(\d+)\s*$/&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">$items</span><span style="color:#000000">[</span><span style="color:#000080">2</span><span style="color:#000000">], </span><span style="color:#0000ff">$fields</span><span style="color:#000000">)) {</span></span>
-<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;&lt;error&gt;[</span><span style="color:#0000ff">$params</span><span style="color:#008000">]: Invalid third parameter&lt;/error&gt;\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(!preg_match(</span><span style="color:#008000">&quot;/^\s*(\d+)\s*$/&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$items</span><span style="color:#000000">[</span><span style="color:#000080">2</span><span style="color:#000000">],</span><span style="color:#008080"> </span><span style="color:#0000ff">$champs</span><span style="color:#000000">))</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span>
+<span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;&lt;erreur&gt;[</span><span style="color:#0000ff">$params</span><span style="color:#008000">] : 3ième paramètre invalide&lt;/erreur&gt;\n&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">//if</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">$salary </span><span style="color:#000000">= </span><span style="color:#0000ff">$fields</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">];</span></span>
-<span class="odt-code-line">// calculate the tax</span>
-<span class="odt-code-line"><span style="color:#0000ff">$tax </span><span style="color:#000000">= $occupation-&gt;calculateTax(</span><span style="color:#0000ff">$married</span><span style="color:#000000">, </span><span style="color:#0000ff">$children</span><span style="color:#000000">, </span><span style="color:#0000ff">$salary</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">$salaire</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$champs</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">];</span></span>
+<span class="odt-code-line">// tax calculation</span>
+<span class="odt-code-line"><span style="color:#0000ff">$impôt</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$metier</span><span style="color:#000000">-&gt;calculerImpot(</span><span style="color:#0000ff">$marié</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$enfants</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$salaire</span><span style="color:#000000">);</span></span>
 <span class="odt-code-line">// return the result</span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print </span><span style="color:#008000">&quot;&lt;tax&gt;</span><span style="color:#0000ff">$tax</span><span style="color:#008000">&lt;/tax&gt;\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;&lt;impot&gt;</span><span style="color:#0000ff">$impôt</span><span style="color:#008000">&lt;/impot&gt;\n&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">// end</span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span>
 </code></pre></div>
@@ -1498,20 +1498,20 @@
 
 <p><strong>Results</strong></p>
 <p>Recall that the client [client_impots_web_05] uses the following file [data.txt]:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>yes,2,200000
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>no,2,200000
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>yes,3,200000
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>no,3,200000
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>yes,5,50000
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>no,0,3000000
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>oui,2,200000
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>non,2,200000
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>oui,3,200000
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>non,3,200000
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>oui,5,50000
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>non,0,3000000
 </code></pre></div>
 <p>Based on these lines (married, children, salary), the client queries the tax calculation server and writes the results to the text file [results.txt]. After the client runs, the contents of this file are as follows:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>yes:2:200000:22504
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>no:2:200000:33388
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>yes:3:200000:16400
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>no:3:200000:22504
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>yes:5:50000:0
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>no:0:3000000:1354938
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>oui:2:200000:22504
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>non:2:200000:33388
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>oui:3:200000:16400
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>non:3:200000:22504
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>oui:5:50000:0
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>non:0:3000000:1354938
 </code></pre></div>
 <p>where each line is in the form (married, children, salary, calculated tax).</p>
 
