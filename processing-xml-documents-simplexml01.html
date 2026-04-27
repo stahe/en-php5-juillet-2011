@@ -678,47 +678,47 @@
 <h1 id="12-processing-xml-documents-simplexml_01">12. <span style="color: #365f91">Processing XML Documents (simplexml_01)</span></h1>
 <p>Consider the following [data.xml] file:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-xml">
-<span class="odt-code-line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line">&lt;tribu&gt;</span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;enseignant&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;personne</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">sexe</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">M</span><span style="color:#800080">&quot;&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;nom&gt;</span><span style="color:#000000">dupont</span><span style="color:#800080">&lt;/nom&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;prenom&gt;</span><span style="color:#000000">jean</span><span style="color:#800080">&lt;/prenom&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;age&gt;</span><span style="color:#000000">28</span><span style="color:#800080">&lt;/age&gt;</span></span>
-<span class="odt-code-line">ceci est un commentaire</span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;/personne&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;section&gt;</span><span style="color:#000000">27</span><span style="color:#800080">&lt;/section&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;/enseignant&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;etudiant&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;personne</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">sexe</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">F</span><span style="color:#800080">&quot;&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;nom&gt;</span><span style="color:#000000">martin</span><span style="color:#800080">&lt;/nom&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;prenom&gt;</span><span style="color:#000000">charline</span><span style="color:#800080">&lt;/prenom&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#800080">&lt;age&gt;</span><span style="color:#000000">22</span><span style="color:#800080">&lt;/age&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;/personne&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#800080">&lt;formation&gt;</span><span style="color:#000000">dess IAIE</span><span style="color:#800080">&lt;/formation&gt;</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#800080">&lt;/etudiant&gt;</span></span>
-<span class="odt-code-line">&lt;/tribu&gt;</span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;tribu&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;enseignant&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;personne</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">sexe</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">M</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;nom&gt;</span><span style="color:#000000">dupont</span><span style="color:#800080">&lt;/nom&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;prenom&gt;</span><span style="color:#000000">jean</span><span style="color:#800080">&lt;/prenom&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;age&gt;</span><span style="color:#000000">28</span><span style="color:#800080">&lt;/age&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">ceci est un commentaire</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/personne&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;section&gt;</span><span style="color:#000000">27</span><span style="color:#800080">&lt;/section&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/enseignant&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;etudiant&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;personne</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">sexe</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">F</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;nom&gt;</span><span style="color:#000000">martin</span><span style="color:#800080">&lt;/nom&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;prenom&gt;</span><span style="color:#000000">charline</span><span style="color:#800080">&lt;/prenom&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;age&gt;</span><span style="color:#000000">22</span><span style="color:#800080">&lt;/age&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/personne&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;formation&gt;</span><span style="color:#000000">dess IAIE</span><span style="color:#800080">&lt;/formation&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/etudiant&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;/tribu&gt;</span></span>
 </code></pre></div>
 
 <p>We analyze this document with the following script:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
-<span class="odt-code-line">&lt;?php</span>
-<span class="odt-code-line"> </span>
-<span class="odt-code-line">// file XML to be processed</span>
-<span class="odt-code-line"><span style="color:#0000ff">$FILE_NAME</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;data.xml&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">// operation</span>
-<span class="odt-code-line"><span style="color:#0000ff">$xml</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">simplexml_load_file(</span><span style="color:#0000ff">$FILE_NAME</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">print_r(</span><span style="color:#0000ff">$xml</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">print_r(</span><span style="color:#0000ff">$xml</span><span style="color:#000000">-&gt;enseignant-&gt;personne[</span><span style="color:#008000">&#x27;sexe&#x27;</span><span style="color:#000000">]);</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">$nom</span><span style="color:#000000">=</span><span style="color:#0000ff">$xml</span><span style="color:#000000">-&gt;enseignant-&gt;personne-&gt;nom;</span></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;nom=</span><span style="color:#0000ff">$nom</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">$sexe</span><span style="color:#000000">=</span><span style="color:#0000ff">$xml</span><span style="color:#000000">-&gt;enseignant-&gt;personne[</span><span style="color:#008000">&#x27;sexe&#x27;</span><span style="color:#000000">];</span></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;sexe=</span><span style="color:#0000ff">$sexe</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">$formation</span><span style="color:#000000">=</span><span style="color:#0000ff">$xml</span><span style="color:#000000">-&gt;etudiant-&gt;formation;</span></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;formation=</span><span style="color:#0000ff">$formation</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;isset=&quot;</span><span style="color:#000000">.</span><span style="font-weight:bold;color:#000000">isset</span><span style="color:#000000">(</span><span style="color:#0000ff">$xml</span><span style="color:#000000">-&gt;enseignant-&gt;personne-&gt;nom).</span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;isset=&quot;</span><span style="color:#000000">.</span><span style="font-weight:bold;color:#000000">isset</span><span style="color:#000000">(</span><span style="color:#0000ff">$xml</span><span style="color:#000000">-&gt;enseignant-&gt;personne-&gt;xx).</span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// file XML to be processed</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$FILE_NAME</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;data.xml&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// operation</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$xml</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">simplexml_load_file(</span><span style="color:#0000ff">$FILE_NAME</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">print_r(</span><span style="color:#0000ff">$xml</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">print_r(</span><span style="color:#0000ff">$xml</span><span style="color:#000000">-&gt;enseignant-&gt;personne[</span><span style="color:#008000">&#x27;sexe&#x27;</span><span style="color:#000000">]);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$nom</span>=<span style="color:#0000ff">$xml</span>-&gt;enseignant-&gt;personne-&gt;nom;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;nom=</span><span style="color:#0000ff">$nom</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$sexe</span><span style="color:#000000">=</span><span style="color:#0000ff">$xml</span><span style="color:#000000">-&gt;enseignant-&gt;personne[</span><span style="color:#008000">&#x27;sexe&#x27;</span><span style="color:#000000">];</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;sexe=</span><span style="color:#0000ff">$sexe</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$formation</span><span style="color:#000000">=</span><span style="color:#0000ff">$xml</span><span style="color:#000000">-&gt;etudiant-&gt;formation;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;formation=</span><span style="color:#0000ff">$formation</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;isset=&quot;</span><span style="color:#000000">.</span><span style="font-weight:bold;color:#000000">isset</span><span style="color:#000000">(</span><span style="color:#0000ff">$xml</span><span style="color:#000000">-&gt;enseignant-&gt;personne-&gt;nom).</span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;isset=&quot;</span><span style="color:#000000">.</span><span style="font-weight:bold;color:#000000">isset</span><span style="color:#000000">(</span><span style="color:#0000ff">$xml</span><span style="color:#000000">-&gt;enseignant-&gt;personne-&gt;xx).</span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
 <p><span style="color: #000000">Here we are using a PHP module called [simpleXML] that allows us to process XML documents.</span></p>
@@ -867,8 +867,8 @@
     <div class="md-footer-meta__inner">
 
       <div>
-        <a href="https://tahe.developpez.com" target="_blank">
-          https://tahe.developpez.com
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
         </a>
         <br>
         This tutorial written by <strong>Serge Tahé</strong> is made available to the public under the terms of the
