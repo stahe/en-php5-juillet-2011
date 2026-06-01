@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/en-php5-juillet-2011/php-servers.html">
+        <link rel="canonical" href="https://stahe.github.io/en-php5-juillet-2011/servers-in-php.html">
       
       
-        <link rel="prev" href="php-network-functions.html">
+        <link rel="prev" href="the-network-functions-of-php.html">
       
       
-        <link rel="next" href="tax-calculation-exercise-with-a-web-service-and-a-three-tier-architecture.html">
+        <link rel="next" href="exercise-impots-with-a-web-service-and-a-three-tier-architecture.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>10. PHP Servers - An Introduction to PHP5 Through Examples</title>
+        <title>10. Servers in PHP - An Introduction to PHP5 Through Examples</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#10-php-servers" class="md-skip">
+        <a href="#10-servers-in-php" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10. PHP Servers
+              10. Servers in PHP
             
           </span>
         </div>
@@ -364,7 +366,7 @@
   <span class="md-ellipsis">
     
   
-    3. The Basics of PHP
+    3. The basics of PHP
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="application-exercise---tax-calculation.html" class="md-nav__link">
+      <a href="application-exercise---impots.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Application Exercise – Tax Calculation
+    4. Application Exercise - IMPOTS
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="application-exercise---tax-calculation-with-objects-impots03.html" class="md-nav__link">
+      <a href="application-exercise---impots-with-objects-impots03.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. Application Exercise – Tax Calculation with Objects (impots_03)
+    6. Application Exercise - IMPOTS with objects (impots_03)
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="using-the-mysql-dbms.html" class="md-nav__link">
+      <a href="using-sgbd-and-mysql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Using the MySQL DBMS
+    7. Using SGBD and MySql
   
 
     
@@ -492,14 +494,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tax-calculation-exercise-with-mysql.html" class="md-nav__link">
+      <a href="exercise-impots-with-mysql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Tax Calculation Exercise with MySQL
+    8. Exercise IMPOTS with MySQL
   
 
     
@@ -519,14 +521,14 @@
   
   
     <li class="md-nav__item">
-      <a href="php-network-functions.html" class="md-nav__link">
+      <a href="the-network-functions-of-php.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. PHP Network Functions
+    9. The network functions of PHP
   
 
     
@@ -562,7 +564,7 @@
   <span class="md-ellipsis">
     
   
-    10. PHP Servers
+    10. Servers in PHP
   
 
     
@@ -573,14 +575,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="php-servers.html" class="md-nav__link md-nav__link--active">
+      <a href="servers-in-php.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. PHP Servers
+    10. Servers in PHP
   
 
     
@@ -668,10 +670,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1021-the-get-client-client1_web_02" class="md-nav__link">
+  <a href="#1021-the-client-get-client1_web_02" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10.2.1. The GET client (client1_web_02)
+        10.2.1. The client GET (client1_web_02)
       
     </span>
   </a>
@@ -690,10 +692,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1023-the-post-client-client2_web_03" class="md-nav__link">
+  <a href="#1023-the-client-post-client2_web_03" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10.2.3. The POST client (client2_web_03)
+        10.2.3. The client POST (client2_web_03)
       
     </span>
   </a>
@@ -717,15 +719,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#103-retrieving-web-server-environment-variables" class="md-nav__link">
+  <a href="#103-retrieving-environment-variables-from-the-web-server" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10.3. Retrieving Web Server Environment Variables
+        10.3. Retrieving environment variables from the WEB server
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="10.3. Retrieving Web Server Environment Variables">
+    <nav class="md-nav" aria-label="10.3. Retrieving environment variables from the WEB server">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -756,15 +758,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#104-web-session-management" class="md-nav__link">
+  <a href="#104-session-management-web" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10.4. Web Session Management
+        10.4. Session Management WEB
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="10.4. Web Session Management">
+    <nav class="md-nav" aria-label="10.4. Session Management WEB">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -864,14 +866,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tax-calculation-exercise-with-a-web-service-and-a-three-tier-architecture.html" class="md-nav__link">
+      <a href="exercise-impots-with-a-web-service-and-a-three-tier-architecture.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. Tax Calculation: Exercise with a Web Service and a Three-Tier Architecture
+    11. Exercise IMPOTS with a WEB service and a three-tier architecture
   
 
     
@@ -891,14 +893,14 @@
   
   
     <li class="md-nav__item">
-      <a href="processing-xml-documents-simplexml01.html" class="md-nav__link">
+      <a href="processing-of-documents-xml-simplexml01.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Processing XML Documents (simplexml_01)
+    12. Processing of documents XML (simplexml_01)
   
 
     
@@ -918,14 +920,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tax-calculation-exercise-with-xml.html" class="md-nav__link">
+      <a href="exercise-impots-with-xml.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. Tax Calculation: Exercise with XML
+    13. Exercise IMPOTS with XML
   
 
     
@@ -955,14 +957,14 @@
 
 
 
-<p><a id="refheading399381881943603"></a></p>
-<h1 id="10-php-servers">10. <span style="color: #365f91">PHP Servers</span></h1>
-<p>Since PHP programs can be executed by a web server, such a program becomes a server-side program capable of serving multiple clients. From the client’s perspective, calling a web service is equivalent to requesting the URL of that service. The client can be written in any language, including PHP. In the latter case, we use the network functions we just discussed. We also need to know how to &quot;communicate&quot; with a web service, that is, understand the <em>HTTP</em> protocol used for communication between a web server and its clients. This is the purpose of the following programs.</p>
-<p>The web client described in Section<a href="#inet02"><u><span style="color: #0563c1"> 9.2</span></u></a> allowed us to explore part of the HTTP protocol.</p>
+<p><span id="refheading399381881943603" name="refheading399381881943603" class="odt-bookmark-anchor"></span></p>
+<h1 id="10-servers-in-php">10. <span style="color: #365f91">Servers in PHP</span></h1>
+<p>Since PHP programs can be executed by a WEB server, such a program becomes a server program capable of serving multiple clients instances. From the client’s perspective, calling a WEB service is equivalent to requesting the URL of that service. The client can be written in any language, including PHP. In the latter case, we use the network functions we just discussed. We also need to know how to &quot;communicate&quot; with a WEB service, that is, understand the <em>http</em> communication protocol between a web server and its clients clients. That is the purpose of the following programs.</p>
+<p>The web client described in Section<a href="the-network-functions-of-php.html#inet02"><u><span style="color: #0563c1"> 9.2</span></u></a> allowed us to discover part of the HTTP protocol.</p>
 <p><img src="images/10000000000004B0000000E0FF946545.png" width="600" height="112" style="width:15.875cm;height:2.963cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004B0000000E0FF946545.png" /></p>
-<p>In their simplest form, client/server exchanges are as follows:</p>
+<p>In its simplest form, client/server exchanges are as follows:</p>
 <ul>
-  <li>the client opens a connection to port 80 on the web server
+  <li>the client opens a connection to port 80 of the web server
   </li>
   <li>it makes a request for a document
   </li>
@@ -972,103 +974,103 @@
   </li>
 </ul>
 
-<p>The client can take various forms: HTML text, an image, a video, etc. It can be an existing document (static document) or a document generated on the fly by a script (dynamic document). In the latter case, we refer to web programming. The script for dynamically generating documents can be written in various languages: PHP, Python, Perl, Java, Ruby, C#, VB.NET, etc.</p>
-<p>Here, we use PHP to dynamically generate text documents.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000638000000E735269C0D.png" width="680" height="99" style="display:inline-block; margin:4px;width:17.997cm;height:2.611cm;" class="odt-zoomable" data-zoom-src="images/1000000000000638000000E735269C0D.png" /></td></tr></table>
+<p>The client can be of various types: a text file in HTML format, an image, a video, etc. It can be an existing document (static document) or a document generated on the fly by a script (dynamic document). In the latter case, this is referred to as web programming. The script for dynamically generating documents can be written in various languages: PHP, Python, Perl, Java, Ruby, C#, VB.net, etc.</p>
+<p>Here we use PHP to dynamically generate text documents.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000638000000E735269C0D.png" width="680" height="99" style="display:inline-block; margin:4px;width:17.997cm;height:2.611cm;" class="odt-zoomable" data-zoom-src="images/1000000000000638000000E735269C0D.png" /></td></tr></table>
 
 <ul>
   <li>In [1], the client establishes a connection with the server, requests a PHP script, and may or may not send parameters to that script
   </li>
-  <li>In [2], the web server executes the PHP script using the PHP interpreter. This script generates a document that is sent to the client [3]
+  <li>In [2], the web server executes the script PHP via the interpreter PHP. This script generates a document that is sent to the client [3]
   </li>
   <li>The server closes the connection. The client does the same.
   </li>
 </ul>
 
-<p>The web server can handle multiple clients at once. With the WampServer software package, the web server is an Apache server, an open-source server from the Apache Foundation (http://www.apache.org/). In the following applications, WampServer must be launched. This activates three components: the Apache web server, the MySQL database management system, and the PHP interpreter.</p>
-<p>The scripts executed by the web server will be written using the NetBeans tool. So far, we have written PHP scripts executed in a console environment:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000592000000DE15D52480.png" width="680" height="106" style="display:inline-block; margin:4px;width:17.997cm;height:2.803cm;" class="odt-zoomable" data-zoom-src="images/1000000000000592000000DE15D52480.png" /></td></tr></table>
+<p>The web server can process multiple clients requests at once. With the WampServer software package, the web server is an Apache server, an open-source server from the Apache Foundation (http://www.apache.org/). In the following applications, WampServer must be launched. This activates three software components: the Apache web server, SGBD, and the MySQL interpreter.</p>
+<p>Scripts executed by the web server will be written using the Netbeans tool. So far, we have written PHP scripts executed in a console environment:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000592000000DE15D52480.png" width="680" height="106" style="display:inline-block; margin:4px;width:17.997cm;height:2.803cm;" class="odt-zoomable" data-zoom-src="images/1000000000000592000000DE15D52480.png" /></td></tr></table>
 
 <p>The user uses the console to request the execution of a PHP script and receive the results.</p>
 <p>In the client/server applications that follow, </p>
 <ul>
-  <li>the client script is executed in a console environment
+  <li>the client script is executed in a console context
   </li>
-  <li>the server script is executed in a web environment
+  <li>the server script is executed in a web context
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000067500000233E047ED66.png" width="680" height="232" style="display:inline-block; margin:4px;width:17.997cm;height:6.13cm;" class="odt-zoomable" data-zoom-src="images/100000000000067500000233E047ED66.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000067500000233E047ED66.png" width="680" height="232" style="display:inline-block; margin:4px;width:17.997cm;height:6.13cm;" class="odt-zoomable" data-zoom-src="images/100000000000067500000233E047ED66.png" /></td></tr></table>
 
-<p>The server&#x27;s PHP script cannot be located just anywhere in the file system. This is because the web server searches for the static and dynamic documents requested of it in locations specified by the configuration. The default configuration of WampServer causes documents to be searched for in the <em>&lt;WampServer&gt;/www</em> folder, where &lt;<em>WampServer</em>&gt; is the WampServer installation folder. Thus, if a web client requests a document D with the URL [http://localhost/D], the web server will serve the document D located at the path [&lt;WampServer&gt;/www/D].</p>
-<p>In the following examples, we will place the server scripts in the [www/web-examples] folder. If a server script is named <em>S.php</em>, it will be requested from the web server using the URL [<em>http://localhost/exemples-web/S.php</em>]. The document [<em>&lt;WampServer&gt;/www/web-examples/S.php</em>] will then be served.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001830000012F6178BA8A.png" width="194" height="152" style="display:inline-block; margin:4px;width:5.121cm;height:4.009cm;" class="odt-zoomable" data-zoom-src="images/10000000000001830000012F6178BA8A.png" /></td></tr></table>
+<p>The server script PHP cannot be located just anywhere in the file system. This is because the web server searches for the static and dynamic documents requested of it in locations specified by configuration. The default configuration of WampServer causes documents to be searched for in the <em>&lt;WampServer&gt;/www</em> folder, where &lt;<em>WampServer</em>&gt; is the installation folder of WampServer. Thus, if a web client requests document D using the URL [http://localhost/D] path, the web server will serve document D from the [&lt;WampServer&gt;/www/D] path.</p>
+<p>In the following examples, we will place the server scripts in the [www/exemples-web] folder. If a server script is named <em>S.php</em>, it will be requested from the web server using the URL [http://localhost/exemples-web/S.php]. The document [&lt;WampServer&gt;/www/exemples-web/S.php] will then be served to it.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000001830000012F6178BA8A.png" width="194" height="152" style="display:inline-block; margin:4px;width:5.121cm;height:4.009cm;" class="odt-zoomable" data-zoom-src="images/10000000000001830000012F6178BA8A.png" /></td></tr></table>
 
-<p>To create a server-side script with NetBeans<a id="confnetbeansphpweb"></a> , we will proceed as follows:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000041000000131E392E087.png" width="520" height="153" style="display:inline-block; margin:4px;width:13.758cm;height:4.036cm;" class="odt-zoomable" data-zoom-src="images/100000000000041000000131E392E087.png" /></td></tr></table>
+<p>To create a server script with Netbeans in<span id="confnetbeansphpweb" name="confnetbeansphpweb" class="odt-bookmark-anchor"></span> , we will proceed as follows:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000041000000131E392E087.png" width="520" height="153" style="display:inline-block; margin:4px;width:13.758cm;height:4.036cm;" class="odt-zoomable" data-zoom-src="images/100000000000041000000131E392E087.png" /></td></tr></table>
 
 <ul>
   <li>In [1], we create a new project
   </li>
-  <li>In [2], we select the [PHP] category and the [PHP Application] project
+  <li>In [2], we select the category [PHP] and the project [PHP Application]
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000061E000001AC6C1D15EE.png" width="680" height="186" style="display:inline-block; margin:4px;width:17.997cm;height:4.919cm;" class="odt-zoomable" data-zoom-src="images/100000000000061E000001AC6C1D15EE.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000061E000001AC6C1D15EE.png" width="680" height="186" style="display:inline-block; margin:4px;width:17.997cm;height:4.919cm;" class="odt-zoomable" data-zoom-src="images/100000000000061E000001AC6C1D15EE.png" /></td></tr></table>
 
 <ul>
-  <li>in [3], we name the project
+  <li>In [3], we name the project
   </li>
   <li>In [4], we choose a folder for the project
   </li>
-  <li>In [5], we specify that the script must be executed by a local web server (the script’s URL will be in the form http://localhost/...). The local web server will be the Apache web server from WampServer.
+  <li>In [5], we specify that the script must be executed by a local web server (the script’s URL will be in the form http://localhost/...). The local web server will be the Apache web server for WampServer.
   </li>
-  <li>In [6], we specify the project’s URL. Here, we decide that a script named S.php in the project will be accessed via the URL [http://localhost/exemples-web/S.php]. Based on the above, this means that the path to the S.php script in the file system will be [&lt;WampServer&gt;/www/web-examples/S.php]. This is what is specified in [7]. Here, we specify that any S.php script in the project should be copied into the Apache web server directory structure.
+  <li>In [6], we specify the project’s URL. Here, we decide that a script S.php from the project will be requested with the URL and [http://localhost/exemples-web/S.php]. Based on what has been said, this means that the path of the S.php script in the file system will be [&lt;WampServer&gt;/www/exemples-web/S.php]. This is what is indicated in [7]. Here, we are asking that any S.php script from the project be copied into the Apache web server directory structure.
   </li>
-  <li>in [8], the new project.
+  <li>In [8], the new project.
   </li>
 </ul>
 
 <p>Let’s write a test script:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005E3000001635FB91E5E.png" width="680" height="160" style="display:inline-block; margin:4px;width:17.997cm;height:4.24cm;" class="odt-zoomable" data-zoom-src="images/10000000000005E3000001635FB91E5E.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000005E3000001635FB91E5E.png" width="680" height="160" style="display:inline-block; margin:4px;width:17.997cm;height:4.24cm;" class="odt-zoomable" data-zoom-src="images/10000000000005E3000001635FB91E5E.png" /></td></tr></table>
 
 <ul>
-  <li>In [1], we create a first PHP script in the [web-examples] project
+  <li>in [1], we create a first script PHP
   </li>
-  <li>In [2], we give it a name
+  <li>In [2], we name it
   </li>
-  <li>in [3], after creating it, we give it the following content
+  <li>In [3], after creating it, we give it the following content
   </li>
 </ul>
 
-<p>Next, WampServer must be running.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005470000016294D7507E.png" width="676" height="177" style="display:inline-block; margin:4px;width:17.873cm;height:4.683cm;" class="odt-zoomable" data-zoom-src="images/10000000000005470000016294D7507E.png" /></td></tr></table>
+<p>Next, WampServer must be launched.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000005470000016294D7507E.png" width="676" height="177" style="display:inline-block; margin:4px;width:17.873cm;height:4.683cm;" class="odt-zoomable" data-zoom-src="images/10000000000005470000016294D7507E.png" /></td></tr></table>
 
 <ul>
-  <li>In [4], we run the web script [example1.php]. NetBeans will then launch the machine’s default browser and instruct it to display the URL [http://localhost/exemples-web/exemple1.php] [5]
+  <li>In [4], we run the web script [exemple1.php]. Netbeans will then launch the machine’s default browser and instruct it to display URL [http://localhost/exemples-web/exemple1.php] [5]
   </li>
   <li>In [6], the browser displays what the server script sent to the client.
   </li>
 </ul>
 
-<p>Moving forward, we will encounter two types of web clients:</p>
+<p>Later, we will encounter two types of web browsers:</p>
 <ul>
-  <li>a browser as described above. We noted that the web server sends a response in the form: <i>HTTP headers, blank line, text</i>. The browser displays only <i>the text</i>.
+  <li>a browser as described above. We noted that the web server sent a response in the form: <i>headers HTTP, blank line, text</i>. The browser displays only <i>the text</i>.
   </li>
-  <li>a PHP script that will display the entire response: <i>HTTP headers, blank line, text</i>. 
+  <li>a script that will display the entire response: <i>headers, blank line, text</i>. 
   </li>
 </ul>
 
-<p>Moving forward,</p>
+<p>In the following,</p>
 <ul>
-  <li>server-side scripts will be written like [example1.php] above
+  <li>server-side scripts will be written as [exemple1.php] above
   </li>
-  <li>client-side scripts will be written like the console scripts we have written so far.
+  <li>client scripts will be written like the console scripts we have written so far.
   </li>
 </ul>
-<p><a id="refheading399401881943603"></a></p>
+<p><span id="refheading399401881943603" name="refheading399401881943603" class="odt-bookmark-anchor"></span></p>
 <h2 id="101-clientserver-datetime-application">10.1. <span style="color: #4f81bd">Client/server date/time application</span></h2>
-<p><a id="refheading399421881943603"></a></p>
+<p><span id="refheading399421881943603" name="refheading399421881943603" class="odt-bookmark-anchor"></span></p>
 <h3 id="1011-the-server-web_01">10.1.1. <span style="color: #4f81bd">The server (web_01)</span></h3>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
@@ -1083,12 +1085,12 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#000000">date(</span><span style="color:#008000">&quot;d/m/y H:i:s&quot;</span><span style="color:#000000">,time());</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">Basically, the PHP script above displays the current time on the screen. However, when executed by a web server, stream 1—which is usually associated with the screen—is redirected to the connection linking the server to its client. Therefore, in a web context, the script above sends the current time as text to the client.</span></p>
-<p><span style="color: #000000">Let’s run this script within NetBeans:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053F000002616446BC9C.png" width="672" height="305" style="display:inline-block; margin:4px;width:17.768cm;height:8.057cm;" class="odt-zoomable" data-zoom-src="images/100000000000053F000002616446BC9C.png" /></td></tr></table>
+<p><span style="color: #000000">Basically, the PHP script above displays the current time on the screen. However, when executed by a web server, stream #1—which is usually associated with the screen—is redirected to the connection linking the server to its client. Therefore, in a web context, the script above sends the current time as text to the client.</span></p>
+<p><span style="color: #000000">Let’s run this script within Netbeans:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000053F000002616446BC9C.png" width="672" height="305" style="display:inline-block; margin:4px;width:17.768cm;height:8.057cm;" class="odt-zoomable" data-zoom-src="images/100000000000053F000002616446BC9C.png" /></td></tr></table>
 
 <ul>
-  <li><span style="color: #000000">In [1], we run the script. A web browser is then launched.</span>
+  <li><span style="color: #000000">In [1], the script is executed. A web browser is then launched.</span>
   </li>
   <li><span style="color: #000000">In [2], the URL requested by the web browser</span>
   </li>
@@ -1096,33 +1098,33 @@
   </li>
 </ul>
 
-<p><span style="color: #000000">The client browser uses the </span>HTTP<span style="color: #000000"> protocol to communicate with the web server. We have already described the structure of this protocol.</span></p>
-<p><span style="color: #000000">The client sends lines of text that can be broken down into three parts: </span><em>HTTP headers, a blank line, and the document</em><span style="color: #000000">. The document sent to the web server is usually empty or consists of a set of parameters </span><em>in the form parami=vali</em><span style="color: #000000">, where </span><em>vali</em> <span style="color: #000000">is a value entered by the user in an HTML form.</span></p>
-<p><span style="color: #000000">The server’s response has the same structure: </span><em>HTTP headers, a blank line, and a document,</em> <span style="color: #000000">where </span><em>the document</em> <span style="color: #000000">is this time the document requested by the client browser. If the client has sent parameters, the document returned generally depends on those parameters.</span></p>
-<p><span style="color: #000000">With the </span><strong>Firefox</strong><span style="color: #000000"> browser, you can view the actual data exchanged between the client and the web server. There is a </span><em>Firefox</em><span style="color: #000000"> plugin called </span><strong>Firebug</strong> <span style="color: #000000">that allows you to track this data exchange. Firebug is available at the URL [https://addons.mozilla.org/fr/firefox/addon/firebug/]. If you use the </span><em>Firefox</em><span style="color: #000000"> browser to visit this URL, you can download the </span><em>Firebug</em><span style="color: #000000"> plugin. We will assume hereafter that the Firebug plugin has been downloaded and installed. It is accessible via an option in the Firefox menu:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B8000000C83631F0CC.png" width="322" height="146" style="display:inline-block; margin:4px;width:8.511cm;height:3.868cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B8000000C83631F0CC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<p><span style="color: #000000">The client browser uses the </span>HTTP<span style="color: #000000"> protocol to communicate with the web server. We have already described the format of this protocol.</span></p>
+<p><span style="color: #000000">The client sends lines of text that can be broken down into three parts: </span><em>headers, an empty line, and the document</em><span style="color: #000000">. The document sent to the web server is usually empty or consists of a set of parameters </span><em>in the form parami=vali</em><span style="color: #000000">, where </span><em>vali</em> <span style="color: #000000">is a value entered by the user in a form.</span></p>
+<p><span style="color: #000000">The server’s response has the same format: </span><em>headers HTTP, blank line, document</em><span style="color: #000000">, where </span><em>the document</em> <span style="color: #000000">is this time the document requested by the client browser. If the client has sent parameters, the document delivered generally depends on those parameters.</span></p>
+<p><span style="color: #000000">With the </span><strong>Firefox</strong><span style="color: #000000"> browser, it is possible to view the actual exchanges between the client and the web server. There is a </span><em>Firefox</em><span style="color: #000000"> plugin called </span><strong>Firebug</strong> <span style="color: #000000">that allows you to trace these exchanges. Firebug is available at URL [https://addons.mozilla.org/fr/firefox/addon/firebug/]. If you use the </span><em>Firefox</em><span style="color: #000000"> browser to visit this Url, you can then download the </span><em>Firebug</em><span style="color: #000000"> plugin. We assume below that the Firebug plugin has been downloaded and installed. It is available via a option in the Firefox menu:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000001B8000000C83631F0CC.png" width="322" height="146" style="display:inline-block; margin:4px;width:8.511cm;height:3.868cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B8000000C83631F0CC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">A Firebug window opens within the Firefox browser window. This window itself has a menu:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002180000005F9DBEC713.png" width="375" height="67" style="display:inline-block; margin:4px;width:9.931cm;height:1.76cm;" class="odt-zoomable" data-zoom-src="images/10000000000002180000005F9DBEC713.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000002180000005F9DBEC713.png" width="375" height="67" style="display:inline-block; margin:4px;width:9.931cm;height:1.76cm;" class="odt-zoomable" data-zoom-src="images/10000000000002180000005F9DBEC713.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;">&nbsp;</td></tr></table>
 
-<p><span style="color: #000000">To view the client/server exchanges during an HTTP request, we enter the URL [</span><mark style="background-color: #fff5ce">http://localhost/exemples-web/web_01.php</mark><span style="color: #000000">] in the Firefox browser. The Firebug window then fills with information:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000381000000C34711D784.png" width="449" height="98" style="display:inline-block; margin:4px;width:11.867cm;height:2.581cm;" class="odt-zoomable" data-zoom-src="images/1000000000000381000000C34711D784.png" /></td></tr></table>
+<p><span style="color: #000000">To view the client/server exchanges during a HTTP request, we make the URL [http://localhost/exemples-web/web_01.php] request using the Firefox browser. The Firebug window then fills with information:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000381000000C34711D784.png" width="449" height="98" style="display:inline-block; margin:4px;width:11.867cm;height:2.581cm;" class="odt-zoomable" data-zoom-src="images/1000000000000381000000C34711D784.png" /></td></tr></table>
 
 <p><span style="color: #000000">Above is a summary of the client/server exchanges:</span></p>
 <ul>
-  <li>[1]: The client sent the HTTP request<b>: GET /exemples-web/web_01.php HTTP/1.1 </b>to request the document [web01.php]
+  <li>[1]: the client sent the request HTTP<b>: GET /exemples-web/web_01.php HTTP/1.1 </b>to request the document [web01.php]
   </li>
-  <li>[2]: The server sent the response: <b>HTTP/1.1 200 OK, </b>indicating that it found the requested document.
+  <li>[2]: the server sent the response: <b>HTTP/1.1 200 OK </b>indicating that it found the requested document.
   </li>
 </ul>
 
-<p>Firebug allows you to view the complete exchanges. Simply &quot;expand&quot; the URL:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000635000002EA09DD715B.png" width="680" height="319" style="display:inline-block; margin:4px;width:17.997cm;height:8.449cm;" class="odt-zoomable" data-zoom-src="images/1000000000000635000002EA09DD715B.png" /></td></tr></table>
+<p>Firebug allows you to view the complete exchange. Simply &quot;expand&quot; the URL:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000635000002EA09DD715B.png" width="680" height="319" style="display:inline-block; margin:4px;width:17.997cm;height:8.449cm;" class="odt-zoomable" data-zoom-src="images/1000000000000635000002EA09DD715B.png" /></td></tr></table>
 
-<p>Above, we see the HTTP headers exchanged between the client (Request) and the server (Response). It is possible to obtain the source code of the exchange, i.e., the actual lines of text exchanged [1]. We then obtain the following source code:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020A0000017A610B8750.png" width="365" height="265" style="display:inline-block; margin:4px;width:9.67cm;height:7.003cm;" class="odt-zoomable" data-zoom-src="images/100000000000020A0000017A610B8750.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<p>Above, we see the Http headers exchanged between the client (Request) and the server (Response). It is possible to obtain the source code of the exchanges, c.a.d, and the actual text lines exchanged, [1]. We then obtain the following source code:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000020A0000017A610B8750.png" width="365" height="265" style="display:inline-block; margin:4px;width:9.67cm;height:7.003cm;" class="odt-zoomable" data-zoom-src="images/100000000000020A0000017A610B8750.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;">&nbsp;</td></tr></table>
 
-<p><span style="color: #000000">To write a client-side script for the web server, we simply need to replicate the browser’s behavior. After establishing a connection with the server, the client-side script could send the 8 lines of the request shown above. In fact, not everything is essential, and we will only send the following three lines:</span></p>
+<p><span style="color: #000000">To write a client-side script for the web server, we simply need to replicate the browser’s behavior. After establishing a connection with the server, the client-side script could send the 8 lines of the request above. In fact, not everything is essential, and we will only send the following three lines:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>GET /exemples-web/web01.php HTTP/1.1
@@ -1138,37 +1140,37 @@
   </li>
 </ul>
 
-<p>Let’s now look at the server’s response. We know it was generated by the PHP script [web_01.php]. Above, we see the HTTP headers of the response. The code of the [web01.php] script shows that it did not generate them. Recall the server script’s configuration:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000064C000000E0DFF4BA43.png" width="680" height="95" style="display:inline-block; margin:4px;width:17.997cm;height:2.501cm;" class="odt-zoomable" data-zoom-src="images/100000000000064C000000E0DFF4BA43.png" /></td></tr></table>
+<p>Let’s now look at the server’s response. We know it was generated by the PHP [web_01.php] script. Above, we see the HTTP headers of the response. The code of the [web01.php] script shows that it did not generate them. Let’s recall the server script’s configuration:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000064C000000E0DFF4BA43.png" width="680" height="95" style="display:inline-block; margin:4px;width:17.997cm;height:2.501cm;" class="odt-zoomable" data-zoom-src="images/100000000000064C000000E0DFF4BA43.png" /></td></tr></table>
 
-<p>It is the web server that generated the HTTP headers of the response. The server script can generate them itself. We’ll see an example of this a little later.</p>
-<p>We mentioned that the web server’s response takes the form: <em>HTTP headers, blank line, document</em>. If the document is a text document, we can view it in the [Response] tab of Firebug:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D9000000C583576C27.png" width="152" height="138" style="display:inline-block; margin:4px;width:4.02cm;height:3.649cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D9000000C583576C27.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<p>It is the web server that generated the HTTP headers of the response. The server script can generate them itself. We will see an example of this a little later.</p>
+<p>We mentioned that the web server’s response had the following format: <em>HTTP headers, blank line, document</em>. If the document is a text document, you can view it in the [Réponse] tab of Firebug:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000000D9000000C583576C27.png" width="152" height="138" style="display:inline-block; margin:4px;width:4.02cm;height:3.649cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D9000000C583576C27.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;">&nbsp;</td></tr></table>
 
 <p>This response was generated by the [web_01.php] script.</p>
-<p><a id="refheading399441881943603"></a></p>
+<p><span id="refheading399441881943603" name="refheading399441881943603" class="odt-bookmark-anchor"></span></p>
 <h3 id="1012-a-client-client1_web_01">10.1.2. <span style="color: #4f81bd">A client (client1_web_01)</span></h3>
 <p>We will now write a client script for the previous service. We know that the client must:</p>
 <ul>
   <li>open a connection with the web server
   </li>
-  <li>send the text: <i>HTTP headers, blank line</i>
+  <li>send the text: <i>headers HTTP, empty line</i>
   </li>
-  <li>read the server&#x27;s complete response until the server closes its connection with the client
+  <li>Read the server&#x27;s entire response until the server closes its connection with the client
   </li>
-  <li>close the connection with the server
+  <li>Close the connection with the server
   </li>
 </ul>
 
-<p>The client script runs in a NetBeans console environment:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000641000003276A1BFC85.png" width="680" height="343" style="display:inline-block; margin:4px;width:17.997cm;height:9.072cm;" class="odt-zoomable" data-zoom-src="images/1000000000000641000003276A1BFC85.png" /></td></tr></table>
+<p>The client script runs in a console environment of Netbeans:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000641000003276A1BFC85.png" width="680" height="343" style="display:inline-block; margin:4px;width:17.997cm;height:9.072cm;" class="odt-zoomable" data-zoom-src="images/1000000000000641000003276A1BFC85.png" /></td></tr></table>
 
 <ul>
-  <li>in [1], the client script [client1_web_01.php] is included in the NetBeans project [examples]
+  <li>in [1], the client script [client1_web_01.php] is included in the project Netbeans [exemples]
   </li>
-  <li>in [2], the properties of the NetBeans project [examples]
+  <li>In [2], the properties of the Netbeans and [exemples] projects
   </li>
-  <li>in [3], the NetBeans project [examples] runs in &quot;command line&quot; mode, which we have also referred to as &quot;console&quot; mode.
+  <li>in [3], the project Netbeans [exemples] runs in &quot;command line&quot; mode, which we have also referred to as &quot;console&quot; mode.
   </li>
 </ul>
 
@@ -1212,21 +1214,21 @@
 <ul>
   <li>line 8: opening a connection to the server
   </li>
-  <li>line 16: HTTP GET command
+  <li>Line 16: Order HTTP GET
   </li>
-  <li>line 18: HTTP Host command
+  <li>Line 18: Order HTTP Host
   </li>
-  <li>line 20: HTTP Connection command
+  <li>line 20: command HTTP Connection
   </li>
   <li>line 22: empty line
   </li>
-  <li>Lines 26–28: Read all text lines sent by the server until it closes the connection.
+  <li>lines 26–28: read all text lines sent by the server until it closes the connection.
   </li>
   <li>line 30: the client closes the connection
   </li>
 </ul>
 
-<p><strong><a id="refheading399461881943603"></a>Results</strong></p>
+<p><strong><span id="refheading399461881943603" name="refheading399461881943603" class="odt-bookmark-anchor"></span>Results</strong></p>
 <p>Executing the client script produces the following results:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
@@ -1248,34 +1250,34 @@
 </code></pre></div></td></tr></table></div>
 <p><strong>Comments</strong></p>
 <ul>
-  <li>Lines 1–7: the HTTP response from the web server.
+  <li>lines 1-7: the HTTP response from the web server.
   </li>
-  <li>Line 8: the empty line that signals the end of the HTTP headers
+  <li>Line 8: the empty line that signals the end of the headers HTTP
   </li>
-  <li>Lines 9 and beyond: the document. Here, it is a simple text representing the current date and time. This is the text written by the PHP script to output #1.
+  <li>Lines 9 and beyond: the document. Here, it is a simple text representing the current date and time. This is the text written by the script PHP to output #1.
   </li>
 </ul>
 
 <ul>
   <li>Line 1: The server responds that it has found the requested document.
   </li>
-  <li>Line 2: the server&#x27;s current date and time
+  <li>line 2: current date and time on the server
   </li>
-  <li>Line 3: Web server identity
+  <li>line 3: web server identity
   </li>
-  <li>line 4: indicates that the document that follows is generated by a PHP script
+  <li>line 4: indicates that the document that follows is a document generated by a PHP script
   </li>
-  <li>line 5: number of characters in the document
+  <li>Line 5: Number of characters in the document
   </li>
-  <li>Line 6: The server indicates that after sending the document, it will close the connection
+  <li>line 6: the server indicates that after sending the document, it will close the connection
   </li>
-  <li>line 7: indicates that the document sent by the server is text in HTML format. This is incorrect here. The document is plain text. When the document is not in HTML format, it is up to the PHP script to indicate this. We did not do that here.
+  <li>line 7: indicates that the document sent by the server is text in HTML format. This is incorrect here. The document is plain text with no specific format. When the document is not text in HTML format, the PHP script is responsible for indicating this. We did not do so here.
   </li>
 </ul>
 
-<p><a id="refheading399481881943603"></a></p>
+<p><span id="refheading399481881943603" name="refheading399481881943603" class="odt-bookmark-anchor"></span></p>
 <h3 id="1013-a-second-client-client2_web_01">10.1.3. <span style="color: #4f81bd">A second client (client2_web_01)</span></h3>
-<p>The previous client displayed everything the web server sent it. In practice, we generally ignore the HTTP headers in the response and focus on the body of the document. Here, we want to retrieve the date and time sent by the server-side PHP script. We will retrieve this information using a regular expression.</p>
+<p>The previous client displayed everything the web server sent it. In practice, we generally ignore the HTTP headers in the response and process the document body. Here, we aim to retrieve the date and time sent by the server script PHP. We will retrieve this information using a regular expression.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1302,17 +1304,17 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// the server will now respond on channel $connexion. It will send all</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// then close the channel. The client therefore reads everything that arrives from $connexion</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// until it finds the line it&#x27;s looking for in the form dd/mm/yy hh:mm:ss</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// until it finds the line it&#x27;s looking for in the form dd/mm/aa hh:mm:ss</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">while</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$ligne</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">fgets(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">1000</span><span style="color:#000000">))</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">$ligne</span><span style="color:#008000">&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(preg_match(</span><span style="color:#008000">&quot;/(\d\d)\/(\d\d)\/(\d\d) (\d\d):(\d\d):(\d\d)/&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$ligne</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$champs</span><span style="color:#000000">))</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     // we retrieve the # fields</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">array_shift(</span><span style="color:#0000ff">$champs</span><span style="color:#000000">);</span><span style="color:#008080"> </span><span style="font-style:italic;color:#808080">// e// removes the 1st element from the array fields</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">     // we retrieve the 6 fields in 6 variables</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    array_shift($champs); // removes the 1st element from the array fields</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">     // the 6 fields are retrieved in 6 variables</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">list</span><span style="color:#000000">(</span><span style="color:#0000ff">$j</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$m</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$a</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$h</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$s</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$champs</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">     // result display</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;\ndateheure=[</span><span style="color:#0000ff">$j</span><span style="color:#008000">,</span><span style="color:#0000ff">$m</span><span style="color:#008000">,</span><span style="color:#0000ff">$a</span><span style="color:#008000">,</span><span style="color:#0000ff">$h</span><span style="color:#008000">,</span><span style="color:#0000ff">$i</span><span style="color:#008000">,</span><span style="color:#0000ff">$s</span><span style="color:#008000">]\n&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">////if</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }//if</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">//while</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// the customer in turn closes the connection</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">fclose(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">);</span></span></span>
@@ -1320,7 +1322,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
-<p><strong><a id="refheading399501881943603"></a>Results</strong></p>
+<p><strong><span id="refheading399501881943603" name="refheading399501881943603" class="odt-bookmark-anchor"></span>Results</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -1341,11 +1343,11 @@
 <a id="__codelineno-2-9" name="__codelineno-2-9"></a>17/08/11 14:14:51
 <a id="__codelineno-2-10" name="__codelineno-2-10"></a>dateheure=[17,08,11,14,14,51]
 </code></pre></div></td></tr></table></div>
-<p><a id="refheading399521881943603"></a></p>
+<p><span id="refheading399521881943603" name="refheading399521881943603" class="odt-bookmark-anchor"></span></p>
 <h2 id="102-server-retrieval-of-parameters-sent-by-the-client">10.2. <span style="color: #4f81bd">Server retrieval of parameters sent by the client</span></h2>
 <p>In the HTTP protocol, a client has two methods for passing parameters to the web server:</p>
 <ul>
-  <li>it requests the service URL in the form 
+  <li>it requests the URL service in the form 
   </li>
 </ul>
 
@@ -1355,7 +1357,7 @@
 
 <p>where the <em>valid</em> values must first be encoded so that certain reserved characters are replaced by their hexadecimal values.</p>
 <ul>
-  <li>it requests the service URL in the form 
+  <li>It requests the URL from the service in the form 
   </li>
 </ul>
 
@@ -1363,26 +1365,26 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">POST</span> url HTTP/1.0</span></span>
 </code></pre></div>
 
-<p>then, among the HTTP headers sent to the server, includes the following header:</p>
+<p>then, among the headers sent to the server, includes the following header:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Content-length=N
 </code></pre></div>
 <p>The rest of the headers sent by the client end with a blank line. It can then send its data in the form</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>val1&amp;param2=val2&amp;param3=val3…
 </code></pre></div>
-<p>where the <em>valid</em> values must, as with the GET method, be encoded beforehand. The number of characters sent to the server must be N, where N is the value declared in the header</p>
+<p>where the values <em>vali</em> must, as with the GET method, be encoded beforehand. The number of characters sent to the server must be N, where N is the value declared in the header</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Content-length=N
 </code></pre></div>
-<p>The PHP script that retrieves the previous <em>parami</em> parameters sent by the client obtains their values from the array:</p>
+<p>The script PHP, which retrieves the previous <em>parameters</em> sent by the client, obtains their values from the array:</p>
 <ul>
-  <li>$_GET[&quot;<i>parami</i>&quot;] for a GET request
+  <li>$_GET[&quot;parami&quot;] for a command GET
   </li>
-  <li>$_POST[&quot;<i>parami</i>&quot;] for a POST request
+  <li>$_POST[&quot;parami&quot;] for a command POST
   </li>
 </ul>
 
-<p><a id="refheading399541881943603"></a></p>
-<h3 id="1021-the-get-client-client1_web_02">10.2.1. <span style="color: #4f81bd">The GET client (client1_web_02)</span></h3>
-<p>The PHP script below sends three parameters [last_name, first_name, age] to the server.</p>
+<p><span id="refheading399541881943603" name="refheading399541881943603" class="odt-bookmark-anchor"></span></p>
+<h3 id="1021-the-client-get-client1_web_02">10.2.1. <span style="color: #4f81bd"><strong>The client GET (client1_web_02)</strong></span></h3>
+<p>The script PHP below sends three parameters [nom, prenom, age] to the server.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1398,7 +1400,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(!</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;Echec de la connexion au site (</span><span style="color:#0000ff">$HOTE</span><span style="color:#008000">,</span><span style="color:#0000ff">$PORT</span><span style="color:#008000">) : </span><span style="color:#0000ff">$erreur</span><span style="color:#008000">&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">//if</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}//if</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// information sent to server PHP</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// information is encoded</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$infos</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;prenom=&quot;</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#000000">urlencode(utf8_decode(</span><span style="color:#0000ff">$prenom</span><span style="color:#000000">))</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#008000">&quot;&amp;nom=&quot;</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#000000">urlencode(utf8_decode(</span><span style="color:#0000ff">$nom</span><span style="color:#000000">))</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#008000">&quot;&amp;age=&quot;</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#000000">urlencode(</span><span style="color:#008000">&quot;</span><span style="color:#0000ff">$age</span><span style="color:#008000">&quot;</span><span style="color:#000000">);</span></span></span>
@@ -1424,18 +1426,18 @@
 
 <p><strong><span style="color: #000000">Comments</span></strong></p>
 <ul>
-  <li><span style="color: #000000">line 7: URL of the server script</span>
+  <li><span style="color: #000000">line 7: Url from the server script</span>
   </li>
-  <li><span style="color: #000000">line 8: values of the 3 parameters</span>
+  <li><span style="color: #000000">line 8: the values of the 3 parameters</span>
   </li>
-  <li><span style="color: #000000">line 10: opens a connection to the web server</span>
+  <li><span style="color: #000000">line 10: opening a connection to the web server</span>
   </li>
-  <li><span style="color: #000000">line 18: encoding of the 3 parameters. We are working in a script written in NetBeans with UTF-8 character encoding. Therefore, the 3 parameter values from line 8 are encoded in UTF-8. The utf8_decode function converts their encoding to ISO-8859-1. Once this is done, they can be encoded for the URL. All non-alphabetic characters are replaced by %xx, where xx is the hexadecimal value of the character. Spaces are replaced by the + sign.</span>
+  <li><span style="color: #000000">line 18: encoding of the 3 parameters. We are in a script written in Netbeans with UTF-8 character encoding. Therefore, the 3 parameter values in line 8 are encoded in UTF-8. The utf8_decode function converts their encoding to ISO-8859-1. Once this is done, they can be encoded for URL. All non-alphabetic characters are replaced by %xx, where xx is the hexadecimal value of the character. Spaces are replaced by the + sign.</span>
   </li>
-  <li><span style="color: #000000">Line 24: The requested URL is </span><b><span style="color: #000000">$URL?$infos, </span></b><span style="color: #000000">where </span><i><span style="color: #000000">$infos </span></i><span style="color: #000000">is in the form </span><i><span style="color: #000000">last_name=val1&amp;first_name=val2&amp;age=val3</span></i><span style="color: #000000">.</span>
+  <li><span style="color: #000000">Line 24: The requested URL is </span><b><span style="color: #000000">$URL?$infos, </span></b><span style="color: #000000">where $infos is in the form </span><i><span style="color: #000000">lastname=val1&amp;firstname=val2&amp;age=val3</span></i><span style="color: #000000">.</span>
   </li>
 </ul>
-<p><a id="refheading399561881943603"></a></p>
+<p><span id="refheading399561881943603" name="refheading399561881943603" class="odt-bookmark-anchor"></span></p>
 <h3 id="1022-the-server-web_02">10.2.2. <span style="color: #4f81bd">The server (web_02)</span></h3>
 <p>The server simply displays what it receives.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
@@ -1468,39 +1470,39 @@
 
 <p><strong>Comments</strong></p>
 <ul>
-  <li>line 13: sets the HTTP header &quot;Content-Type&quot;. By default, the web server sends the header
+  <li>line 13: sets the &quot;Content-Type&quot; header to HTTP. By default, the web server sends the header
   </li>
 </ul>
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Content-Type: text/html
 </code></pre></div>
-<p>, which indicates that the response is text in HTML format. Here, the response will be unformatted text with characters encoded in UTF-8:</p>
+<p>which indicates that the response is text in the format HTML. In this case, the response will be unformatted text with characters encoded in UTF-8:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Content-Type: text/plain; charset=utf-8
 </code></pre></div>
-<p>HTTP headers must be sent before the server&#x27;s response. Therefore, in the code above, the call to the <em>header</em> function must come before any <em>print</em> statements.</p>
+<p>The HTTP headers must be sent before the server&#x27;s response. Therefore, as shown above, the call to the <em>header</em> function will come before any <em>print</em> statements.</p>
 <ul>
   <li>Lines 16–18: We retrieve the three parameters from the $_GET array.
   </li>
-  <li>Line 21: We construct the string that will be sent as a response to the client. Certain characters have special meanings in HTML and must be replaced with HTML entities to be displayed. <b>htmlspecialchars($string) </b>replaces all these characters with their equivalents in the <i>$string</i>. For example, the $ character becomes &amp;amp. Then, since we specified in line 13 that the response would be UTF-8 text, we encode the retrieved values in UTF-8.
+  <li>line 21: we construct the string that will be sent in response to the client. Certain characters have special meanings in HTML and must be replaced by HTML entities to be displayed. <b>htmlspecialchars($string) </b>replaces all these characters with their equivalents in the <i>$string </i>string. For example, the $ character becomes &amp;amp. Then, since we specified in line 13 that the response would be UTF-8 text, we encode the retrieved values in UTF-8.
   </li>
   <li>Line 25: The response is sent to the client
   </li>
 </ul>
 
-<p><strong><a id="refheading399581881943603"></a>Test 1</strong></p>
-<p>Let’s run the [web_02] script from NetBeans. A browser will then open to display the URL [http://localhost/exemples-web/web_02.php]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000064E000000E4FBCE101C.png" width="680" height="96" style="display:inline-block; margin:4px;width:17.997cm;height:2.542cm;" class="odt-zoomable" data-zoom-src="images/100000000000064E000000E4FBCE101C.png" /></td></tr></table>
+<p><strong><span id="refheading399581881943603" name="refheading399581881943603" class="odt-bookmark-anchor"></span>Test 1</strong></p>
+<p>Let’s run the script [web_02] from Netbeans. A browser is then launched to display URL [http://localhost/exemples-web/web_02.php]:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000064E000000E4FBCE101C.png" width="680" height="96" style="display:inline-block; margin:4px;width:17.997cm;height:2.542cm;" class="odt-zoomable" data-zoom-src="images/100000000000064E000000E4FBCE101C.png" /></td></tr></table>
 
 <ul>
-  <li>In [1], the browser displays the URL [http://localhost/exemples-web/web_02.php]. Because we did not append parameters to this URL, the server responded with empty parameters. Recall that the server’s response is the one written with the <i>print</i> statement.
+  <li>In [1], the browser displays URL [http://localhost/exemples-web/web_02.php]. Because we did not append parameters to this Url, the server responded with empty parameters. Remember that the server’s response is the one written with the <i>print</i> statement.
   </li>
-  <li>In [2], we append parameters to the URL. This time, the server script returns them correctly.
+  <li>In [2], we append parameters to URL. This time, the server script returns them correctly.
   </li>
 </ul>
 
-<p>Note that NetBeans is not required to run a server script. Simply enter the server script’s URL into a browser to execute it.</p>
+<p>Note that Netbeans is not required to execute a server script. Simply typing the URL of the server script into a browser is sufficient for the script to run.</p>
 <p><strong>Test 2</strong></p>
-<p>We run the client [client1_web_02.php] in NetBeans. We receive the following response:</p>
+<p>We run the client [client1_web_02.php] in Netbeans. We receive the following response:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
@@ -1532,9 +1534,9 @@
   </li>
 </ul>
 
-<p><a id="refheading399601881943603"></a></p>
-<h3 id="1023-the-post-client-client2_web_03">10.2.3. <span style="color: #4f81bd">The POST client (client2_web_03)</span></h3>
-<p>An HTTP client sends the following text sequence to the web server: <em>HTTP headers, blank line, document</em>. In the previous client, this sequence was as follows: </p>
+<p><span id="refheading399601881943603" name="refheading399601881943603" class="odt-bookmark-anchor"></span></p>
+<h3 id="1023-the-client-post-client2_web_03">10.2.3. <span style="color: #4f81bd">The client POST (client2_web_03)</span></h3>
+<p>A client Http sends the following text sequence to the web server: <em>headers HTTP, empty line, document</em>. In the previous client, this sequence was as follows: </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>GET /url?paramètres HTTP/1.1
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>… autres entêtes HTTP
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>ligne vide
@@ -1545,8 +1547,8 @@
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>ligne vide
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>paramètres
 </code></pre></div>
-<p>This time, the parameters that were included in the HTTP headers for the GET client are part of the document sent after the headers in the POST client.</p>
-<p>The POST client script is as follows:</p>
+<p>This time, the parameters that were included in the headers for the GET client are part of the document sent after the headers in the POST client.</p>
+<p>The script for client POST is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1562,7 +1564,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(!</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;Echec de la connexion au site (</span><span style="color:#0000ff">$HOTE</span><span style="color:#008000">,</span><span style="color:#0000ff">$PORT</span><span style="color:#008000">) : </span><span style="color:#0000ff">$erreur</span><span style="color:#008000">&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">//if</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}//if</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// information sent to server PHP</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// information is encoded</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$infos</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;prenom=&quot;</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#000000">urlencode(utf8_decode(</span><span style="color:#0000ff">$prenom</span><span style="color:#000000">))</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#008000">&quot;&amp;nom=&quot;</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#000000">urlencode(utf8_decode(</span><span style="color:#0000ff">$nom</span><span style="color:#000000">))</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#008000">&quot;&amp;age=&quot;</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#000000">urlencode(</span><span style="color:#008000">&quot;</span><span style="color:#0000ff">$age</span><span style="color:#008000">&quot;</span><span style="color:#000000">);</span></span></span>
@@ -1595,45 +1597,45 @@
 
 <p><strong>Comments</strong></p>
 <ul>
-  <li>Line 7: The URL of the web service to which the POST client will connect. This web service will be described shortly.
+  <li>line 7: the URL of the web service to which the client POST will connect. This web service will be described shortly.
   </li>
-  <li>Line 8: the parameters to be sent to the web service
+  <li>line 8: the parameters to be sent to the web service
   </li>
-  <li>Line 10: Connection to the web server
+  <li>line 10: connection to the web server
   </li>
   <li>line 18: encoding of the parameters to be sent to the web service
   </li>
-  <li>line 23: HTTP POST command
+  <li>line 23: command Http POST
   </li>
-  <li>line 25: HTTP Host command
+  <li>line 25: command Http Host
   </li>
-  <li>line 27: HTTP Connection header
+  <li>line 27: command Http Connection
   </li>
-  <li>line 29: HTTP <b>Content-Type</b> header. We have already encountered this HTTP header. It is present every time a document is sent. A web server sending an HTML document uses the HTTP
+  <li>line 29: command Http <b>Content-type</b>. We have already encountered this header HTTP. It is present every time a document is sent. A web server that sends a document Html uses the header HTTP
   </li>
 </ul>
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Content-type : text/html
 </code></pre></div>
-<p>If it sends unformatted text, it uses the HTTP header</p>
+<p>If it sends unformatted text, it uses the header HTTP</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Content-type : text/plain
 </code></pre></div>
-<p>Our POST client sends a document that is text in the form param1=val1&amp;param2=<em>val2&amp;</em>.... This type of document has the type <strong>application/x-www-form-urlencoded</strong>. We won’t explain why, as that would require us to explain what a web form is.</p>
+<p>Our client POST sends a document that is text in the form param1=<em>val1</em>&amp;<em>param2=val2&amp;</em>.... This type of document has the type <strong>application/x-www-form-urlencoded</strong>. We won’t explain why, as that would require us to explain what a web form is.</p>
 <ul>
-  <li>Line 32: <b>Content-length</b> directive. We have already encountered this HTTP header. It is present every time a document is sent. It indicates the number of bytes in the document.
+  <li>Line 32: <b>Content-length</b> header. We have already encountered this header HTTP. It is present every time a document is sent. It indicates the number of bytes in the document.
   </li>
-  <li>Line 34: The empty line indicating the end of the HTTP headers
+  <li>Line 34: The empty line indicating the end of the headers HTTP
   </li>
   <li>Line 36: Sending the parameters
   </li>
-  <li>Lines 40–41: Reading the complete response from the server
+  <li>Lines 40–41: Reading the complete server response
   </li>
-  <li>Line 43: Closing the connection
+  <li>line 43: closing the connection
   </li>
 </ul>
 
 <h3 id="1024-the-server-web_03">10.2.4. <span style="color: #4f81bd">The server (web_03)</span></h3>
-<p>The web service [web_03] does the same thing as the web service [web_02]. It reads the parameters sent by the POST client and sends them back to the client. Its code is as follows:</p>
+<p>The [web_03] web service does the same thing as the [web_02] web service. It reads the parameters sent by the POST client and sends them back to the client. Its code is as follows:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1661,14 +1663,14 @@
 
 <p><strong>Comments</strong></p>
 <ul>
-  <li>lines 14–16: The parameters sent by a POST client become available in the $_POST array for the web service receiving them.
+  <li>lines 14-16: the parameters sent by a client POST become available in the array $_POST for the web service that receives them.
   </li>
-  <li>line 6: HTTP <i>Content-Type</i> header. You might be surprised not to find the HTTP <i>Content-Length</i> header in the HTTP headers, which indicates the size of the document sent back to the client. We saw that the web server sends HTTP headers by default. The <i>Content-Length</i> header is one of them.
+  <li>Line 6: HTTP <i>Content-Type</i> header. It may be surprising not to find the HTTP <i>Content-Length</i> header in the HTTP headers, which indicates the size of the document sent back to the client. We have seen that the web server sends HTTP headers by default. The <i>Content-Length</i> header is one of them.
   </li>
 </ul>
 
-<p><strong><a id="refheading399621881943603"></a>Results</strong></p>
-<p>Once the server script is written in NetBeans, it becomes immediately available via the WampServer Apache server. Remember that this is achieved through configuration (see paragraph<a href="#confnetbeansphpweb"><u><span style="color: #0563c1"> 10</span></u></a>). We launch the client, which queries the server, and then receive the following response:</p>
+<p><strong><span id="refheading399621881943603" name="refheading399621881943603" class="odt-bookmark-anchor"></span>Results</strong></p>
+<p>Once the server script is written in NetBeans, it becomes immediately available via the Apache server at WampServer. Recall that this is achieved through configuration (see paragraph<a href="#confnetbeansphpweb"><u><span style="color: #0563c1"> 10</span></u></a>). We launch the client, which queries the server, and then receive the following response:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
@@ -1692,19 +1694,19 @@
 <ul>
   <li>lines 2-10: the server&#x27;s response
   </li>
-  <li>lines 2-8: the HTTP headers
+  <li>lines 2-8: the headers Http
   </li>
   <li>line 10: the document
   </li>
   <li>line 6: the HTTP <i>Content-Length</i> header. Since this header was not generated by the server script, it was generated by the web server.
   </li>
-  <li>Line 8: the only header generated by the server script
+  <li>line 8: the only header generated by the server script
   </li>
 </ul>
-<p><a id="refheading399641881943603"></a></p>
-<h2 id="103-retrieving-web-server-environment-variables">10.3. <span style="color: #4f81bd">Retrieving Web Server Environment Variables</span></h2>
-<p>A server script runs in a web environment that it can access. This environment is stored in the $_SERVER dictionary. First, we write a server application that sends the contents of this dictionary to its clients.</p>
-<p><a id="refheading399661881943603"></a></p>
+<p><span id="refheading399641881943603" name="refheading399641881943603" class="odt-bookmark-anchor"></span></p>
+<h2 id="103-retrieving-environment-variables-from-the-web-server">10.3. <span style="color: #4f81bd">Retrieving environment variables from the WEB server</span></h2>
+<p>A server script runs in a web environment that it can recognize. This environment is stored in the dictionary $_SERVER. First, we write a server application that sends the contents of this dictionary to its clients.</p>
+<p><span id="refheading399661881943603" name="refheading399661881943603" class="odt-bookmark-anchor"></span></p>
 <h3 id="1031-the-server-web_04">10.3.1. <span style="color: #4f81bd">The server (web_04)</span></h3>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
@@ -1728,69 +1730,69 @@
 <p>The result obtained when the client is a web browser is as follows:</p>
 <p><img src="images/1000000000000282000001F8E6F77871.png" width="449" height="353" style="width:11.89cm;height:9.335cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000282000001F8E6F77871.png" /></p>
 <p>Here is the meaning of some of the variables (for Windows. On Linux, they would be different):</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>HTTP_CMDE
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">CMDE represents the HTTP header sent by the client. We have access to all these headers.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">CMDE represents the HTTP header sent by the client. We have access to all these headers.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>PATH
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">The path to the executables on the machine where the server script is running</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">The path to the executables on the machine where the server script is running</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>COMSPEC
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">The path to the DOS command interpreter</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">the path to the DOS command interpreter</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>PATHEXT
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">the extensions of executable files</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">the extensions of executable files</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>WINDIR
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">the Windows installation folder</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">the Windows installation folder</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>SERVER_SIGNATURE
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">the web server signature. Nothing here.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">the web server signature. Nothing here.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>SERVER_SOFTWARE
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">the type of web server</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>SERVER_NAME
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">the type of web server</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>SERVER_NAME 
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">The Internet name of the web server machine</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">The Internet name of the web server machine</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>SERVER_PORT
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">the web server&#x27;s listening port</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">the web server&#x27;s listening port</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>SERVER_ADDR
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">the IP address of the web server machine</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">the IP address of the web server</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>REMOTE_ADDR
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">the client&#x27;s IP address. In this case, the client was on the same machine as the server.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">the client&#x27;s address. In this case, the client was on the same machine as the server.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>REMOTE_PORT
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">the client&#x27;s communication port</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">the client&#x27;s communication port</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>DOCUMENT_ROOT
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">the root of the directory tree of documents served by the web server</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">the root of the directory tree of documents served by the web server</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>SERVER_ADMIN
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">the email address of the web server administrator</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">the email address of the web server administrator</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>SCRIPT_FILENAME
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">the full path of the server script</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">the full path of the server script</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>SERVER_PROTOCOL
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">the version of the HTTP protocol used by the web server</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">the version of the HTTP protocol used by the web server</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>REQUEST_METHOD
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">the HTTP method used by the client. There are four: GET, POST, PUT, DELETE</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">the Http command used by the client. There are four of them: GET, POST, PUT, DELETE</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>QUERY_STRING
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">the parameters sent with a GET request /url?parameters</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">the parameters sent with a request GET /url?parameters</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>REQUEST_URI
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">The URL requested by the client. If the browser requests the URL http://machine[:port]/uri, REQUEST_URI will be uri</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">the URL requested by the client. If the browser requests the URL http://machine[:port]/uri, we will have REQUEST_URI=uri</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>SCRIPT_NAME
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">$_SERVER[&#x27;SCRIPT_FILENAME&#x27;] = $_SERVER[&#x27;DOCUMENT_ROOT&#x27;] . $_SERVER[&#x27;SCRIPT_NAME&#x27;]</div></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">$_SERVER[&#x27;SCRIPT_FILENAME&#x27;]=$_SERVER[&#x27;DOCUMENT_ROOT&#x27;].$_SERVER[&#x27;SCRIPT_NAME&#x27;]</div></td></tr></table>
 
-<p><a id="refheading399681881943603"></a></p>
+<p><span id="refheading399681881943603" name="refheading399681881943603" class="odt-bookmark-anchor"></span></p>
 <h3 id="1032-the-client-client1_web_04">10.3.2. <span style="color: #4f81bd">The client (client1_web_04)</span></h3>
 <p>The client simply displays everything the server sends it.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
@@ -1816,7 +1818,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;Host: localhost\n&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// Connection</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008000">&quot;Connection: close\n&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// blank line</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// empty line</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// the server will now respond on channel $connexion. It will send all</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// then close the channel. The client therefore reads everything that arrives from $connexion</span></span>
@@ -1830,7 +1832,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
-<p><strong><a id="refheading399701881943603"></a>Results</strong></p>
+<p><strong><span id="refheading399701881943603" name="refheading399701881943603" class="odt-bookmark-anchor"></span>Results</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-34-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-34-3"> 3</a></span>
@@ -1897,13 +1899,13 @@
 <a id="__codelineno-34-32" name="__codelineno-34-32"></a>[PHP_SELF,/exemples-web/web_04.php]
 <a id="__codelineno-34-33" name="__codelineno-34-33"></a>[REQUEST_TIME,1313849518]
 </code></pre></div></td></tr></table></div>
-<p><a id="refheading399721881943603"></a></p>
-<h2 id="104-web-session-management">10.4. <span style="color: #4f81bd">Web Session Management</span></h2>
+<p><span id="refheading399721881943603" name="refheading399721881943603" class="odt-bookmark-anchor"></span></p>
+<h2 id="104-session-management-web">10.4. <span style="color: #4f81bd">Session Management WEB</span></h2>
 <p>In the previous client/server examples, the process was as follows:</p>
 <ul>
   <li>the client opens a connection to port 80 on the web server
   </li>
-  <li>it sends the text sequence: HTTP headers, blank line, [document]
+  <li>it sends the text sequence: headers Http, blank line, [document]
   </li>
   <li>in response, the server sends a sequence of the same type
   </li>
@@ -1913,21 +1915,21 @@
   </li>
 </ul>
 
-<p>If the same client makes a new request to the web server shortly thereafter, a new connection is established between the client and the server. The server cannot tell whether the connecting client has visited before or if this is a first-time request. Between connections, the server “forgets” its client. For this reason, the HTTP protocol is said to be a stateless protocol. However, it is useful for the server to remember its clients. For example, if an application is secure, the client will send the server a username and password to authenticate itself. If the server &quot;forgets&quot; its client between connections, the client would have to authenticate itself with every new connection, which is not feasible.</p>
-<p>To track a client, the server proceeds as follows: when a client makes an initial request, the server includes an identifier in its response, which the client must then send back with every subsequent request. Using this identifier—which is unique to each client—the server can recognize the client. It can then maintain a record for that client in the form of a file uniquely associated with the client’s identifier.</p>
+<p>If the same client makes a new request to the web server shortly thereafter, a new connection is established between the client and the server. The server cannot tell whether the connecting client has visited before or if this is a first-time request. Between connections, the server “forgets” its client. For this reason, the HTTP protocol is said to be a stateless protocol. However, it is useful for the server to remember its clients. For example, if an application is secure, the client will send the server a username and password to authenticate itself. If the server “forgets” its client between connections, the client would have to authenticate itself with every new connection, which is not feasible.</p>
+<p>To track a client, the server proceeds as follows: when a client makes an initial request, the server includes an identifier in its response that the client must then send back with every new request. Thanks to this identifier, which is unique to each client, the server can recognize a client. It can then manage a cache for that client in the form of a file uniquely associated with the client’s identifier.</p>
 <p>Technically, this is how it works:</p>
 <ul>
-  <li>In the response to a new client, the server includes the HTTP header <i>Set-Cookie: Key=Identifier</i>. It does this only on the first request.
+  <li>In the response to a new client, the server includes the header HTTP <i>Set-Cookie: MotClé=Identifier</i>. It does this only on the first request.
   </li>
-  <li>In subsequent requests, the client will send its identifier via the HTTP <i>Cookie</i> header<i>: Key=Identifier </i>so that the server can recognize it.
+  <li>In subsequent requests, the client will send back its identifier via the header HTTP <i>Cookie: MotClé=Identifier </i>so that the server can recognize it.
   </li>
 </ul>
 
-<p>One might wonder how the server knows it is dealing with a new client rather than a returning one. It is the presence of the HTTP <em>Cookie</em> header in the client’s HTTP headers that tells it. For a new client, this header is absent.</p>
+<p>One might wonder how the server knows it is dealing with a new client rather than a returning one. It is the presence of the HTTP <em>Cookie</em> header in the client’s Http headers that tells it. For a new client, this header is absent.</p>
 <p>The set of connections from a given client is called a session.</p>
-<p><a id="refheading399741881943603"></a></p>
+<p><span id="refheading399741881943603" name="refheading399741881943603" class="odt-bookmark-anchor"></span></p>
 <h3 id="1041-the-configuration-file">10.4.1. <span style="color: #4f81bd">The configuration file</span></h3>
-<p>For session management to work correctly with PHP, you must verify that it is properly configured. On Windows, its configuration file is <em>PHP.ini</em>. Depending on the execution context (console, web), the [PHP.ini] configuration file must be located in different directories. To find these, use the following script:</p>
+<p>For session management to work correctly with PHP, you must verify that it is properly configured. On Windows, its configuration file is <em>PHP.ini</em>. Depending on the execution context (console, web), the [PHP.ini] configuration file must be located in different folders. To determine these, use the following script:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span>
 <span class="normal"><a href="#__codelineno-35-2">2</a></span>
 <span class="normal"><a href="#__codelineno-35-3">3</a></span>
@@ -1936,8 +1938,8 @@
 <a id="__codelineno-35-3" name="__codelineno-35-3"></a><span class="c1">// infos PHP</span>
 <a id="__codelineno-35-4" name="__codelineno-35-4"></a><span class="nb">phpinfo</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
-<p>Line 4: The <em>phpinfo()</em> function provides information about the PHP interpreter executing the script. In particular, it returns the path to the [PHP.ini] configuration file being used.</p>
-<p>In a console environment, you will get a result similar to the following:</p>
+<p>Line 4: The <em>phpinfo</em> function provides information about the PHP interpreter executing the script. In particular, it provides the path to the [PHP.ini] configuration file being used.</p>
+<p>In a console environment, you get a result similar to the following:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span>
 <span class="normal"><a href="#__codelineno-36-2">2</a></span>
 <span class="normal"><a href="#__codelineno-36-3">3</a></span>
@@ -1951,7 +1953,7 @@
 <a id="__codelineno-36-6" name="__codelineno-36-6"></a>…
 </code></pre></div></td></tr></table></div>
 <p>Line 2: The main configuration file is <em>c:\windows\PHP.ini</em></p>
-<p>Line 3: A secondary configuration file is <em>C:\DBServers\wamp21\bin\PHP\php5.3.5\PHP.ini</em>. It allows you to modify certain configuration options in the main configuration file.</p>
+<p>line 3: a secondary configuration file is <em>C:\serveursSGBD\wamp21\bin\PHP\php5.3.5\PHP.ini</em>. It allows you to modify certain configuration options in the main configuration file.</p>
 <p>In a web environment, the following result is obtained:</p>
 <p><img src="images/100000000000031700000110014C8B41.png" width="554" height="190" style="width:14.651cm;height:5.038cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031700000110014C8B41.png" /></p>
 <p>The secondary configuration file here is not the same as in the console environment. It is the latter that we will examine. In this file, there is a <strong>session</strong> section: </p>
@@ -1986,16 +1988,16 @@
   </li>
   <li>line 3: the directory where session data is saved. If this directory does not exist, no error is reported and session management does not work.
   </li>
-  <li>Lines 4-5: indicate that the session ID is managed by the HTTP <i>Set-Cookie </i>and <i>Cookie </i>headers
+  <li>Lines 4-5: indicate that the session ID is managed by the Http <i>Set-Cookie </i>and <i>Cookie </i>headers
   </li>
-  <li>line 6: the <i>Set-Cookie</i> header will be in the form <i>Set-Cookie: PHPSESSID=session_id</i>
+  <li>Line 6: The <i>Set-Cookie</i> header will be in the following format<i>: Set-Cookie: PHPSESSID=identifiant_de_session</i>
   </li>
-  <li>Line 7: A client session is not started automatically. The server script must explicitly request it using the <i>session_start()</i> function.
+  <li>Line 7: A client session is not started automatically. The server script must explicitly request it using the <i>session_start()</i> statement.
   </li>
 </ul>
-<p><a id="refheading399761881943603"></a></p>
+<p><span id="refheading399761881943603" name="refheading399761881943603" class="odt-bookmark-anchor"></span></p>
 <h3 id="1042-server-1-web_05">10.4.2. <span style="color: #4f81bd">Server 1 (web_05)</span></h3>
-<p>Session ID management is transparent to a web service. This identifier is managed by the web server. A web service accesses the client’s session via the <em>session_start()</em> function. From that point on, the web service can read from and write to the client’s session via the $_SESSION array. The following code demonstrates session management for three counters.</p>
+<p>Session ID management is transparent to a web service. This identifier is managed by the web server. A web service accesses the client session via the <em>session_start()</em> instruction. From that point on, the web service can read/write data to the client session via the $_SESSION dictionary. The following code demonstrates session management of three counters.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -2006,7 +2008,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// log in</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">session_start();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// on met 3 variables en session</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// we set 3 variables in session</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(!</span><span style="font-weight:bold;color:#000000">isset</span><span style="color:#000000">(</span><span style="color:#0000ff">$_SESSION</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;N1&#x27;</span><span style="color:#000000">]))</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#0000ff">$_SESSION</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;N1&#x27;</span><span style="color:#000000">]</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000080">0</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -2031,11 +2033,11 @@
 <ul>
   <li>line 9: start of a client session
   </li>
-  <li>lines 11-13: the $_SESSION array is a key-value dictionary. Data stored in this dictionary persists across requests from the same client. It acts as the client’s memory on the server.
+  <li>lines 11-13: the array $_SESSION is a key-value dictionary. The data stored in this dictionary persists across requests from the same client. It serves as the client’s memory on the server.
   </li>
   <li>lines 11-19: if the three counters N1, N2, N3 are not in the session, they are added to it.
   </li>
-  <li>lines 21–23: they are incremented by one
+  <li>Lines 21–23: They are incremented by one.
   </li>
   <li>lines 25–27: their values are sent to the client
   </li>
@@ -2051,36 +2053,36 @@
 
 <p><strong>Results</strong></p>
 <p>We use a web browser as the client. By default (actually, by configuration), the browser does indeed send back to the server the session identifiers that the server sends to it. As requests are made, the browser will receive the three counters sent by the server and will see their values increment.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005720000011829CAC443.png" width="680" height="137" style="display:inline-block; margin:4px;width:17.997cm;height:3.614cm;" class="odt-zoomable" data-zoom-src="images/10000000000005720000011829CAC443.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000005720000011829CAC443.png" width="680" height="137" style="display:inline-block; margin:4px;width:17.997cm;height:3.614cm;" class="odt-zoomable" data-zoom-src="images/10000000000005720000011829CAC443.png" /></td></tr></table>
 
 <ul>
   <li>In [1], the first request to the web service [web_05]
   </li>
-  <li>In [2], the third request shows that the counters are indeed incremented. The counter values are indeed being stored across requests.
+  <li>In [2], the third request shows that the counters have indeed been incremented. The counter values are indeed being stored as requests are made.
   </li>
 </ul>
 
-<p>Let’s use Firebug to view the HTTP headers exchanged between the server and the client. We close Firefox to end the current session with the server, reopen it, and enable Firebug. We request the service |web_05]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003BF0000041C37AF4874.png" width="480" height="526" style="display:inline-block; margin:4px;width:12.688cm;height:13.919cm;" class="odt-zoomable" data-zoom-src="images/10000000000003BF0000041C37AF4874.png" /></td></tr></table>
+<p>Let’s use Firebug to view the Http headers exchanged between the server and the client. We close Firefox to end the current session with the server, reopen it, and enable Firebug. We request the service |web_05]:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000003BF0000041C37AF4874.png" width="480" height="526" style="display:inline-block; margin:4px;width:12.688cm;height:13.919cm;" class="odt-zoomable" data-zoom-src="images/10000000000003BF0000041C37AF4874.png" /></td></tr></table>
 
 <p>Above, we see the session ID sent by the server in its response to the client’s first request. It uses the HTTP <em>Set-Cookie</em> header.</p>
 <p>Let’s make a new request by refreshing (F5) the page in the web browser:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003AF00000350DC8301EB.png" width="472" height="424" style="display:inline-block; margin:4px;width:12.476cm;height:11.218cm;" class="odt-zoomable" data-zoom-src="images/10000000000003AF00000350DC8301EB.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000003AF00000350DC8301EB.png" width="472" height="424" style="display:inline-block; margin:4px;width:12.476cm;height:11.218cm;" class="odt-zoomable" data-zoom-src="images/10000000000003AF00000350DC8301EB.png" /></td></tr></table>
 
-<p>Here, we’ll notice two things:</p>
+<p>Here, we can observe two things:</p>
 <ul>
   <li>The web browser sends the session ID back with the HTTP <i>Cookie</i> header.
   </li>
   <li>In its response, the web service no longer includes this identifier. It is now the client’s responsibility to send it with each of its requests.
   </li>
 </ul>
-<p><a id="refheading399781881943603"></a></p>
+<p><span id="refheading399781881943603" name="refheading399781881943603" class="odt-bookmark-anchor"></span></p>
 <h3 id="1043-client-1-client1_web_05">10.4.3. <span style="color: #4f81bd">Client 1 (client1_web_05)</span></h3>
-<p>We will now write a client-side script based on the previous server-side script. In its session management, it must behave like the web browser:</p>
+<p>We are now writing a client-side script based on the previous server-side script. In its session management, it must behave like the web browser:</p>
 <ul>
-  <li>In the server’s response to its first request, it must find the session ID that the server sends it. It knows it will find it in the HTTP <i>Set-Cookie</i> header.
+  <li>In the server’s response to its first request, it must find the session identifier that the server sends it. It knows it will find it in the HTTP <i>Set-Cookie</i> header.
   </li>
-  <li>For each subsequent request, it must send the identifier it received back to the server. It will do this using the HTTP <i>Cookie</i> header.
+  <li>it must, with each subsequent request, send the identifier it received back to the server. It will do so using the HTTP <i>Cookie</i> header.
   </li>
 </ul>
 
@@ -2123,7 +2125,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// send cookie if non-empty</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$cookie</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;Cookie: </span><span style="color:#0000ff">$cookie</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">////if</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }//if</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// send empty line</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// the web server response is displayed</span></span></span>
@@ -2146,7 +2148,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// n3 value</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(preg_match(</span><span style="color:#008000">&quot;/^N3=(.*?)\s*$/&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$ligne</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$champs</span><span style="color:#000000">))</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">      </span><span style="color:#0000ff">$N3</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$champs</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">];</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">////while</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">//while</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// close the connection</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">fclose(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// return</span></span></span>
@@ -2158,34 +2160,34 @@
 <ul>
   <li>lines 3-16: the main program
   </li>
-  <li>lines 18–67: the <i>connect</i> function
+  <li>lines 18-67: the <i>connect</i> function
   </li>
-  <li>Lines 9–14: The client calls the server five times and displays the successive values of counters N1, N2, and N3. If the session is managed correctly, these counters should be incremented by 1 with each new request.
+  <li>lines 9-14: the client calls the server 5 times and displays the successive values of counters N1, N2, and N3. If the session is managed correctly, these counters should be incremented by 1 with each new request.
   </li>
-  <li>Line 10: The <i>`connecte` </i>function uses the parameters `<i>$HOTE</i>`, <i>`$PORT</i>`, and <i>`$urlServeur` </i>to connect the client to the web service. The <i>`$cookie</i>` parameter represents the session ID. On the first call, it is an empty string. On subsequent calls, it is the session ID sent by the server in response to the client’s first call. The <i>`connecte</i>` function returns the values of the three counters `$N1`, `$N2`, `$N3`, the session ID `<i>$cookie</i>`, and any errors in `<i>$erreur</i>`.
+  <li>line 10: the <i>connect</i> function uses the parameters $HOTE, $PORT, $urlServeur to connect the client to the web service. The parameter $cookie represents the session ID. On the first call, this is an empty string. On subsequent calls, it is the session ID sent by the server in response to the client’s first call. The `<i>connecte` </i>function returns, as results, the values of the three counters `$N1`, $N2, and $N3, the session ID $cookie, and any errors $erreur.
   </li>
-  <li>Line 18: The `<i>connecte` </i>function has the characteristics of a standard HTTP client. We will only comment on the new features.
+  <li>Line 18: The function <i>connects </i>to a standard Http client. We will only comment on the new features.
   </li>
-  <li>Lines 30–40: Sending HTTP headers.
+  <li>Lines 30–40: Sending the headers Http.
   </li>
   <li>Lines 36–38: If the session ID is known, it is sent to the server
   </li>
-  <li>Lines 44–66: processing of all text lines sent by the server
+  <li>lines 44–66: processing of all text lines sent by the server
   </li>
-  <li>Lines 47–51: If the session ID has not yet been retrieved, it is retrieved from the HTTP <i>Set-Cookie</i> header using a regular expression.
+  <li>lines 47-51: if the session ID has not yet been retrieved, it is retrieved from the HTTP <i>Set-Cookie</i> header using a regular expression.
   </li>
   <li>lines 53-54: the N1 counter is also obtained using a regular expression
   </li>
   <li>lines 56–57, 59–60: same for counters N2 and N3
   </li>
-  <li>line 63: Close the connection to the server.
+  <li>Line 63: Close the connection to the server.
   </li>
-  <li>Line 65: The results are returned as an array.
+  <li>Line 65: Returns the results as an array.
   </li>
 </ul>
 
-<p><strong><a id="refheading399801881943603"></a>Results</strong></p>
-<p>Executing the client script causes the following to be displayed in the NetBeans console:</p>
+<p><strong><span id="refheading399801881943603" name="refheading399801881943603" class="odt-bookmark-anchor"></span>Results</strong></p>
+<p>Executing the client script causes the following to be displayed in the Netbeans console:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-38-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-38-3"> 3</a></span>
@@ -2359,14 +2361,14 @@
 <ul>
   <li>Line 5: In its first response, the server sends the session ID. In subsequent responses, it no longer sends it.
   </li>
-  <li>It is clear that the web server retains the values of (N1, N2, N3) across the client’s requests. This is called session tracking.
+  <li>It is clear that the web server retains the values of (N1, N2, N3) across the client’s requests. This is known as session tracking.
   </li>
 </ul>
 
 <p>The following two examples show that you can also save the values of an array or an object.</p>
-<p><a id="refheading399821881943603"></a></p>
+<p><span id="refheading399821881943603" name="refheading399821881943603" class="odt-bookmark-anchor"></span></p>
 <h3 id="1044-server-2-web_06">10.4.4. <span style="color: #4f81bd">Server 2 (web_06)</span></h3>
-<p>The following server script demonstrates that an array or a dictionary can be stored in a session.</p>
+<p>The following server script demonstrates that you can store an array or a dictionary in a session.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -2378,7 +2380,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// log in</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">session_start();</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// save a table and a dictionary</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// initialize or modify the table</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// on initialise ou modifie le tableau</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="font-weight:bold;color:#000000">isset</span><span style="color:#000000">(</span><span style="color:#0000ff">$_SESSION</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;tableau&#x27;</span><span style="color:#000000">]))</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">for</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000080">0</span><span style="color:#000000">;</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">&lt;</span><span style="color:#008080"> </span><span style="color:#000000">count(</span><span style="color:#0000ff">$_SESSION</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;tableau&#x27;</span><span style="color:#000000">]);</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#000000">++)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#0000ff">$_SESSION</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;tableau&#x27;</span><span style="color:#000000">][</span><span style="color:#0000ff">$i</span><span style="color:#000000">]++;</span></span></span>
@@ -2388,7 +2390,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#0000ff">$_SESSION</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;tableau&#x27;</span><span style="color:#000000">][</span><span style="color:#0000ff">$i</span><span style="color:#000000">]</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">*</span><span style="color:#008080"> </span><span style="color:#000080">10</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// initialize or modify the dictionary</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// on initialise ou modifie le dictionnaire</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="font-weight:bold;color:#000000">isset</span><span style="color:#000000">(</span><span style="color:#0000ff">$_SESSION</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;dico&#x27;</span><span style="color:#000000">]))</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">foreach</span><span style="color:#008080"> </span><span style="color:#000000">(array_keys(</span><span style="color:#0000ff">$_SESSION</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;dico&#x27;</span><span style="color:#000000">])</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">as</span><span style="color:#008080"> </span><span style="color:#0000ff">$clé</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#0000ff">$_SESSION</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;dico&#x27;</span><span style="color:#000000">][</span><span style="color:#0000ff">$clé</span><span style="color:#000000">]++;</span></span></span>
@@ -2407,18 +2409,18 @@
 
 <p><strong>Comments</strong></p>
 <ul>
-  <li>lines 17-19: an array is initially created if it does not already exist
+  <li>lines 17-19: an array is initially added to the session if it isn&#x27;t already there
   </li>
-  <li>lines 12–15: if it already exists, its elements are incremented by 1
+  <li>lines 12-15: if it is already there, its elements are incremented by 1
   </li>
-  <li>line 27: a dictionary with numeric values is initialized if it does not already exist
+  <li>line 27: a dictionary with numeric values is added to the session if it is not already there
   </li>
   <li>lines 22-25: if it is already in the session, its numerical values are incremented by 1
   </li>
   <li>lines 30-35: the array and dictionary are sent to the client
   </li>
 </ul>
-<p><a id="refheading399841881943603"></a></p>
+<p><span id="refheading399841881943603" name="refheading399841881943603" class="odt-bookmark-anchor"></span></p>
 <h3 id="1045-client-2-client1_web_06">10.4.5. <span style="color: #4f81bd">Client 2 (client1_web_06)</span></h3>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
@@ -2478,7 +2480,7 @@
 </code></pre></div>
 
 <p>The client code is similar to the client code already commented out.</p>
-<p><strong><a id="refheading399861881943603"></a>Results</strong></p>
+<p><strong><span id="refheading399861881943603" name="refheading399861881943603" class="odt-bookmark-anchor"></span>Results</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-39-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-39-3"> 3</a></span>
@@ -2541,9 +2543,9 @@
 <a id="__codelineno-39-30" name="__codelineno-39-30"></a>tableau=4,14,24,34,44,54,64,74,84,94
 <a id="__codelineno-39-31" name="__codelineno-39-31"></a>dico=(zéro,4) (dix,14) (vingt,24) 
 </code></pre></div></td></tr></table></div>
-<p><a id="refheading399881881943603"></a></p>
+<p><span id="refheading399881881943603" name="refheading399881881943603" class="odt-bookmark-anchor"></span></p>
 <h3 id="1046-server-3-web_07">10.4.6. <span style="color: #4f81bd">Server 3 (web_07)</span></h3>
-<p>The following server script shows that an object can be stored in a session.</p>
+<p>The following server script demonstrates that an object can be placed in a session.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -2554,7 +2556,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// log in</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">session_start();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// initialize or modify a Personne object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// on initialise ou modifie un objet Personne</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="font-weight:bold;color:#000000">isset</span><span style="color:#000000">(</span><span style="color:#0000ff">$_SESSION</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;personne&#x27;</span><span style="color:#000000">]))</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#0000ff">$personne</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#0000ff">$_SESSION</span><span style="color:#000000">[</span><span style="color:#008000">&#x27;personne&#x27;</span><span style="color:#000000">];</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// increment age</span></span></span>
@@ -2619,15 +2621,15 @@
 
 <p><strong>Comments</strong></p>
 <ul>
-  <li>line 17: We add a <i>Person</i> object to the session if it isn&#x27;t already there.
+  <li>Line 17: We add a <i>Person</i> object to the session if it isn&#x27;t already there.
   </li>
-  <li>lines 11-15: if it is already there, we increment its age by 1
+  <li>Lines 11–15: If it is already there, we increment its age by 1
   </li>
-  <li>line 20: we send the <i>Person</i> object to the client.
+  <li>Line 20: Send the <i>Person</i> object to the client.
   </li>
 </ul>
 
-<p><a id="refheading399901881943603"></a></p>
+<p><span id="refheading399901881943603" name="refheading399901881943603" class="odt-bookmark-anchor"></span></p>
 <h3 id="1047-client-3-client1_web_07">10.4.7. <span style="color: #4f81bd">Client 3 (client1_web_07)</span></h3>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
@@ -2640,7 +2642,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$cookie</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">for</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000080">0</span><span style="color:#000000">;</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span><span style="color:#000000">&lt;</span><span style="color:#008080"> </span><span style="color:#000080">5</span><span style="color:#000000">;</span><span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#000000">++)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">connecte(</span><span style="color:#0000ff">$HOTE</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$PORT</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$urlServeur</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$cookie</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">//if</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}//if</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// end</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -2651,11 +2653,11 @@
 
 <p><strong>Comments</strong> </p>
 <ul>
-  <li>Line 15: The <i>connect</i> function is identical to the one in the previous client script
+  <li>line 15: the <i>connect</i> function is identical to the one in the previous client script
   </li>
 </ul>
 
-<p><strong><a id="refheading399921881943603"></a>Results</strong></p>
+<p><strong><span id="refheading399921881943603" name="refheading399921881943603" class="odt-bookmark-anchor"></span>Results</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-40-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-40-3"> 3</a></span>

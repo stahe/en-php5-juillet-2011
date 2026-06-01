@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://stahe.github.io/en-php5-juillet-2011/objects.html">
       
       
-        <link rel="prev" href="application-exercise---tax-calculation.html">
+        <link rel="prev" href="application-exercise---impots.html">
       
       
-        <link rel="next" href="application-exercise---tax-calculation-with-objects-impots03.html">
+        <link rel="next" href="application-exercise---impots-with-objects-impots03.html">
       
       
         
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -364,7 +366,7 @@
   <span class="md-ellipsis">
     
   
-    3. The Basics of PHP
+    3. The basics of PHP
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="application-exercise---tax-calculation.html" class="md-nav__link">
+      <a href="application-exercise---impots.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Application Exercise – Tax Calculation
+    4. Application Exercise - IMPOTS
   
 
     
@@ -471,10 +473,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#51-any-variable-can-become-an-object-with-attributes-example_14" class="md-nav__link">
+  <a href="#51-any-variable-can-become-an-object-with-attributes-exemple_14" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.1. Any variable can become an object with attributes (example_14)
+        5.1. Any variable can become an object with attributes (exemple_14)
       
     </span>
   </a>
@@ -482,10 +484,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#52-a-person-class-with-no-declared-attributes-example_15" class="md-nav__link">
+  <a href="#52-a-person-class-with-no-declared-attributes-exemple_15" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2. A Person class with no declared attributes (example_15)
+        5.2. A Person class with no declared attributes (exemple_15)
       
     </span>
   </a>
@@ -493,10 +495,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#53-the-person-class-with-declared-attributes-example_16" class="md-nav__link">
+  <a href="#53-the-person-class-with-declared-attributes-exemple_16" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.3. The Person class with declared attributes (example_16)
+        5.3. The Person class with declared attributes (exemple_16)
       
     </span>
   </a>
@@ -504,10 +506,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#54-the-person-class-with-a-constructor-example_17" class="md-nav__link">
+  <a href="#54-the-person-class-with-a-constructor-exemple_17" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.4. The Person class with a constructor (example_17)
+        5.4. The Person class with a constructor (exemple_17)
       
     </span>
   </a>
@@ -515,10 +517,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#55-the-person-class-with-validity-checks-in-the-constructor-example_18" class="md-nav__link">
+  <a href="#55-the-person-class-with-validity-checks-in-the-constructor-exemple_18" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.5. The Person class with validity checks in the constructor (example_18)
+        5.5. The Person class with validity checks in the constructor (exemple_18)
       
     </span>
   </a>
@@ -526,10 +528,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#56-adding-a-method-that-acts-as-a-second-constructor-example_19" class="md-nav__link">
+  <a href="#56-adding-a-method-that-acts-as-a-second-constructor-exemple_19" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.6. Adding a method that acts as a second constructor (example_19)
+        5.6. Adding a method that acts as a second constructor (exemple_19)
       
     </span>
   </a>
@@ -537,10 +539,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#57-an-array-of-person-objects-example_20" class="md-nav__link">
+  <a href="#57-an-array-of-person-objects-exemple_20" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.7. An array of Person objects (example_20)
+        5.7. An array of Person objects (exemple_20)
       
     </span>
   </a>
@@ -548,10 +550,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#58-creating-a-class-derived-from-the-person-class-example_21" class="md-nav__link">
+  <a href="#58-creating-a-class-derived-from-the-person-class-exemple_21" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.8. Creating a class derived from the Person class (example_21)
+        5.8. Creating a class derived from the Person class (exemple_21)
       
     </span>
   </a>
@@ -559,10 +561,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#59-creating-a-second-class-derived-from-the-person-class-example_22" class="md-nav__link">
+  <a href="#59-creating-a-second-class-derived-from-the-person-class-exemple_22" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.9. Creating a second class derived from the Person class (example_22)
+        5.9. Creating a second class derived from the Person class (exemple_22)
       
     </span>
   </a>
@@ -570,10 +572,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#510-interfaces-example_23" class="md-nav__link">
+  <a href="#510-interfaces-exemple_23" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.10. Interfaces (example_23)
+        5.10. Interfaces (exemple_23)
       
     </span>
   </a>
@@ -595,14 +597,14 @@
   
   
     <li class="md-nav__item">
-      <a href="application-exercise---tax-calculation-with-objects-impots03.html" class="md-nav__link">
+      <a href="application-exercise---impots-with-objects-impots03.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. Application Exercise – Tax Calculation with Objects (impots_03)
+    6. Application Exercise - IMPOTS with objects (impots_03)
   
 
     
@@ -622,14 +624,14 @@
   
   
     <li class="md-nav__item">
-      <a href="using-the-mysql-dbms.html" class="md-nav__link">
+      <a href="using-sgbd-and-mysql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Using the MySQL DBMS
+    7. Using SGBD and MySql
   
 
     
@@ -649,14 +651,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tax-calculation-exercise-with-mysql.html" class="md-nav__link">
+      <a href="exercise-impots-with-mysql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Tax Calculation Exercise with MySQL
+    8. Exercise IMPOTS with MySQL
   
 
     
@@ -676,14 +678,14 @@
   
   
     <li class="md-nav__item">
-      <a href="php-network-functions.html" class="md-nav__link">
+      <a href="the-network-functions-of-php.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. PHP Network Functions
+    9. The network functions of PHP
   
 
     
@@ -703,14 +705,14 @@
   
   
     <li class="md-nav__item">
-      <a href="php-servers.html" class="md-nav__link">
+      <a href="servers-in-php.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. PHP Servers
+    10. Servers in PHP
   
 
     
@@ -730,14 +732,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tax-calculation-exercise-with-a-web-service-and-a-three-tier-architecture.html" class="md-nav__link">
+      <a href="exercise-impots-with-a-web-service-and-a-three-tier-architecture.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. Tax Calculation: Exercise with a Web Service and a Three-Tier Architecture
+    11. Exercise IMPOTS with a WEB service and a three-tier architecture
   
 
     
@@ -757,14 +759,14 @@
   
   
     <li class="md-nav__item">
-      <a href="processing-xml-documents-simplexml01.html" class="md-nav__link">
+      <a href="processing-of-documents-xml-simplexml01.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Processing XML Documents (simplexml_01)
+    12. Processing of documents XML (simplexml_01)
   
 
     
@@ -784,14 +786,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tax-calculation-exercise-with-xml.html" class="md-nav__link">
+      <a href="exercise-impots-with-xml.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. Tax Calculation: Exercise with XML
+    13. Exercise IMPOTS with XML
   
 
     
@@ -821,10 +823,10 @@
 
 
 
-<p><a id="refheading398901881943603"></a></p>
+<p><span id="refheading398901881943603" name="refheading398901881943603" class="odt-bookmark-anchor"></span></p>
 <h1 id="5-objects">5. <span style="color: #365f91">Objects</span></h1>
-<p><a id="refheading398921881943603"></a></p>
-<h2 id="51-any-variable-can-become-an-object-with-attributes-example_14">5.1. <span style="color: #4f81bd">Any variable can become an object with attributes (example_14)</span></h2>
+<p><span id="refheading398921881943603" name="refheading398921881943603" class="odt-bookmark-anchor"></span></p>
+<h2 id="51-any-variable-can-become-an-object-with-attributes-exemple_14">5.1. <span style="color: #4f81bd">Any variable can become an object with attributes (exemple_14)</span></h2>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -873,14 +875,14 @@
 </code></pre></div>
 <p><strong>Comments</strong></p>
 <ul>
-<li>line 4: the notation <em>$obj-&gt;attr</em> refers to the <em>attr</em> attribute of the variable <em>$obj</em>. If it does not exist, it is created, thus making the variable <em>$obj</em> an object with attributes.</li>
-<li>line 13: the expression <em>$obj2 = $obj1</em>, when <em>$obj1</em> is an object, is a copy of objects by <strong>reference</strong>. Thus, <em>$obj2</em> and <em>$obj1</em> are references to the same object. The object itself can be modified by either reference.</li>
-<li>Line 20: The expression <em>$obj3=&amp;$obj1</em> assigns the reference (address) of the variable <em>$obj1</em> to <em>$obj3</em>. If <em>$obj1</em> is an object, as is the case here, the preceding expression is equivalent to <em>$obj3=$obj1</em>.</li>
+<li>line 4: the notation <em>$obj-&gt;attr</em> refers to the <em>attr</em> attribute of the variable $obj. If it does not exist, it is created, thereby making the variable $obj an object with attributes.</li>
+<li>line 13: the expression <em>$obj2=$obj1</em>, when $obj1 is an object, is a copy of objects by <strong>reference</strong>. Thus, $obj2 and $obj1 are references to the same object. The object itself can be modified by either reference.</li>
+<li>Line 20: The expression <em>$obj3=&amp;$obj1</em> assigns the reference (address) of the variable $obj1 to $obj3. If $obj1 is an object, as is the case here, the previous expression is equivalent to <em>$obj3=$obj1</em>.</li>
 <li>Lines 28–29: demonstrate that an object can be traversed like a dictionary. The keys of the dictionary are the names of the attributes, and the values of the dictionary are the values of those same attributes.</li>
 <li>Line 27: The <em>count</em> function can be applied to an object but does not, as one might expect, return the number of attributes. Therefore, an object shares similarities with a dictionary but is not one.
-<a id="refheading398941881943603"></a></li>
+<span id="refheading398941881943603" name="refheading398941881943603" class="odt-bookmark-anchor"></span></li>
 </ul>
-<h2 id="52-a-person-class-with-no-declared-attributes-example_15">5.2. <span style="color: #4f81bd">A Person class with no declared attributes (example_15)</span></h2>
+<h2 id="52-a-person-class-with-no-declared-attributes-exemple_15">5.2. <span style="color: #4f81bd">A Person class with no declared attributes (exemple_15)</span></h2>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -915,13 +917,13 @@
 <p><strong>Comments</strong></p>
 <ul>
 <li>lines 3–13: define a <em>Person</em> <strong>class</strong>. A class is a template used to create objects. A class is a collection of <strong>attributes</strong> and functions called <strong>methods</strong>. Attributes do not have to be declared.</li>
-<li>Lines 9–12: The <em>identity</em> method displays the values of three attributes not declared in the class. The keyword <strong>$this</strong> refers to the object to which the method is applied.</li>
-<li>Line 17: An object <em>$p</em> of type <em>Person</em> is created. The keyword <strong>new</strong> is used to create a new object. The operation returns a <strong>reference</strong> to the created object (i.e., an address). Various notations are possible: <em>new Person()</em>, <em>new Person</em>, <em>new person</em>. The class name is case-insensitive.</li>
+<li>lines 9-12: the <em>identity</em> method displays the values of three attributes not declared in the class. The keyword $this refers to the object to which the method is applied.</li>
+<li>Line 17: An object of type <em>Person</em> named $p is created. The keyword <strong><code>new**</code> is used to create a new object. The operation returns a </strong>reference<em><em> to the created object (i.e., an address). Various notations are possible: </em><code>new Person()*</code>, </em><code>new Person*</code>, *<code>new person*</code>. The class name is case-insensitive.</li>
 <li>Lines 18–20: The three attributes required by the <em>identity</em> method are created in the $p object.</li>
-<li>line 22: the <em>identity</em> method of the <em>Person</em> class is applied to the <em>$p</em> object. In the code (lines 9–11) of the <em>identity</em> method, <em>$this</em> refers to the same object as <em>$p</em>.
-<a id="refheading398961881943603"></a></li>
+<li>line 22: the <em>identity</em> method of the <em>Person</em> class is applied to the object $p. In the code (lines 9–11) of the <em>identity</em> method, $this references the same object as $p.
+<span id="refheading398961881943603" name="refheading398961881943603" class="odt-bookmark-anchor"></span></li>
 </ul>
-<h2 id="53-the-person-class-with-declared-attributes-example_16">5.3. <span style="color: #4f81bd">The Person class with declared attributes (example_16)</span></h2>
+<h2 id="53-the-person-class-with-declared-attributes-exemple_16">5.3. <span style="color: #4f81bd">The Person class with declared attributes (exemple_16)</span></h2>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -955,11 +957,11 @@
 </code></pre></div>
 <p><strong>Comments</strong></p>
 <ul>
-<li>lines 6–8: the class attributes are explicitly declared using the <strong>var</strong> keyword.
-<a id="refheading398981881943603"></a></li>
+<li>lines 6-8: the class attributes are explicitly declared using the <strong>var</strong> keyword.
+<span id="refheading398981881943603" name="refheading398981881943603" class="odt-bookmark-anchor"></span></li>
 </ul>
-<h2 id="54-the-person-class-with-a-constructor-example_17">5.4. <span style="color: #4f81bd">The Person class with a constructor (example_17)</span></h2>
-<p>The previous examples showed exotic <em>Person</em> classes as they might have been found in PHP 4. It is not recommended to follow these examples. We now present a <em>Person</em> class that follows PHP 5 best practices:</p>
+<h2 id="54-the-person-class-with-a-constructor-exemple_17">5.4. <span style="color: #4f81bd">The Person class with a constructor (exemple_17)</span></h2>
+<p>The previous examples showed unusual <em>Person</em> classes such as those found in PHP 4. It is not recommended to follow these examples. We now present a <em>Person</em> class that follows the best practices of PHP 5:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1031,10 +1033,10 @@
 <p><strong>Comments</strong></p>
 <ul>
 <li>lines 3-48: the <em>Person</em> class</li>
-<li>lines 6-8: the class&#x27;s <strong>private</strong> attributes. These attributes are only visible within the class. Other keywords that can be used are:</li>
+<li>lines 6-8: the <strong>private</strong> attributes of the class. These attributes are only visible within the class. Other keywords that can be used are:</li>
 <li><strong>public</strong>: makes the attribute a public attribute visible from outside the class</li>
 <li><strong>protected</strong>: makes the attribute a protected attribute visible from within the class and its derived classes.</li>
-<li>Because the attributes are private, they cannot be accessed from outside the class. Therefore, we cannot write the following code:</li>
+<li>Because the attributes are private, they cannot be accessed from outside the class. Therefore, you cannot write the following code:</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>$p=new Personne() ;
@@ -1043,7 +1045,7 @@
 <p>Here, we are outside the <em>Person</em> class. Since the <em>name</em> attribute is private, line 2 is incorrect. To initialize the private fields of the $p object, there are two ways:</p>
 <ul>
 <li>(continued)<ul>
-<li>use the public <strong>set</strong> and <strong>get</strong> methods (the names of these methods can be anything) from lines 11–33. We can then write:</li>
+<li>use the public methods <strong>set</strong> and <strong>get</strong> (the names of these methods can be anything) from lines 11–33. We can then write:</li>
 </ul>
 </li>
 </ul>
@@ -1053,19 +1055,19 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>(continued)<ul>
-<li>Use the constructor from lines 36–41. We would then write:</li>
+<li>Use the constructor from lines 36–41. We will then write:</li>
 </ul>
 </li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>$p=new Personne(&quot;Michel&quot;,&quot;Landru&quot;,44) ;
 </code></pre></div></td></tr></table></div>
-<p>The code above automatically calls the <em>Person</em> class method called <em>__construct</em>.</p>
+<p>The code above automatically calls the <em>Person</em> class method named __construct.</p>
 <ul>
-<li>Line 54: This line displays the Person <em>$p</em> as a string. To do this, the <em>Person</em> class method called <em>__toString</em> is used.</li>
+<li>Line 54: This line displays the Person $p as a string. To do this, the <em>Person</em> class method named __toString is used.</li>
 </ul>
-<p><a id="refheading399001881943603"></a></p>
-<h2 id="55-the-person-class-with-validity-checks-in-the-constructor-example_18">5.5. <span style="color: #4f81bd">The Person class with validity checks in the constructor (example_18)</span></h2>
-<p>A class’s constructor is the right place to verify that the object’s initialization values are correct. However, an object can also be initialized via its <em>set</em> methods or equivalents. To avoid duplicating the same checks in two different places, we’ll place them within the <em>set</em> methods. If an object’s initialization value is found to be incorrect, an <strong>exception</strong> will be thrown. Here is an example:</p>
+<p><span id="refheading399001881943603" name="refheading399001881943603" class="odt-bookmark-anchor"></span></p>
+<h2 id="55-the-person-class-with-validity-checks-in-the-constructor-exemple_18">5.5. <span style="color: #4f81bd">The Person class with validity checks in the constructor (exemple_18)</span></h2>
+<p>The constructor of a class is the right place to verify that the object’s initialization values are correct. However, an object can also be initialized via its <em>set</em> methods or equivalents. To avoid duplicating the same checks in two different places, these checks should be placed within the <em>set</em> methods. If an object’s initialization value is found to be incorrect, an <strong>exception</strong> will be thrown. Here is an example:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1148,19 +1150,19 @@
 
 <p><strong>Results</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>personne=[Paul,Langevin,48]
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>L&#39;âge doit être un entier positif ou nul
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>L&#39;age must be a positive integer or zero
 </code></pre></div>
 <p><strong>Comments</strong></p>
 <ul>
-<li>lines 23-30: initialization of the <em>first_name</em> attribute and verification of the initialization value</li>
+<li>lines 23–30: initialization of the <em>first_name</em> attribute and verification of the initialization value</li>
 <li>line 25: use of a regular expression. The first name is a sequence of one or more characters, possibly followed or preceded by spaces.</li>
 <li>line 26: if the last name is empty, an exception is thrown; otherwise, the first name is stored (line 28)</li>
-<li>line 66: use of the <em>Person</em> class constructor</li>
-<li>line 68: use of the <em>__toString</em> method of the <em>Person</em> class</li>
-<li>Lines 70–74: Handling any exception thrown by the <em>Person</em> class constructor.</li>
+<li>Line 66: Use of the <em>Person</em> class constructor</li>
+<li>Line 68: Use of the __toString method of the <em>Person</em> class</li>
+<li>lines 70–74: Handling any exception thrown by the <em>Person</em> class constructor.</li>
 </ul>
-<p><a id="refheading399021881943603"></a></p>
-<h2 id="56-adding-a-method-that-acts-as-a-second-constructor-example_19">5.6. <span style="color: #4f81bd">Adding a method that acts as a second constructor (example_19)</span></h2>
+<p><span id="refheading399021881943603" name="refheading399021881943603" class="odt-bookmark-anchor"></span></p>
+<h2 id="56-adding-a-method-that-acts-as-a-second-constructor-exemple_19">5.6. <span style="color: #4f81bd">Adding a method that acts as a second constructor (exemple_19)</span></h2>
 <p>In PHP 5, it is not possible to have multiple constructors with different parameters that would allow an object to be constructed in various ways. We can therefore use methods that act as constructors:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
@@ -1189,7 +1191,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// method</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">initWithPersonne(</span><span style="color:#0000ff">$p</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// initializes the current object with a person $p</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// initialise l&#x27;objet courant avec une personne $p</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;</span><span style="font-weight:bold;color:#000000">__construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$p</span><span style="color:#000000">-&gt;prénom,</span><span style="color:#008080"> </span><span style="color:#0000ff">$p</span><span style="color:#000000">-&gt;nom,</span><span style="color:#008080"> </span><span style="color:#0000ff">$p</span><span style="color:#000000">-&gt;âge);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1222,10 +1224,10 @@
 </code></pre></div>
 <p><strong>Comments</strong></p>
 <ul>
-<li>lines 26-29: The <em>initWithPerson</em> method allows you to assign the attribute values of another <em>Person</em> object to the current object. Here, it calls the <em>__construct</em> constructor, but this is not mandatory.
-<a id="refheading399041881943603"></a></li>
+<li>lines 26-29: the method <em>initWithPersonne</em> allows you to assign the attribute values of another <em>Person</em> object to the current object. Here, it calls the constructor __construct, but this is not mandatory.
+<span id="refheading399041881943603" name="refheading399041881943603" class="odt-bookmark-anchor"></span></li>
 </ul>
-<h2 id="57-an-array-of-person-objects-example_20">5.7. <span style="color: #4f81bd">An array of Person objects (example_20)</span></h2>
+<h2 id="57-an-array-of-person-objects-exemple_20">5.7. <span style="color: #4f81bd">An array of Person objects (exemple_20)</span></h2>
 <p>The following example shows that you can have arrays of objects.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
@@ -1284,10 +1286,10 @@
 <ul>
 <li>line 39: creation of an array of 2 people</li>
 <li>line 42: iterating through the array</li>
-<li>line 43: <em>$group[$i]</em> is an object of type <em>Person</em>. The <em>__toString</em> method is used to display it.
-<a id="refheading399061881943603"></a></li>
+<li>Line 43: <em>$groupe[$i]</em> is an object of type <em>Person</em>. The method __toString is used to display it.
+<span id="refheading399061881943603" name="refheading399061881943603" class="odt-bookmark-anchor"></span></li>
 </ul>
-<h2 id="58-creating-a-class-derived-from-the-person-class-example_21">5.8. <span style="color: #4f81bd">Creating a class derived from the Person class (example_21)</span></h2>
+<h2 id="58-creating-a-class-derived-from-the-person-class-exemple_21">5.8. <span style="color: #4f81bd">Creating a class derived from the Person class (exemple_21)</span></h2>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1314,7 +1316,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// method</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">initWithPersonne(</span><span style="color:#0000ff">$p</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// initializes the current object with a person $p</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// initialise l&#x27;objet courant avec une personne $p</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">$this-&gt;</span><span style="font-weight:bold;color:#000000">__construct</span><span style="color:#000000">(</span><span style="color:#0000ff">$p</span><span style="color:#000000">-&gt;prénom,</span><span style="color:#008080"> </span><span style="color:#0000ff">$p</span><span style="color:#000000">-&gt;nom,</span><span style="color:#008080"> </span><span style="color:#0000ff">$p</span><span style="color:#000000">-&gt;âge);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1329,7 +1331,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">class</span><span style="color:#008080"> </span><span style="color:#000000">Enseignant</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">extends</span><span style="color:#008080"> </span><span style="color:#000000">Personne</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// attributes</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#0000ff">$discipline</span><span style="color:#000000">;</span><span style="color:#008080">   </span><span style="font-style:italic;color:#808080">// d// subject taught</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  private $discipline;   // subject taught</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// getter and setter</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1350,7 +1352,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;setDiscipline(</span><span style="color:#0000ff">$discipline</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// overloads the __toString function of the parent class</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// overloading the __toString function of the parent class</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">__toString</span><span style="color:#000000">()</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#008000">&quot;[&quot;</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#000000">parent::</span><span style="font-weight:bold;color:#000000">__toString</span><span style="color:#000000">()</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#008000">&quot;,</span><span style="color:#0000ff">$this-&gt;discipline</span><span style="color:#008000">]&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
@@ -1384,13 +1386,13 @@
 </ul>
 </li>
 <li>line 57: the derived class has access to the methods and constructors of its parent class via the keyword <strong>parent::</strong>. Here, we pass the parameters (first_name, last_name, age) to the parent class’s constructor.</li>
-<li>line 64: the <em>__toString</em> method of the derived class uses the <em>__toString</em> method of the parent class.</li>
+<li>line 64: the __toString method of the derived class uses the __toString method of the parent class.</li>
 <li>line 71: an array containing a <em>Teacher</em> object and a <em>Person</em> object.</li>
 <li>line 74: we loop through the elements of the array</li>
-<li>line 75: the <em>__toString</em> method of each element <em>$group[$i]</em> will be called. The <em>Person</em> class has a <em>__toString</em> method. The <em>Teacher</em> class has two: that of its parent class and its own. One might wonder which one will be called. Execution shows that it was the <em>Teacher</em> class’s method that was called. This is always the case: when a method is called on an object, it is searched for in the following order: in the object itself, in its parent class if it has one, then in the parent class of the parent class, and so on… The search stops as soon as the method is found.
-<a id="refheading399081881943603"></a></li>
+<li>line 75: the __toString method of each element <em>$groupe[$i]</em> will be called. The <em>Person</em> class has a __toString method. The <em>Teacher</em> class has two: the one from its parent class and its own. One might wonder which one will be called. Execution shows that it is the one from the <em>Teacher</em> class that was called. This is always the case: when a method is called on an object, it is searched for in the following order: in the object itself, in its parent class if it has one, then in the parent class of the parent class, and so on… The search stops as soon as the method is found.
+<span id="refheading399081881943603" name="refheading399081881943603" class="odt-bookmark-anchor"></span></li>
 </ul>
-<h2 id="59-creating-a-second-class-derived-from-the-person-class-example_22">5.9. <span style="color: #4f81bd">Creating a second class derived from the Person class (example_22)</span></h2>
+<h2 id="59-creating-a-second-class-derived-from-the-person-class-exemple_22">5.9. <span style="color: #4f81bd">Creating a second class derived from the Person class (exemple_22)</span></h2>
 <p>The following example creates a <em>Student</em> class derived from the <em>Person</em> class:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
@@ -1418,7 +1420,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// method</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">initWithPersonne(</span><span style="color:#0000ff">$p</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// initializes the current object with a person $p</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// initialise l&#x27;objet courant avec une personne $p</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">...</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1433,7 +1435,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">class</span><span style="color:#008080"> </span><span style="color:#000000">Enseignant</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">extends</span><span style="color:#008080"> </span><span style="color:#000000">Personne</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// attributes</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#0000ff">$discipline</span><span style="color:#000000">;</span><span style="color:#008080">   </span><span style="font-style:italic;color:#808080">// d// subject taught</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  private $discipline;   // subject taught</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// getter and setter</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
@@ -1458,7 +1460,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">class</span><span style="color:#008080"> </span><span style="color:#000000">Etudiant</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">extends</span><span style="color:#008080"> </span><span style="color:#000000">Personne</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// attributes</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#0000ff">$formation</span><span style="color:#000000">;</span><span style="color:#008080">   </span><span style="font-style:italic;color:#808080">// d// subject taught</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  private $formation;   // subject taught</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// getter and setter</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1503,9 +1505,9 @@
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>groupe[1]=[Sylvie,Lefur,70]
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>groupe[2]=[[Steve,Boer,23],iup2 qualité]
 </code></pre></div>
-<p><a id="refheading49023760291743"></a></p>
-<h2 id="510-interfaces-example_23">5.10. <span style="color: #4f81bd">Interfaces (example_23)</span></h2>
-<p>An interface is a structure that defines method prototypes. A class that implements an interface defines the code for all of the interface&#x27;s methods.</p>
+<p><span id="refheading49023760291743" name="refheading49023760291743" class="odt-bookmark-anchor"></span></p>
+<h2 id="510-interfaces-exemple_23">5.10. <span style="color: #4f81bd">Interfaces (exemple_23)</span></h2>
+<p>An interface is a structure that defines method prototypes. A class that implements an interface defines the code for all the methods in the interface.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1566,14 +1568,14 @@
 </code></pre></div>
 <p><strong>Comments</strong></p>
 <ul>
-<li>Lines 4–8: The <em>IExample</em> interface defines two methods: the <em>add</em> function (line 5) and the <em>subtract</em> function (line 7). The interface does not define the code for these methods. The classes that implement the interface will do so.</li>
-<li>Line 11: The <em>Class1</em> class <strong>implements</strong> the <em>IExample</em> interface. It therefore defines code for the <em>add</em> method (line 13) and the <em>subtract</em> method (line 17).</li>
-<li>Lines 24–34: The same applies to the <em>Class2</em> class.</li>
-<li>Line 37: The <code>*calculer</code><em> method takes three parameters: two integers, <code>*$a*</code> and </em><code>$b*</code>, and an object <code>*$interface</code><em> that implements the <code>*IExemple</code></em> interface. We could have written <em><code>function calculate($a, $b, $interface)</code></em> without specifying the <em><code>IExample</code></em> type of the <code>*$interface*</code> parameter. By specifying it, we allow the PHP interpreter to verify that the actual parameter is indeed an object implementing the <code>*IExample</code>* interface.</li>
-<li>lines 38–39: use of the <em>add</em> and <em>subtract</em> methods of the $interface object. Because it implements the <em>IExample</em> interface, we know it has these two methods.</li>
-<li>Lines 44–45: Creation of two objects of different types, both of which implement the <em>IExample</em> interface.</li>
-<li>Line 47: We pass the object <em>$c1</em> of type <em>Class1</em>, which implements the <em>IExample</em> interface, to the <em>calculate</em> function.</li>
-<li>Line 48: The object <em>$c2</em> of type <em>Class2</em>, which implements the <em>IExample</em> interface, is passed to the <em>calculate</em> function.</li>
+<li>lines 4–8: The <em>IExemple</em> interface defines two methods: the <em>add</em> function (line 5) and the <em>subtract</em> function (line 7). The interface does not define the code for these methods. The classes that implement the interface will do so.</li>
+<li>Line 11: The <em>Class1</em> class <strong>implements</strong> the <em>IExemple</em> interface. It therefore defines code for the <em>add</em> method (line 13) and the <em>subtract</em> method (line 17).</li>
+<li>Lines 24–34: Same for the <em>Class2</em> class</li>
+<li>line 37: the <em>calculate</em> method takes three parameters: two integers $a and $b and an object $interface implementing the <em>IExemple</em> interface. We could have written <em>function calculate($a, $b, $interface)</em> without specifying the type <em>IExemple</em> of the parameter $interface. By specifying it, we allow the PHP interpreter to verify that the actual parameter is indeed an object implementing the <em>IExemple</em> interface.</li>
+<li>lines 38–39: use of the <em>add</em> and <em>subtract</em> methods of the $interface object. Because this object implements the <em>IExemple</em> interface, we know it has these two methods.</li>
+<li>lines 44–45: creation of two objects of different types but both implementing the <em>IExemple</em> interface.</li>
+<li>Line 47: The object $c1 of type <em>Class1</em>, which implements the interface <em>IExemple</em>, is passed to the <em>calculate</em> function.</li>
+<li>Line 48: Passes the object $c2 of type <em>Class2</em>, which implements the interface <em>IExemple</em>, to the <em>calculate</em> function.</li>
 </ul>
 
 

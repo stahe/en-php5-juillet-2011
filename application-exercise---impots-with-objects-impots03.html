@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/en-php5-juillet-2011/application-exercise---tax-calculation-with-objects-impots03.html">
+        <link rel="canonical" href="https://stahe.github.io/en-php5-juillet-2011/application-exercise---impots-with-objects-impots03.html">
       
       
         <link rel="prev" href="objects.html">
       
       
-        <link rel="next" href="using-the-mysql-dbms.html">
+        <link rel="next" href="using-sgbd-and-mysql.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>6. Application Exercise – Tax Calculation with Objects (impots_03) - An Introduction to PHP5 Through Examples</title>
+        <title>6. Application Exercise - IMPOTS with objects (impots_03) - An Introduction to PHP5 Through Examples</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#6-application-exercise-tax-calculation-with-objects-impots_03" class="md-skip">
+        <a href="#6-application-exercise-impots-with-objects-impots_03" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              6. Application Exercise – Tax Calculation with Objects (impots_03)
+              6. Application Exercise - IMPOTS with objects (impots_03)
             
           </span>
         </div>
@@ -364,7 +366,7 @@
   <span class="md-ellipsis">
     
   
-    3. The Basics of PHP
+    3. The basics of PHP
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="application-exercise---tax-calculation.html" class="md-nav__link">
+      <a href="application-exercise---impots.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Application Exercise – Tax Calculation
+    4. Application Exercise - IMPOTS
   
 
     
@@ -447,14 +449,14 @@
         
       
       
-      <a href="application-exercise---tax-calculation-with-objects-impots03.html" class="md-nav__link md-nav__link--active">
+      <a href="application-exercise---impots-with-objects-impots03.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. Application Exercise – Tax Calculation with Objects (impots_03)
+    6. Application Exercise - IMPOTS with objects (impots_03)
   
 
     
@@ -475,14 +477,14 @@
   
   
     <li class="md-nav__item">
-      <a href="using-the-mysql-dbms.html" class="md-nav__link">
+      <a href="using-sgbd-and-mysql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Using the MySQL DBMS
+    7. Using SGBD and MySql
   
 
     
@@ -502,14 +504,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tax-calculation-exercise-with-mysql.html" class="md-nav__link">
+      <a href="exercise-impots-with-mysql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Tax Calculation Exercise with MySQL
+    8. Exercise IMPOTS with MySQL
   
 
     
@@ -529,14 +531,14 @@
   
   
     <li class="md-nav__item">
-      <a href="php-network-functions.html" class="md-nav__link">
+      <a href="the-network-functions-of-php.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. PHP Network Functions
+    9. The network functions of PHP
   
 
     
@@ -556,14 +558,14 @@
   
   
     <li class="md-nav__item">
-      <a href="php-servers.html" class="md-nav__link">
+      <a href="servers-in-php.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. PHP Servers
+    10. Servers in PHP
   
 
     
@@ -583,14 +585,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tax-calculation-exercise-with-a-web-service-and-a-three-tier-architecture.html" class="md-nav__link">
+      <a href="exercise-impots-with-a-web-service-and-a-three-tier-architecture.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. Tax Calculation: Exercise with a Web Service and a Three-Tier Architecture
+    11. Exercise IMPOTS with a WEB service and a three-tier architecture
   
 
     
@@ -610,14 +612,14 @@
   
   
     <li class="md-nav__item">
-      <a href="processing-xml-documents-simplexml01.html" class="md-nav__link">
+      <a href="processing-of-documents-xml-simplexml01.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Processing XML Documents (simplexml_01)
+    12. Processing of documents XML (simplexml_01)
   
 
     
@@ -637,14 +639,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tax-calculation-exercise-with-xml.html" class="md-nav__link">
+      <a href="exercise-impots-with-xml.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. Tax Calculation: Exercise with XML
+    13. Exercise IMPOTS with XML
   
 
     
@@ -674,10 +676,10 @@
 
 
 
-<p><a id="impots03"></a>
-<a id="refheading399101881943603"></a></p>
-<h1 id="6-application-exercise-tax-calculation-with-objects-impots_03">6. <span style="color: #365f91"><strong>Application Exercise – T</strong><strong>ax Calculation</strong> <strong>with Objects (impots_03)</strong></span></h1>
-<p>We revisit the exercise previously studied (sections<a href="#impots01"><u><span style="color: #0563c1"> 4.2</span></u></a> and<a href="#impots02"><u><span style="color: #0563c1"> 4.3</span></u></a>) to solve it using PHP code that utilizes a class.</p>
+<p><span id="refheading399101881943603" name="refheading399101881943603" class="odt-bookmark-anchor"></span>
+<span id="impots03" name="impots03" class="odt-bookmark-anchor"></span></p>
+<h1 id="6-application-exercise-impots-with-objects-impots_03">6. <span style="color: #365f91">Application Exercise - IMPOTS with objects (impots_03)</span></h1>
+<p>We return to the exercise already covered previously (sections<a href="application-exercise---impots.html#impots01"><u><span style="color: #0563c1"> 4.2</span></u></a> and<a href="application-exercise---impots.html#impots02"><u><span style="color: #0563c1"> 4.3</span></u></a>) to solve it using a PHP code that utilizes a class.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -703,7 +705,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">      </span><span style="font-weight:bold;color:#000000">throw</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">new</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">Exception</span><span style="color:#000000">(</span><span style="color:#008000">&quot;Erreur lors de l&#x27;exploitation du fichier </span><span style="color:#0000ff">$IMPOTS</span><span style="color:#008000">&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }//if</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// create the 3 tables - assume the rows are syntactically correct</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#0000ff">$u</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">new</span><span style="color:#008080"> </span><span style="color:#000000">Utilitaires();</span><span style="color:#008080"> </span><span style="font-style:italic;color:#808080">// p// for utility functions</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $u = new Utilitaires(); // for utility functions</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;limites</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">explode(</span><span style="color:#008000">&quot;:&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$u</span><span style="color:#000000">-&gt;cutNewLineChar(</span><span style="color:#0000ff">$tables</span><span style="color:#000000">[</span><span style="color:#000080">0</span><span style="color:#000000">]));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;coeffR</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">explode(</span><span style="color:#008000">&quot;:&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$u</span><span style="color:#000000">-&gt;cutNewLineChar(</span><span style="color:#0000ff">$tables</span><span style="color:#000000">[</span><span style="color:#000080">1</span><span style="color:#000000">]));</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span><span style="color:#000000">-&gt;coeffN</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">explode(</span><span style="color:#008000">&quot;:&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$u</span><span style="color:#000000">-&gt;cutNewLineChar(</span><span style="color:#0000ff">$tables</span><span style="color:#000000">[</span><span style="color:#000080">2</span><span style="color:#000000">]));</span></span></span>
@@ -747,11 +749,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  public </span><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">cutNewLinechar(</span><span style="color:#0000ff">$ligne</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// delete the end-of-line mark from $ligne if it exists</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#0000ff">$L</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">strlen(</span><span style="color:#0000ff">$ligne</span><span style="color:#000000">);</span><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// lo// line length</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    $L = strlen($ligne);  // line length</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">while</span><span style="color:#008080"> </span><span style="color:#000000">(substr(</span><span style="color:#0000ff">$ligne</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$L</span><span style="color:#008080"> </span><span style="color:#000000">-</span><span style="color:#008080"> </span><span style="color:#000080">1</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">1</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">==</span><span style="color:#008080"> </span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">or</span><span style="color:#008080"> </span><span style="color:#000000">substr(</span><span style="color:#0000ff">$ligne</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$L</span><span style="color:#008080"> </span><span style="color:#000000">-</span><span style="color:#008080"> </span><span style="color:#000080">1</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">1</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">==</span><span style="color:#008080"> </span><span style="color:#008000">&quot;\r&quot;</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">      </span><span style="color:#0000ff">$ligne</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">substr(</span><span style="color:#0000ff">$ligne</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">0</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$L</span><span style="color:#008080"> </span><span style="color:#000000">-</span><span style="color:#008080"> </span><span style="color:#000080">1</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">      </span><span style="color:#0000ff">$L</span><span style="color:#000000">--;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">//wh//while</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">//while</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// end</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#000000">(</span><span style="color:#0000ff">$ligne</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span></span></span>
@@ -812,7 +814,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">?&gt;</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">The [taxes.txt] file:</span></p>
+<p><span style="color: #000000">The file [impots.txt]:</span></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>12620:13190:15640:24740:31810:39970:48360:55790:92970:127860:151250:172040:195000:0
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>0:0.05:0.1:0.15:0.2:0.25:0.3:0.35:0.4:0.45:0.5:0.55:0.6:0.65
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>0:631:1290.5:2072.5:3309.5:4900:6898.5:9316.5:12106:16754.5:23147.5:30710:39312:49062
@@ -826,7 +828,7 @@
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>non,0,3000000
 </code></pre></div>
 <p><strong>Results</strong>: those already obtained in the versions with tables and files.</p>
-<p>The file [results.txt]</p>
+<p>The file [resultats.txt]</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>oui:2:200000:22504
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>non:2:200000:33388
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>oui:3:200000:16400
@@ -836,16 +838,16 @@
 </code></pre></div>
 <p><strong>Comments</strong></p>
 <ul>
-<li>Line 4: the <strong>Taxes</strong> class. It encapsulates data and methods for calculating taxes:</li>
+<li>Line 4: the <strong>Taxes</strong> class. It encapsulates data and methods used to calculate the tax:</li>
 <li><strong>data</strong>: lines 7–9 – these are the three data arrays used to calculate the tax. These three arrays are initialized by the constructor on line 13 from a text file.</li>
 <li><strong>methods</strong>: line 32 – the <code>*calculate</code>* method calculates the tax.</li>
 <li>Lines 17, 22: When the constructor cannot create the <em>Taxes</em> object, it throws an exception.</li>
 <li>line 25: the <em>Utilities</em> class was defined to encapsulate the <em>cutNewLineChar</em> function.</li>
 <li>Lines 26–28: Initialization of the three private fields of the <em>Taxes</em> class</li>
-<li>Line 32: The <code>*calculate</code><em> method of the <code>*Taxes</code></em> class calculates a taxpayer&#x27;s tax.</li>
-<li>lines 65–78: the <em>Utilities</em> class</li>
-<li>lines 89–94: creation of a <em>Taxes</em> object with exception handling. This creation will use the $IMPOTS text file to populate the three private fields of the <em>Taxes</em> object.</li>
-<li>Line 96: Creation of a <em>Utilities</em> object to access the <em>cutNewLineChar</em> function.</li>
+<li>line 32: the <code>*calculate</code><em> method of the <code>*Taxes</code></em> class calculates a taxpayer’s tax.</li>
+<li>Lines 65–78: The <em>Utilities</em> class</li>
+<li>Lines 89–94: Creation of a <em>Taxes</em> object with exception handling. This creation will use the text file $IMPOTS to populate the three private fields of the <em>Taxes</em> object with its contents.</li>
+<li>Lines 96: Creation of a <em>Utilities</em> object to access the <em>cutNewLineChar</em> function.</li>
 </ul>
 
 

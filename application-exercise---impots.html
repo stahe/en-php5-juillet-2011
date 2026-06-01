@@ -12,7 +12,7 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/en-php5-juillet-2011/application-exercise---tax-calculation.html">
+        <link rel="canonical" href="https://stahe.github.io/en-php5-juillet-2011/application-exercise---impots.html">
       
       
         <link rel="prev" href="the-basics-of-php.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>4. Application Exercise – Tax Calculation - An Introduction to PHP5 Through Examples</title>
+        <title>4. Application Exercise - IMPOTS - An Introduction to PHP5 Through Examples</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#4-application-exercise-tax-calculation" class="md-skip">
+        <a href="#4-application-exercise-impots" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4. Application Exercise – Tax Calculation
+              4. Application Exercise - IMPOTS
             
           </span>
         </div>
@@ -364,7 +366,7 @@
   <span class="md-ellipsis">
     
   
-    3. The Basics of PHP
+    3. The basics of PHP
   
 
     
@@ -400,7 +402,7 @@
   <span class="md-ellipsis">
     
   
-    4. Application Exercise – Tax Calculation
+    4. Application Exercise - IMPOTS
   
 
     
@@ -411,14 +413,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="application-exercise---tax-calculation.html" class="md-nav__link md-nav__link--active">
+      <a href="application-exercise---impots.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Application Exercise – Tax Calculation
+    4. Application Exercise - IMPOTS
   
 
     
@@ -455,10 +457,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#42-version-with-arrays-impots_01" class="md-nav__link">
+  <a href="#42-version-with-tables-impots_01" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2. Version with arrays (impots_01)
+        4.2. Version with tables (impots_01)
       
     </span>
   </a>
@@ -518,14 +520,14 @@
   
   
     <li class="md-nav__item">
-      <a href="application-exercise---tax-calculation-with-objects-impots03.html" class="md-nav__link">
+      <a href="application-exercise---impots-with-objects-impots03.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. Application Exercise – Tax Calculation with Objects (impots_03)
+    6. Application Exercise - IMPOTS with objects (impots_03)
   
 
     
@@ -545,14 +547,14 @@
   
   
     <li class="md-nav__item">
-      <a href="using-the-mysql-dbms.html" class="md-nav__link">
+      <a href="using-sgbd-and-mysql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Using the MySQL DBMS
+    7. Using SGBD and MySql
   
 
     
@@ -572,14 +574,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tax-calculation-exercise-with-mysql.html" class="md-nav__link">
+      <a href="exercise-impots-with-mysql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Tax Calculation Exercise with MySQL
+    8. Exercise IMPOTS with MySQL
   
 
     
@@ -599,14 +601,14 @@
   
   
     <li class="md-nav__item">
-      <a href="php-network-functions.html" class="md-nav__link">
+      <a href="the-network-functions-of-php.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. PHP Network Functions
+    9. The network functions of PHP
   
 
     
@@ -626,14 +628,14 @@
   
   
     <li class="md-nav__item">
-      <a href="php-servers.html" class="md-nav__link">
+      <a href="servers-in-php.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. PHP Servers
+    10. Servers in PHP
   
 
     
@@ -653,14 +655,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tax-calculation-exercise-with-a-web-service-and-a-three-tier-architecture.html" class="md-nav__link">
+      <a href="exercise-impots-with-a-web-service-and-a-three-tier-architecture.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. Tax Calculation: Exercise with a Web Service and a Three-Tier Architecture
+    11. Exercise IMPOTS with a WEB service and a three-tier architecture
   
 
     
@@ -680,14 +682,14 @@
   
   
     <li class="md-nav__item">
-      <a href="processing-xml-documents-simplexml01.html" class="md-nav__link">
+      <a href="processing-of-documents-xml-simplexml01.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Processing XML Documents (simplexml_01)
+    12. Processing of documents XML (simplexml_01)
   
 
     
@@ -707,14 +709,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tax-calculation-exercise-with-xml.html" class="md-nav__link">
+      <a href="exercise-impots-with-xml.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. Tax Calculation: Exercise with XML
+    13. Exercise IMPOTS with XML
   
 
     
@@ -744,33 +746,33 @@
 
 
 
-<p><a id="refheading398821881943603"></a></p>
-<h1 id="4-application-exercise-tax-calculation">4. <span style="color: #365f91"><strong>Application Exercise – T</strong><strong>ax</strong> <strong>C</strong><strong>alculation</strong></span></h1>
-<p><a id="refheading398841881943603"></a></p>
+<p><span id="refheading398821881943603" name="refheading398821881943603" class="odt-bookmark-anchor"></span></p>
+<h1 id="4-application-exercise-impots">4. <span style="color: #365f91">Application Exercise - IMPOTS</span></h1>
+<p><span id="refheading398841881943603" name="refheading398841881943603" class="odt-bookmark-anchor"></span></p>
 <h2 id="41-the-problem">4.1. <span style="color: #4f81bd">The Problem</span></h2>
-<p>We aim to write a program to calculate a taxpayer’s tax. We’ll consider the simplified case of a taxpayer who has only their salary to report:</p>
+<p>We aim to write a program to calculate a taxpayer’s tax. We consider the simplified case of a taxpayer who has only their salary to report:</p>
 <ul>
-<li>The number of shares for the employee is calculated <strong>as nbParts = nbEnfants / 2 + 1</strong> if they are unmarried, or <strong>nbEnfants / 2 + 2</strong> if they are married, where <em>nbEnfants</em> is the number of children they have.</li>
-<li>We calculate their taxable income <strong>R = 0.72 * S,</strong> where S is their annual salary</li>
-<li>We calculate their family coefficient <strong>Q = R / N</strong></li>
+<li>we calculate the number of shares for the employee <strong>nbParts = nbEnfants/2 + 1</strong> if they are unmarried, <strong>nbEnfants/2+2</strong> if they are married, where <em>nbEnfants</em> is the number of children.</li>
+<li>We calculate his taxable income <strong>R = 0.72 * S,</strong> where S is his annual salary</li>
+<li>we calculate his family coefficient <strong>Q = R/N</strong></li>
 </ul>
-<p>We calculate their tax I based on the following data</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">12620.0</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">13,190</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.05</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">631</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">15,640</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1,290.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">24,740</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.15</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2,072.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">31,810</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">3,309.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">39,970</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.25</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4900</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">48,360</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">6,898.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">55,790</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.35</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">9,316.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">92,970</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.4</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">12,106</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">127,860</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.45</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">16,754.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">151,250</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.50</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">23,147.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">172,040</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.55</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">30,710</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">195,000</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.60</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">39,312</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.65</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">49,062</div></td></tr></table>
+<p>we calculate his tax I based on the following data</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">12620.0</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">0</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">0</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">13,190</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">0.05</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">631</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">15,640</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">0.1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">1,290.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">24,740</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">0.15</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">2,072.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">31,810</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">0.2</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">3,309.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">39,970</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">0.25</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">4,900</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">48,360</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">0.3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">6898.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">55,790</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">0.35</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">9,316.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">92,970</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">0.4</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">12,106</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">127,860</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">0.45</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">16,754.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">151,250</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">0.50</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">23,147.5</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">172,040</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">0.55</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">30,710</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">195,000</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">0.60</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">39,312</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">0</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">0.65</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">49,062</div></td></tr></table>
 
 <p>Each row has 3 fields. To calculate tax I, we look for the first row where <em>QF &lt;= field1</em>. For example, if QF = 30000, we will find the row </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    24740        0.15        2072.5
 </code></pre></div>
-<p>Tax I is then equal to <strong>0.15*R - 2072.5*nbParts</strong>. If QF is such that the condition <em>QF&lt;=field1</em> is never met, then the coefficients from the last row are used. Here:</p>
+<p>Tax I is then equal to <strong>0.15*R - 2072.5*nbParts</strong>. If QF is such that the relation <em>QF &lt;= field1</em> is never satisfied, then the coefficients from the last row are used. Here:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    0                0.65        49062
 </code></pre></div>
-<p>which gives tax I = 0.65*R – 49062*nbParts.</p>
-<p><a id="impots01"></a>
-<a id="refheading398861881943603"></a></p>
-<h2 id="42-version-with-arrays-impots_01">4.2. <span style="color: #4f81bd">Version with arrays (impots_01)</span></h2>
+<p>which gives the tax I=0.65*R – 49062*nbParts.</p>
+<p><span id="refheading398861881943603" name="refheading398861881943603" class="odt-bookmark-anchor"></span>
+<span id="impots01" name="impots01" class="odt-bookmark-anchor"></span></p>
+<h2 id="42-version-with-tables-impots_01">4.2. <span style="color: #4f81bd">Version with tables (impots_01)</span></h2>
 <p>We present an initial program where:</p>
 <ul>
-<li>the data needed to calculate the tax are in three arrays (limits, coeffR, coeffN)</li>
-<li>the taxpayer data (married, children, salary) are in a first text file</li>
+<li>the data needed to calculate the tax are in three tables (limits, coeffR, coeffN)</li>
+<li>the taxpayer data (married, children, salary) is in a first text file</li>
 <li>the results of the tax calculation (married, children, salary, tax) are stored in a second text file</li>
 </ul>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
@@ -819,7 +821,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// --------------------------------------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">cutNewLinechar(</span><span style="color:#0000ff">$ligne</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// delete the end-of-line mark from $ligne if it exists</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#0000ff">$L</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">strlen(</span><span style="color:#0000ff">$ligne</span><span style="color:#000000">);</span><span style="color:#008080">  </span><span style="font-style:italic;color:#808080">// // line length</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  $L = strlen($ligne);  // line length</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">while</span><span style="color:#008080"> </span><span style="color:#000000">(substr(</span><span style="color:#0000ff">$ligne</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$L</span><span style="color:#008080"> </span><span style="color:#000000">-</span><span style="color:#008080"> </span><span style="color:#000080">1</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">1</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">==</span><span style="color:#008080"> </span><span style="color:#008000">&quot;\n&quot;</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">or</span><span style="color:#008080"> </span><span style="color:#000000">substr(</span><span style="color:#0000ff">$ligne</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$L</span><span style="color:#008080"> </span><span style="color:#000000">-</span><span style="color:#008080"> </span><span style="color:#000080">1</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">1</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">==</span><span style="color:#008080"> </span><span style="color:#008000">&quot;\r&quot;</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#0000ff">$ligne</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">substr(</span><span style="color:#0000ff">$ligne</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">0</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$L</span><span style="color:#008080"> </span><span style="color:#000000">-</span><span style="color:#008080"> </span><span style="color:#000080">1</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#0000ff">$L</span><span style="color:#000000">--;</span></span></span>
@@ -862,7 +864,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">?&gt;</span></span>
 </code></pre></div>
 
-<p>The data file <em>data.txt</em> (married, children, salary):</p>
+<p>The <em>data.txt</em> data file (married, children, salary):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>oui,2,200000
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>non,2,200000
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>oui,3,200000
@@ -870,7 +872,7 @@
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>oui,5,50000
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>non,0,3000000
 </code></pre></div>
-<p>The <em>results.txt</em> files (married, children, salary, tax) for the results obtained:</p>
+<p>The <em>résultats.txt</em> file (married, children, salary, tax) of the results obtained:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>oui:2:200000:22504
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>non:2:200000:33388
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>oui:3:200000:16400
@@ -882,31 +884,31 @@
 <ul>
 <li>line 4: the name of the text file containing taxpayer data (married, children, salary)</li>
 <li>line 5: the name of the text file containing the results (married, children, salary, tax) of the tax calculation</li>
-<li>Lines 6–8: the three data tables used to calculate the tax</li>
+<li>lines 6–8: the three data tables used to calculate the tax</li>
 <li>lines 11-15: open the taxpayer data file for reading</li>
 <li>lines 18–22: open the results file for writing</li>
 <li>line 25: loop to read the lines (married, children, salary) from the taxpayer file</li>
-<li>line 27: the end-of-line character is removed</li>
+<li>line 27: the end-of-line marker is removed</li>
 <li>line 29: the components (married, children, salary) of the line are retrieved</li>
 <li>line 31: tax is calculated</li>
 <li>line 33: the tax is stored in the results file</li>
 <li>lines 37-38: once the taxpayer file has been fully processed, the files are closed</li>
-<li>line 44: the function that removes the end-of-line character from a line $line. The end-of-line character is the string &quot;\r\n&quot; on Windows systems, &quot;\n&quot; on Unix systems. The result is the input string without its end-of-line character.</li>
-<li>lines 47-48: <em>substr($string, $start, $size)</em> returns the substring of <em>$string</em> starting at character <em>$start</em> and containing at most <em>$size</em> characters.</li>
-<li>line 63: <em>strtolower($string)</em> converts <em>$string</em> to lowercase</li>
-<li>line 76: <em>array_push($array, $element)</em> adds <em>$element</em> to the end of <em>the $array</em>. Note that the <em>$limits</em> array is passed by value to the <em>calculateTax</em> function <em>(</em>line 56<em>)</em>. This addition of an element is therefore performed on a copy of the actual parameter, which remains unchanged.</li>
-<li>line 84: the function <em>floor($x)</em> returns the integer value immediately less than $x.</li>
+<li>line 44: the function that removes the end-of-line character from a line $ligne. The end-of-line character is the string &quot;\r\n&quot; on Windows systems, &quot;\n&quot; on Unix systems. The result is the input string without its end-of-line character.</li>
+<li>lines 47–48: <em>substr($chaîne,$début,$taille)</em> is the substring of $chaîne starting at the character $début and having at most $taille characters.</li>
+<li>line 63: <em>strtolower($chaîne)</em> converts $chaîne to lowercase</li>
+<li>line 76: <em>array_push($tableau,$élément)</em> adds $élément to the end of the array $tableau. Note that the array $limites is passed by value to the function <em>calculerImpot (</em>line 56<em>)</em>. This addition of an element is therefore performed on the copy of the actual parameter, which remains unchanged.</li>
+<li>Line 84: The function <em>floor($x)</em> returns the integer value immediately less than $x.</li>
 </ul>
-<p><a id="impots02"></a>
-<a id="refheading398881881943603"></a></p>
+<p><span id="refheading398881881943603" name="refheading398881881943603" class="odt-bookmark-anchor"></span>
+<span id="impots02" name="impots02" class="odt-bookmark-anchor"></span></p>
 <h2 id="43-version-with-text-files-impots_02">4.3. <span style="color: #4f81bd">Version with text files (impots_02)</span></h2>
-<p>This new version differs from the previous one only in that the data ($limites, $coeffR, $coeffN) needed to calculate the tax are now in a text file in the following format:</p>
+<p>This new version differs from the previous one only in that the data ($limites, $coeffR, $coeffN) required for tax calculation are now in a text file in the following format:</p>
 <p>File <em>impots.txt</em>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>12620:13190:15640:24740:31810:39970:48360:55790:92970:127860:151250:172040:195000:0
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>0:0.05:0.1:0.15:0.2:0.25:0.3:0.35:0.4:0.45:0.5:0.55:0.6:0.65
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>0:631:1290.5:2072.5:3309.5:4900:6898.5:9316.5:12106:16754.5:23147.5:30710:39312:49062
 </code></pre></div>
-<p>The new version simply reads the data from the [impots.txt] file and places it into three arrays <em>($limites, $coeffR, $coeffN)</em>. This brings us back to the previous case. We present only the changes:</p>
+<p>The new version simply reads the data from the [impots.txt] file in order to place it into three tables <em>($limites, $coeffR, $coeffN)</em>. This brings us back to the previous case. We will only present the changes:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -968,11 +970,11 @@
 
 <p><strong>Comments</strong></p>
 <ul>
-<li>Line 11: The function <em>getTables($IMPOTS)</em> processes the text file <em>$IMPOTS</em> to extract the three tables (<em>$limites, $coeffR, $coeffN</em>). The result returned is (<em>$error</em>, <em>$limites, $coeffR, $coeffN</em>), where <em>$error</em> is an error message; it is empty if no error occurred.</li>
-<li>Line 40: The <em>getTables($IMPOTS)</em> function.</li>
-<li>line 43: the function <em>files_exists(filename)</em> returns the boolean <em>true</em> if the file <em>filename</em> exists, and <em>false</em> otherwise.</li>
-<li>line 46: the <em>file(filename)</em> function reads the entire text file <em>filename</em>. It returns an array where each element is a line from the text file. Since the <em>impots.txt</em> file has three lines of text, the function will return an array with three elements.</li>
-<li>Lines 50–52: Use the three retrieved lines to create the three arrays (<em>$limits, $coeffR, $coeffN</em>)</li>
+<li>line 11: the function <em>getTables($IMPOTS)</em> processes the text file $IMPOTS to extract the three arrays (<em>$limites, $coeffR, $coeffN</em>). The result returned is ($erreur, <em>$limites, $coeffR, $coeffN</em>), where $erreur is an error message, empty if no error occurred.</li>
+<li>line 40: the function <em>getTables($IMPOTS)</em>.</li>
+<li>line 43: the function <em>files_exists(nom_fichier)</em> returns <em>true</em> if the file <em>nom_fichier</em> exists, <em>false</em> otherwise.</li>
+<li>Line 46: The function <em>file(nom_fichier)</em> reads the entire text file <em>nom_fichier</em>. It returns an array where each element is a line of the text file. Since, in this case, the file <em>impots.txt</em> has three lines of text, the function will return an array with three elements.</li>
+<li>Lines 50–52: Use the three retrieved lines to create the three arrays (<em>$limites, $coeffR, $coeffN</em>)</li>
 </ul>
 <p>The results obtained are the same as those obtained in the previous version.</p>
 

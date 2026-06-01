@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/en-php5-juillet-2011/php-network-functions.html">
+        <link rel="canonical" href="https://stahe.github.io/en-php5-juillet-2011/the-network-functions-of-php.html">
       
       
-        <link rel="prev" href="tax-calculation-exercise-with-mysql.html">
+        <link rel="prev" href="exercise-impots-with-mysql.html">
       
       
-        <link rel="next" href="php-servers.html">
+        <link rel="next" href="servers-in-php.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>9. PHP Network Functions - An Introduction to PHP5 Through Examples</title>
+        <title>9. The network functions of PHP - An Introduction to PHP5 Through Examples</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#9-php-network-functions" class="md-skip">
+        <a href="#9-the-network-functions-of-php" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              9. PHP Network Functions
+              9. The network functions of PHP
             
           </span>
         </div>
@@ -364,7 +366,7 @@
   <span class="md-ellipsis">
     
   
-    3. The Basics of PHP
+    3. The basics of PHP
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="application-exercise---tax-calculation.html" class="md-nav__link">
+      <a href="application-exercise---impots.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Application Exercise – Tax Calculation
+    4. Application Exercise - IMPOTS
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="application-exercise---tax-calculation-with-objects-impots03.html" class="md-nav__link">
+      <a href="application-exercise---impots-with-objects-impots03.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. Application Exercise – Tax Calculation with Objects (impots_03)
+    6. Application Exercise - IMPOTS with objects (impots_03)
   
 
     
@@ -465,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="using-the-mysql-dbms.html" class="md-nav__link">
+      <a href="using-sgbd-and-mysql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Using the MySQL DBMS
+    7. Using SGBD and MySql
   
 
     
@@ -492,14 +494,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tax-calculation-exercise-with-mysql.html" class="md-nav__link">
+      <a href="exercise-impots-with-mysql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Tax Calculation Exercise with MySQL
+    8. Exercise IMPOTS with MySQL
   
 
     
@@ -535,7 +537,7 @@
   <span class="md-ellipsis">
     
   
-    9. PHP Network Functions
+    9. The network functions of PHP
   
 
     
@@ -546,14 +548,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="php-network-functions.html" class="md-nav__link md-nav__link--active">
+      <a href="the-network-functions-of-php.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. PHP Network Functions
+    9. The network functions of PHP
   
 
     
@@ -579,10 +581,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#91-retrieving-the-name-or-ip-address-of-a-machine-on-the-internet-inet_01" class="md-nav__link">
+  <a href="#91-retrieving-the-name-or-ip-address-of-an-internet-machine" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.1. Retrieving the name or IP address of a machine on the Internet (inet_01)
+        9.1. Retrieving the name or IP address of an Internet machine
       
     </span>
   </a>
@@ -612,10 +614,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#94-a-second-program-for-sending-email-inet_04" class="md-nav__link">
+  <a href="#94-a-second-email-sending-program-inet_04" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.4. A second program for sending email (inet_04)
+        9.4. A second email sending program (inet_04)
       
     </span>
   </a>
@@ -637,14 +639,14 @@
   
   
     <li class="md-nav__item">
-      <a href="php-servers.html" class="md-nav__link">
+      <a href="servers-in-php.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10. PHP Servers
+    10. Servers in PHP
   
 
     
@@ -664,14 +666,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tax-calculation-exercise-with-a-web-service-and-a-three-tier-architecture.html" class="md-nav__link">
+      <a href="exercise-impots-with-a-web-service-and-a-three-tier-architecture.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11. Tax Calculation: Exercise with a Web Service and a Three-Tier Architecture
+    11. Exercise IMPOTS with a WEB service and a three-tier architecture
   
 
     
@@ -691,14 +693,14 @@
   
   
     <li class="md-nav__item">
-      <a href="processing-xml-documents-simplexml01.html" class="md-nav__link">
+      <a href="processing-of-documents-xml-simplexml01.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Processing XML Documents (simplexml_01)
+    12. Processing of documents XML (simplexml_01)
   
 
     
@@ -718,14 +720,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tax-calculation-exercise-with-xml.html" class="md-nav__link">
+      <a href="exercise-impots-with-xml.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    13. Tax Calculation: Exercise with XML
+    13. Exercise IMPOTS with XML
   
 
     
@@ -755,11 +757,11 @@
 
 
 
-<p><a id="refheading399301881943603"></a></p>
-<h1 id="9-php-network-functions">9. <span style="color: #365f91">PHP Network Functions</span></h1>
-<p>We will now discuss PHP’s network functions, which allow us to perform TCP/IP (Transmission Control Protocol/Internet Protocol) programming.</p>
-<p><a id="refheading399321881943603"></a></p>
-<h2 id="91-retrieving-the-name-or-ip-address-of-a-machine-on-the-internet-inet_01">9.1. <span style="color: #4f81bd">Retrieving the name or IP address of a machine on the Internet (inet_01)</span></h2>
+<p><span id="refheading399301881943603" name="refheading399301881943603" class="odt-bookmark-anchor"></span></p>
+<h1 id="9-the-network-functions-of-php">9. <span style="color: #365f91">The network functions of PHP</span></h1>
+<p>We will now discuss the network functions of PHP, which allow us to program TCP / IP (Transfer Control Protocol / Internet Protocol).</p>
+<p><span id="refheading399321881943603" name="refheading399321881943603" class="odt-bookmark-anchor"></span></p>
+<h2 id="91-retrieving-the-name-or-ip-address-of-an-internet-machine">9.1. <span style="color: #4f81bd">Retrieving the name or IP address of an Internet machine</span></h2>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -809,19 +811,19 @@
 </code></pre></div>
 <p><strong>Comments</strong></p>
 <ul>
-  <li>Line 4: We instruct the system not to display runtime errors.
+  <li>line 4: we request that runtime errors not be displayed.
   </li>
 </ul>
 
-<p>PHP&#x27;s network functions are used in the <em>getIpandName</em> function on line 15.</p>
+<p>The network functions of PHP are used in the <em>getIpandName</em> function on line 15.</p>
 <ul>
-  <li>Line 18: The <i>gethostbyname($name) </i>function retrieves the IP address &quot;ip3.ip2.ip1.ip0&quot; of the machine named <i>$name</i>. If the machine <i>$name </i>does not exist, the function returns <i>$name </i>as the result.
+  <li>Line 18: The <i>gethostbyname($nom) </i>function is used to obtain the address IP &quot;ip3.ip2.ip1.ip0&quot; of the machine named $nom. If the machine $nom does not exist, the function returns $nom as the result.
   </li>
-  <li>Line 22: The <i>gethostbyaddr($ip) </i>function retrieves the hostname of the machine with the IP address $ip in the format &quot;ip3.ip2.ip1.ip0&quot;. If the machine <i>$ip </i>does not exist, the function returns <i>$ip </i>as the result.
+  <li>Line 22: The function <i>gethostbyaddr($ip) </i>retrieves the hostname of the machine with address $ip in the form &quot;ip3.ip2.ip1.ip0&quot;. If the machine <i>$ip </i>does not exist, the function returns <i>$ip </i>as the result.
   </li>
 </ul>
-<p><a id="refheading399341881943603"></a>
-<a id="inet02"></a></p>
+<p><span id="refheading399341881943603" name="refheading399341881943603" class="odt-bookmark-anchor"></span>
+<span id="inet02" name="inet02" class="odt-bookmark-anchor"></span></p>
 <h2 id="92-a-web-client-inet_02">9.2. <span style="color: #4f81bd"><strong>A web client (</strong> <strong>inet_02)</strong></span></h2>
 <p>A script to retrieve the content of a website&#x27;s index page.</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
@@ -838,14 +840,14 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#0000ff">$résultat</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">getIndex(</span><span style="color:#0000ff">$SITES</span><span style="color:#000000">[</span><span style="color:#0000ff">$i</span><span style="color:#000000">]);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// result display</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">$résultat</span><span style="color:#008000">\n&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">//for</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}//for</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// end</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">exit</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">//-----------------------------------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">function</span><span style="color:#008080"> </span><span style="color:#000000">getIndex(</span><span style="color:#0000ff">$site</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// reads the URL $site/ and stores it in the $site.html file</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// create file $site.html</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// creation of the $site.html file</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#0000ff">$html</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">fopen(</span><span style="color:#008000">&quot;</span><span style="color:#0000ff">$site</span><span style="color:#008000">.html&quot;</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;w&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(!</span><span style="color:#0000ff">$html</span><span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#008000">&quot;Erreur lors de la création du fichier </span><span style="color:#0000ff">$site</span><span style="color:#008000">.html&quot;</span><span style="color:#000000">;</span></span></span>
@@ -860,7 +862,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// this channel is used for the exchange of orders and information</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// the dialog protocol is HTTP</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// the customer sends the get command to request URL /</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// syntaxe get URL HTTP/1.0</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// syntax get URL HTTP/1.0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// protocol HTTP headers must end with an empty line</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">fputs(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#008000">&quot;GET / HTTP/1.0\n\n&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// the server will now respond on channel $connexion. It will send all</span></span>
@@ -917,7 +919,7 @@
 <a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>Lines 1–11 are the HTTP headers of the server’s response
+  <li>Lines 1-11 are the HTTP headers from the server&#x27;s response
   </li>
   <li>line 1: the server instructs the client to redirect to the URL specified in line 8
   </li>
@@ -925,46 +927,46 @@
   </li>
   <li>line 3: web server identity
   </li>
-  <li>Line 4: Content sent by the server. Here, an HTML page that begins on line 13
+  <li>line 4: content sent by the server. Here, a HTML page that begins on line 13
   </li>
-  <li>Line 12: The empty line that ends the HTTP headers
+  <li>line 12: the empty line that ends the headers
   </li>
-  <li>Lines 13–19: The HTML page sent by the web server.
+  <li>lines 13–19: the HTML page sent by the web server.
   </li>
 </ul>
 
 <p><strong>Code comments:</strong></p>
 <ul>
-  <li>line 7: the list of URLs for the websites whose index pages we want. These will be stored in the text file [sitename.html].
+  <li>line 7: the list of Url websites whose index pages we want. This will be stored in the text file [nomsite.html].
   </li>
-  <li>Line 11: The <i>getIndex</i> function does the work
+  <li>line 11: the <i>getIndex</i> function does the work
   </li>
-  <li>line 19: the <i>getIndex($site) </i>function downloads the root page (or index page) of the <i>$site</i> website and stores it in the text file <i>$site.html</i>.
+  <li>line 19: the function <i>getIndex($site) </i>downloads the root page (or index page) of the website $site and stores it in the text file $site<i>.html</i>.
   </li>
-  <li>line 27: the <i>fsockopen($site,$port) </i>function creates a connection with a TCP/IP service running on port <i>$port </i>of the <i>$site</i> machine. Once the client/server connection is open, many TCP/IP services exchange lines of text. This is the case here with the HTTP (HyperText Transfer Protocol). The data stream from the server to the client can then be treated as a text file. The same applies to the data stream from the client to the server.
+  <li>Line 27: The <i>fsockopen($site,$port) </i>function creates a connection to a service TCP / IP running on port $port of the machine $site. Once the client/server connection is open, many TCP / IP services exchange lines of text. This is the case here with the HTTP protocol (HyperText Transfer Protocol). The data stream from the server to the client can then be treated as a text file. The same applies to the data stream from the client to the server.
   </li>
-  <li>Line 38: The <i>fputs</i> function allows the client to send data to the server. Here, the text line sent has the following meaning: &quot;I want (GET) the root page (/) of the website I am connected to. I am using HTTP version 1.0.&quot; The current version of this protocol is 1.1.
+  <li>Line 38: The <i>fputs</i> function allows the client to send data to the server. Here, the text line sent has the following meaning: &quot;I want (GET) the root page (/) of the website I am connected to. I am working with the HTTP version 1.0 protocol.&quot; The current version of this protocol is 1.1.
   </li>
-  <li>Line 42: The text lines of the server’s response can be read line by line using a <i>while</i> loop and saved to the text file [$site.html]. Once the web server has sent the requested page, it closes its connection with the client. On the client side, this will be detected as an end-of-file.
+  <li>Line 42: The text lines of the server’s response can be read line by line using a <i>while</i> loop and saved to the text file [$site.html]. When the web server has sent the requested page, it closes its connection with the client. On the client side, this will be detected as an end-of-file.
   </li>
 </ul>
-<p><a id="refheading399361881943603"></a></p>
+<p><span id="refheading399361881943603" name="refheading399361881943603" class="odt-bookmark-anchor"></span></p>
 <h2 id="93-an-smtp-client-inet_03">9.3. <span style="color: #4f81bd">An SMTP client (inet_03)</span></h2>
-<p>Among TCP/IP protocols, SMTP (Simple Mail Transfer Protocol) is the communication protocol for the mail delivery service.</p>
+<p>Among the TCP / IP protocols, SMTP (SendMail Transfer Protocol) is the communication protocol for the message sending service.</p>
 <p>Notes:</p>
 <ul>
-  <li>On a Windows machine with antivirus software, the antivirus will likely prevent the PHP script from connecting to port 25 of an SMTP server. You must therefore disable the antivirus. For McAfee, for example, you can do this:
+  <li>On a Windows machine with antivirus software, the antivirus will likely prevent the PHP script from connecting to port 25 of a SMTP server. You must therefore disable the antivirus. For McAfee, for example, you can proceed as follows:
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000643000001ECE58BB136.png" width="680" height="209" style="display:inline-block; margin:4px;width:17.997cm;height:5.525cm;" class="odt-zoomable" data-zoom-src="images/1000000000000643000001ECE58BB136.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000643000001ECE58BB136.png" width="680" height="209" style="display:inline-block; margin:4px;width:17.997cm;height:5.525cm;" class="odt-zoomable" data-zoom-src="images/1000000000000643000001ECE58BB136.png" /></td></tr></table>
 
 <ul>
-  <li>In [1], open the VirusScan console
+  <li>in [1], enable the VirusScan console
   </li>
-  <li>In [2], stop the [On-Access Protection] service
+  <li>On [2], stop the [Protection lors de l&#x27;accès] service
   </li>
-  <li>in [3], it is stopped
+  <li>In [3], it has been stopped
   </li>
 </ul>
 
@@ -984,11 +986,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// &lt;- server sends him a welcome message</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// -&gt; customer sends command EHLO: machine name</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// &lt;- server responds OK or not</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// -&gt; customer sends mail order from: &lt;sender&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// -&gt; client envoie la commande mail from: &lt;expéditeur&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// &lt;- server responds OK or not</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// -&gt; client sends the rcpt to command: &lt;recipient&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// &lt;- server responds OK or not</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// -&gt; customer sends data order</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// -&gt; customer sends data command</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// &lt;- server responds OK or not</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// -&gt; client sends all the lines of its message and ends with a line containing the</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// single character .</span></span>
@@ -1001,7 +1003,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// exchanged text lines must end with the characters RC(#13) and LF(#10)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// data</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$INFOS</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;mail.txt&quot;</span><span style="color:#000000">;</span><span style="color:#008080"> </span><span style="font-style:italic;color:#808080">// mail settings</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">$INFOS = &quot;mail.txt&quot;; // mail settings</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// retrieve mail parameters</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">list</span><span style="color:#000000">(</span><span style="color:#0000ff">$erreur</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$smtpServer</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$expéditeur</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$destinataire</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$message</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">getInfos(</span><span style="color:#0000ff">$INFOS</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// mistake?</span></span>
@@ -1147,7 +1149,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// possible echo</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$verbose</span><span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">      </span><span style="color:#000000">affiche(</span><span style="color:#0000ff">$commande</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">1</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">////if</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }//if</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// reading response</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#0000ff">$réponse</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">fgets(</span><span style="color:#0000ff">$connexion</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">1000</span><span style="color:#000000">);</span></span></span>
@@ -1168,7 +1170,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">     // possible echo</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">if</span><span style="color:#008080"> </span><span style="color:#000000">(</span><span style="color:#0000ff">$verbose</span><span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">      </span><span style="color:#000000">affiche(</span><span style="color:#0000ff">$réponse</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">2</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">////while</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">//while</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// answer completed</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// error returned by the server?</span></span>
@@ -1193,7 +1195,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">      </span><span style="color:#0000ff">$L</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">strlen(</span><span style="color:#0000ff">$échange</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">      </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;&lt;-- [&quot;</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#000000">substr(</span><span style="color:#0000ff">$échange</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#000080">0</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$L</span><span style="color:#008080"> </span><span style="color:#000000">-</span><span style="color:#008080"> </span><span style="color:#000080">2</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#008000">&quot;]\n&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">      </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#000000">}</span><span style="font-style:italic;color:#808080">////switch</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }//switch</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// --------------------------------------------------------------------------</span></span>
@@ -1204,7 +1206,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>The <em>infos.txt</em> file:</p>
+<p>The file <em>infos.txt</em>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -1226,7 +1228,7 @@
   </li>
   <li>line 3: the blank line ends the message headers
   </li>
-  <li>lines 4–7: the message body
+  <li>Lines 4–7: the message body
   </li>
 </ul>
 
@@ -1287,87 +1289,87 @@
 <a id="__codelineno-3-26" name="__codelineno-3-26"></a>&lt;-- [250 2.0.0 Ag3i1h0051mFoG203g3ip1 mail accepted for delivery]
 <a id="__codelineno-3-27" name="__codelineno-3-27"></a>--&gt; [QUIT]
 <a id="__codelineno-3-28" name="__codelineno-3-28"></a>&lt;-- [221 2.0.0 mwinf5d05 ME closing connection]
-<a id="__codelineno-3-29" name="__codelineno-3-29"></a>Résultat de l&#39;envoi : Message envoyé
+<a id="__codelineno-3-29" name="__codelineno-3-29"></a>Résultat de l&#39;send: Message sent
 </code></pre></div></td></tr></table></div>
 <ul>
   <li>line 1: script execution tracking message
   </li>
-  <li>line 2: first response from the SMTP server. This follows the client&#x27;s connection to port 25 of the SMTP server. Server responses are lines in the form [xxx message] or [xxx-message]. The first syntax indicates that the response is complete. xxx is a status code. A value greater than or equal to 500 indicates an error. The second syntax indicates that the response is not complete and that another line will follow.
+  <li>line 2: first response from the SMTP server. This follows the client’s connection to port 25 of the SMTP server. Server responses are lines in the form [xxx message] or [xxx-message]. The first syntax indicates that the response is complete. xxx is a status code. A value greater than or equal to 500 indicates an error. The second syntax indicates that the response is not complete and that another line will follow.
   </li>
   <li>Line 2: The SMTP server indicates that it is ready to receive commands
   </li>
-  <li>line 3: the client sends the command [EHLO machineName], where machineName is the hostname of the machine on which the client is running
+  <li>line 3: the client sends the command [EHLO nomDeMachine], where nomDeMachine is the hostname of the machine on which the client is running
   </li>
   <li>Lines 4–10: Response from the SMTP server
   </li>
-  <li>line 11: the client sends the command [MAIL FROM: &lt;sender&gt;], which specifies the sender’s email address.
+  <li>Line 11: The client sends the command [MAIL FROM: &lt;expéditeur&gt;], which specifies the sender’s email address.
   </li>
-  <li>Line 12: The SMTP server indicates that it accepts this address. It could have rejected it if the syntax had been incorrect. That said, it does not verify that the email address actually exists.
+  <li>line 12: the SMTP server indicates that it accepts this address. It could have rejected it if the syntax had been incorrect. That said, it does not verify that the email address actually exists.
   </li>
-  <li>line 13: the client sends the command [RCPT TO: &lt;recipient&gt;], which specifies the email address of the message’s recipient.
+  <li>Line 13: The client sends the command [RCPT TO: &lt;destinataire&gt;], which specifies the recipient’s email address.
   </li>
   <li>Line 14: The SMTP server responds that it accepts this address. Again, a syntax check is performed.
   </li>
-  <li>Line 15: The client sends the [DATA] command, which indicates to the user that the lines that follow are the body of the message.
+  <li>Line 15: The client sends the command [DATA], which indicates to the user that the lines that follow are the message body.
   </li>
-  <li>Line 16: The server responds that the message can be sent. The message is a sequence of text lines that must end with a single-character line: a period.
+  <li>Line 16: The server responds that the message can be sent. The message is a sequence of text lines that must end with a single-character line consisting of a period.
   </li>
   <li>Lines 17–25: The message sent by the client
   </li>
-  <li>Lines 17–19: The message headers [From:, To:, Subject:] indicate the sender, recipient, and subject of the message, respectively.
+  <li>Lines 17–19: The headers of the message [From:, To:, Subject:] indicate the sender, recipient, and subject of the message, respectively.
   </li>
   <li>Line 20: An empty line indicating the end of the headers
   </li>
-  <li>Lines 21–23: the body of the message
+  <li>Lines 21–23: The body of the message
   </li>
-  <li>line 24: the line consisting of a single period that signals the end of the message.
+  <li>Line 24: A line consisting of a single period that signals the end of the message.
   </li>
-  <li>Line 26: The SMTP server responds that it accepts the message
+  <li>line 26: the SMTP server responds that it accepts the message
   </li>
-  <li>line 27: the client sends the [QUIT] command to indicate that it is finished
+  <li>line 27: the client sends the command [QUIT] to indicate that it has finished
   </li>
-  <li>Line 28: The SMTP server responds that it will close the connection to the client
+  <li>line 28: the SMTP server responds that it will close the connection to the client
   </li>
 </ul>
 
 <p>Code <strong>Comments</strong></p>
-<p>We will not go into much detail about the script code since it has been extensively commented.</p>
+<p>We will not go into much detail about the script code, as it has been extensively commented.</p>
 <ul>
-  <li>Lines 48–80: The function that processes the [infos.txt] file, which contains the message to be sent along with the necessary information for sending it. It returns an array ($error, $smtpServer, $sender, $recipient, $message) with:
+  <li>Lines 48–80: The function that processes the file [infos.txt], which contains the message to be sent along with the necessary information for sending it. It returns an array ($erreur, $smtpServer, $expéditeur, $destinataire, $messge) containing:
     <ul>
-      <li><i>$error</i>: a possible error message; empty otherwise.
+      <li>$erreur: a possible error message; otherwise empty.
       </li>
-      <li><i>$smtpServer</i>: the name of the SMTP server to connect to
+      <li>$smtpServer: the name of the SMTP server to connect to
       </li>
-      <li><i>$sender</i>: the sender&#x27;s email address
+      <li>$expéditeur: the sender’s email address
       </li>
-      <li><i>$recipient</i>: the recipient&#x27;s email address
+      <li>$destinataire: the recipient&#x27;s email address
       </li>
-      <li><i>$message</i>: the message to be sent. In addition to the message body, there may be headers.
+      <li>$message: the message to be sent. In addition to the message body, there may be headers.
       </li>
     </ul>
   </li>
-  <li>lines 84-157: the <i>sendMail</i> function is responsible for sending the message. Its parameters are as follows:
+  <li>Lines 84–157: The <i>sendMail</i> function is responsible for sending the message. Its parameters are as follows:
     <ul>
-      <li><i>$smtpServer</i>: the name of the SMTP server to connect to
+      <li>$smtpServer: the name of the SMTP server to connect to
       </li>
-      <li><i>$sender</i>: the sender&#x27;s email address
+      <li>$expéditeur: the sender’s email address
       </li>
-      <li><i>$recipient</i>: the recipient&#x27;s email address
+      <li>$destinataire: the recipient’s email address
       </li>
-      <li><i>$message</i>: the message to be sent.
+      <li>$message: the message to be sent.
       </li>
-      <li><i>$verbose</i>: set to 1 indicates that communication with the SMTP server should be logged to the console.
+      <li>$verbose: a value of 1 indicates that communication with the SMTP server should be logged on the console.
       </li>
     </ul>
   </li>
 </ul>
 
-<p>The <em>sendMail</em> function returns an error message; it returns an empty string if there were no errors.</p>
+<p>The <em>sendMail</em> function returns an error message; it is empty if no error occurred.</p>
 <ul>
-  <li>Line 88: retrieves the Windows name of a computer running the Windows OS.
+  <li>Line 88: retrieves the Windows name of a computer running Windows.
   </li>
-  <li>line 99: we have seen that the client/server dialogue follows this pattern:
+  <li>Line 99: We have seen that the client/server dialogue follows this pattern:
     <ul>
       <li>the client sends a command on a single line
       </li>
@@ -1375,15 +1377,15 @@
       </li>
     </ul>
   </li>
-  <li>Lines 161–208: The `<i>sendCommand` </i>function accepts the following parameters:
+  <li>Lines 161–208: The <i>sendCommand</i> function accepts the following parameters:
     <ul>
-      <li>$connection: the TCP/IP channel connecting the client to the server
+      <li>$connexion: the TCP / IP channel connecting the client to the server
       </li>
-      <li>$command: the command to be sent over this channel. The server’s response to this command will be read.
+      <li>$commande: the command to be sent on this channel. The server’s response to this command will be read.
       </li>
       <li>$verbose: set to 1 indicates that exchanges with the SMTP server should be displayed on the console.
       </li>
-      <li>$withRCLF: set to 1 indicates that the end-of-line marker &quot;\r\n&quot; must be added to the end of the command
+      <li>$withRCLF: set to 1 indicates that the end-of-line character &quot;\r\n&quot; must be added to the end of the command
       </li>
     </ul>
   </li>
@@ -1398,10 +1400,10 @@
   <li>lines 203–204: if the error code is &gt;=500, then the SMTP server is reporting an error.
   </li>
 </ul>
-<h2 id="94-a-second-program-for-sending-email-inet_04">9.4. <span style="color: #4f81bd"><strong>A second program for sending email (inet_04)</strong></span></h2>
-<p>This script has the same functionality as the previous one: sending an email. We use modules from the PEAR library for this. This library contains dozens of modules covering various fields. We will use the following:</p>
+<h2 id="94-a-second-email-sending-program-inet_04">9.4. <span style="color: #4f81bd">A second email sending program (inet_04)</span></h2>
+<p>This script has the same functionality as the previous one: sending an email. To do this, we use modules from the PEAR library. This library contains dozens of modules covering various domains. We will use the following:</p>
 <ul>
-  <li><i>Net/SMTP</i>: a module for communicating with an SMTP server
+  <li><i>Net/SMTP</i>: a module for communicating with a server SMTP
   </li>
   <li><i>Mail</i>: a module for managing email sending using various protocols.
   </li>
@@ -1409,22 +1411,22 @@
   </li>
 </ul>
 
-<p>To use these modules, you must first install them on the machine running the PHP script. Installing the <em>WampServer</em> software package installed a PHP interpreter. Within its directory structure, you can install PEAR modules.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020800000285D75E6C46.png" width="260" height="323" style="display:inline-block; margin:4px;width:6.879cm;height:8.534cm;" class="odt-zoomable" data-zoom-src="images/100000000000020800000285D75E6C46.png" /></td></tr></table>
+<p>To use these modules, you must first install them on the machine running the PHP script. Installing the <em>WampServer</em> software package installed a PHP interpreter. Within its directory structure, it is possible to install PEAR modules.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000020800000285D75E6C46.png" width="260" height="323" style="display:inline-block; margin:4px;width:6.879cm;height:8.534cm;" class="odt-zoomable" data-zoom-src="images/100000000000020800000285D75E6C46.png" /></td></tr></table>
 
 <ul>
-  <li>in [1], the PHP interpreter installation directory
+  <li>in [1], the installation folder for the PHP interpreter
   </li>
-  <li>in [2], the PEAR folder that will contain the PEAR modules to be installed
+  <li>to [2], the PEAR folder, which will contain the PEAR modules to be installed
   </li>
-  <li>[3] is the [go-pear.bat] batch file that initializes the PEAR library
+  <li>to [3], the batch file [go-pear.bat] that initializes the library PEAR
   </li>
 </ul>
 
-<p>To initialize the PEAR library, open a DOS window and run the [go-pear.bat] file. This script will connect to the PEAR library website. An internet connection is therefore required.</p>
+<p>To initialize the PEAR library, open a DOS window and run the [go-pear.bat] file. This script will connect to the PEAR library’s website. An internet connection is therefore required.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>C:\serveursSGBD\wamp21\bin\PHP\php5.3.5&gt;go-pear.bat
 </code></pre></div>
-<p>Once connected to the PEAR library website, the script will download a number of items. Among these is a new script [pear.bat]. We will use this script to install the various PEAR modules we need. This script is called with arguments. Among these, the [help] argument provides a list of commands accepted by the script:</p>
+<p>When connected to the library&#x27;s website (PEAR), the script will download a number of items. Among these is a new script ([pear.bat]). We will use this script to install the various modules (PEAR) that we need. This script is called with arguments. Among these, the [help] argument provides a list of commands accepted by the script:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">C</span><span class="p">:</span>\<span class="n">serveursSGBD</span>\<span class="n">wamp21</span>\<span class="nb">bin</span>\<span class="n">PHP</span>\<span class="n">php5</span><span class="mf">.3.5</span><span class="o">&gt;</span><span class="n">pear</span> <span class="n">help</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">Commands</span><span class="p">:</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">build</span>                  <span class="n">Build</span> <span class="n">an</span> <span class="n">Extension</span> <span class="n">From</span> <span class="n">C</span> <span class="n">Source</span>
@@ -1483,7 +1485,7 @@
 <a id="__codelineno-5-56" name="__codelineno-5-56" href="#__codelineno-5-56"></a><span class="n">Type</span> <span class="s2">&quot;pear help shortcuts&quot;</span> <span class="n">to</span> <span class="nb">list</span> <span class="nb">all</span> <span class="n">command</span> <span class="n">shortcuts</span><span class="o">.</span>
 <a id="__codelineno-5-57" name="__codelineno-5-57" href="#__codelineno-5-57"></a><span class="n">Type</span> <span class="s2">&quot;pear help &lt;command&gt;&quot;</span> <span class="n">to</span> <span class="n">get</span> <span class="n">the</span> <span class="n">help</span> <span class="k">for</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">command</span><span class="o">.</span>
 </code></pre></div>
-<p>The [install] command is used to install PEAR modules. You can get help on the [install] command:</p>
+<p>The [install] command allows you to install PEAR modules. You can request help on the [install] command:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">C</span><span class="p">:</span>\<span class="n">serveursSGBD</span>\<span class="n">wamp21</span>\<span class="nb">bin</span>\<span class="n">PHP</span>\<span class="n">php5</span><span class="mf">.3.5</span><span class="o">&gt;</span><span class="n">pear</span> <span class="n">help</span> <span class="n">install</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">pear</span> <span class="n">install</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="p">[</span><span class="n">channel</span><span class="o">/</span><span class="p">]</span><span class="o">&lt;</span><span class="n">package</span><span class="o">&gt;</span> <span class="o">...</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">Installs</span> <span class="n">one</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">PEAR</span> <span class="n">packages</span><span class="o">.</span>  <span class="n">You</span> <span class="n">can</span> <span class="n">specify</span> <span class="n">a</span> <span class="n">package</span> <span class="n">to</span> <span class="n">install</span> <span class="ow">in</span> <span class="n">four</span> <span class="n">ways</span><span class="p">:</span>
@@ -1521,7 +1523,7 @@
 <a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a>        <span class="n">root</span> <span class="n">directory</span> <span class="n">used</span> <span class="n">when</span> <span class="n">installing</span> <span class="n">files</span> <span class="p">(</span><span class="n">ala</span> <span class="n">PHP</span><span class="s1">&#39;s INSTALL_ROOT), use packagingroot for RPM</span>
 <a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a>  <span class="o">-</span><span class="n">P</span> <span class="n">DIR</span><span class="p">,</span> <span class="o">--</span><span class="n">packagingroot</span><span class="o">=</span><span class="n">DIR</span>
 <a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a>        <span class="n">root</span> <span class="n">directory</span> <span class="n">used</span> <span class="n">when</span> <span class="n">packaging</span> <span class="n">files</span><span class="p">,</span> <span class="n">like</span> <span class="n">RPM</span> <span class="n">packaging</span>
-<a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a>  <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">errors</span>
+<a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a>   <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">errors</span>
 <a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a>        <span class="n">force</span> <span class="n">install</span> <span class="n">even</span> <span class="k">if</span> <span class="n">there</span> <span class="n">were</span> <span class="n">errors</span>
 <a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a>  <span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="o">--</span><span class="n">alldeps</span>
 <a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a>        <span class="n">install</span> <span class="nb">all</span> <span class="n">required</span> <span class="ow">and</span> <span class="n">optional</span> <span class="n">dependencies</span>
@@ -1532,7 +1534,7 @@
 <a id="__codelineno-6-46" name="__codelineno-6-46" href="#__codelineno-6-46"></a>  <span class="o">-</span><span class="n">p</span><span class="p">,</span> <span class="o">--</span><span class="n">pretend</span>
 <a id="__codelineno-6-47" name="__codelineno-6-47" href="#__codelineno-6-47"></a>        <span class="n">Only</span> <span class="nb">list</span> <span class="n">the</span> <span class="n">packages</span> <span class="n">that</span> <span class="n">would</span> <span class="n">be</span> <span class="n">downloaded</span>
 </code></pre></div>
-<p>The PEAR modules to install are: [Mail], [Mail_Mime], [Net_SMTP]. In the Command Prompt window, enter the following commands one after another:</p>
+<p>The PEAR modules to be installed are as follows: [Mail], [Mail_Mime], [Net_SMTP]. In the Command Prompt window, enter the following commands one after another:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&lt;PHP_installDir&gt;pear install Mail
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>...
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>&lt;PHP_installDir&gt;pear install Mail_Mime
@@ -1558,9 +1560,9 @@
 <a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>XML_Util         1.2.1   stable
 </code></pre></div>
 <p>The modules are installed in the &lt;PHP_installDir&gt;/PEAR folder:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020B000003164B6AAF0C.png" width="262" height="395" style="display:inline-block; margin:4px;width:6.92cm;height:10.453cm;" class="odt-zoomable" data-zoom-src="images/100000000000020B000003164B6AAF0C.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000020B000003164B6AAF0C.png" width="262" height="395" style="display:inline-block; margin:4px;width:6.92cm;height:10.453cm;" class="odt-zoomable" data-zoom-src="images/100000000000020B000003164B6AAF0C.png" /></td></tr></table>
 
-<p>With the PEAR modules installed, the PHP script for sending email looks like this:</p>
+<p>With the PEAR modules installed, the PHP email sending script becomes the following:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1583,7 +1585,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// attachment: name of the document to be attached</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// data</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$INFOS</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#008000">&quot;mail2.txt&quot;</span><span style="color:#000000">;</span><span style="color:#008080"> </span><span style="font-style:italic;color:#808080">// mail settings</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">$INFOS = &quot;mail2.txt&quot;; // mail settings</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// retrieve mail parameters</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">list</span><span style="color:#000000">(</span><span style="color:#0000ff">$erreur</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$smtpServer</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$expéditeur</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$destinataire</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$message</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$sujet</span><span style="color:#000000">,</span><span style="color:#008080"> </span><span style="color:#0000ff">$attachement</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">getInfos(</span><span style="color:#0000ff">$INFOS</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// mistake?</span></span>
@@ -1639,7 +1641,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>The [mail2.txt] file:</p>
+<p>The file [mail2.txt]:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
 <span class="normal"><a href="#__codelineno-9-3">3</a></span>
@@ -1657,55 +1659,55 @@
 
 <p>Screen <strong>results</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Envoi du message [smtp.orange.fr,serge.tahe@univ-angers.fr,serge.tahe@univ-angers.fr,test, document.pdf]
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Résultat de l&#39;envoi : Message envoyé
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Résultat de l&#39;send: Message sent
 </code></pre></div>
 <p><strong>Comments</strong></p>
 <p>This script differs from the previous one only in its use of the <em>sendmail</em> function. We describe this function below:</p>
 <ul>
-  <li>Line 6: The PHP scripts for the PEAR modules have been installed in a directory that the PHP interpreter does not search by default. To ensure that the interpreter can find the PEAR modules, we manually specify the directories it should search. It is possible to modify certain configuration parameters of the PHP interpreter at runtime. This modification is visible only to the script that makes it and only for the duration of its execution. The default configuration of the PHP interpreter can be found in the file <i>&lt;PHP_installdir&gt;/PHP.ini</i>. This file contains lines of the form 
+  <li>Line 6: The PHP scripts from the PEAR modules have been installed in a directory that is not searched by default by the PHP interpreter. To ensure that the PEAR interpreter can find the PEAR modules, we manually specify the directories that the PHP interpreter must search. It is possible to modify certain configuration parameters of the PHP interpreter at runtime. This modification is visible only to the script that makes it and only for the duration of its execution. The default configuration of the PHP interpreter can be found in the file <i>&lt;PHP_installdir&gt;/PHP.ini</i>. This file contains lines of the form 
   </li>
 </ul>
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>clé=valeur
 </code></pre></div>
-<p>The value of the key can be modified at runtime using the function <em>ini_set(key, new_value)</em>. The key used to specify the search path for PHP functions and classes referenced by the script is <em>&#x27;include_path</em>&#x27;. Here, we add both the script directory (.) and the PEAR directory within the PHP interpreter installation directory to the search path.</p>
+<p>The value of the key can be modified at runtime by the function <em>ini_set(key, nouvelle_valeur)</em>. The key to specify the search path used by the interpreter for the PHP functions and classes referenced by the script is <em>&#x27;include_path</em>&#x27;. Here, we include in the search path both the script folder (.) and the PEAR folder within the installation directory of the PHP interpreter.</p>
 <ul>
-  <li>Lines 7–9: The PHP scripts for sending email are loaded.
+  <li>Lines 7–9: The PHP mail-sending scripts are loaded.
   </li>
-  <li>line 50: the <i>sendmail</i> function, which handles sending the email. Its parameters are as follows:
+  <li>Line 50: The <i>sendmail</i> function, which is responsible for sending the email. Its parameters are as follows:
   </li>
 </ul>
 
 <ol>
     <ul>
-      <li><i>$smtpServer</i>: the name of the SMTP server to connect to
+      <li>$smtpServer: the name of the SMTP server to connect to
       </li>
-      <li><i>$sender</i>: the sender’s email address
+      <li>$expéditeur: the sender’s email address
       </li>
-      <li><i>$recipient</i>: the recipient&#x27;s email address
+      <li>$destinataire: the recipient&#x27;s email address
       </li>
-      <li><i>$message</i>: the message to be sent.
+      <li>$message: the message to be sent.
       </li>
-      <li><i>$subject</i>: the subject of the message
+      <li>$sujet: the message subject
       </li>
-      <li><i>$attachment</i>: the name of the document to attach to the message
+      <li>$attachement: the name of the document to attach to the message
       </li>
     </ul>
 </ol>
 
 <p>The <em>sendMail</em> function returns an error message; it is empty if no error occurred.</p>
 <ul>
-  <li>Line 56: creation of a <i>Mail_Mime</i> message. This message consists of headers (From, To, Subject) and a body (the message itself)
+  <li>Line 56: creation of a message of type <i>Mail_Mime</i>. This message consists of headers (From, To, Subject) and a body (the message itself)
   </li>
-  <li>Line 57: The body of the <i>Mail_Mime</i> message is set.
+  <li>Line 57: Set the body of the message to <i>Mail_Mime</i>.
   </li>
-  <li>line 58: attaching a document to the message
+  <li>Line 58: A document is attached to the message
   </li>
-  <li>line 59: Set the headers (From, To, Subject) of the <i>Mail_Mime</i> message
+  <li>line 59: the headers (From, To, Subject) of the message <i>Mail_Mime</i> are set
   </li>
-  <li>line 61: creates the class responsible for sending the <i>Mail_Mime</i> message<i>. </i>The first parameter of the method is the name of the protocol to use, in this case the SMTP protocol. The second parameter is an array specifying the name and port of the SMTP service to use
+  <li>line 61: we create the class responsible for sending the message <i>Mail_Mime. </i>The first parameter of the method is the name of the protocol to use, in this case the SMTP protocol. The second parameter is an array specifying the name and port of the SMTP service to use
   </li>
-  <li>line 62: sending the message. The send method takes three parameters: the sender’s address, the <i>Mail_Mime</i> message headers, and the <i>Mail_Mime</i> message body. The send function returns the boolean TRUE if the message was sent successfully, or an error message otherwise.
+  <li>Line 62: Sending the message. The send method takes three parameters: the sender’s address, the message headers <i>Mail_Mime</i>, and the message body <i>Mail_Mime</i>. The send function returns the boolean TRUE if the message was sent successfully, or an error message otherwise.
   </li>
 </ul>
 
